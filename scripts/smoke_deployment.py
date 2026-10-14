@@ -50,7 +50,7 @@ def main():
                     health = json.load(response)
                 if health["status"] == "ok" and health["schema_version"] == 2:
                     break
-            except (URLError, TimeoutError):
+            except (URLError, TimeoutError, ConnectionError):
                 time.sleep(0.3)
         else:
             raise RuntimeError("Supervisor did not become ready.")

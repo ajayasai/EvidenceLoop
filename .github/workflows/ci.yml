@@ -83,7 +83,16 @@ jobs:
         shell: bash
         run: |
           set -euo pipefail
-          trap 'docker rm -f evidenceloop-demo-ci >/dev/null 2>&1 || true' EXIT
+          cleanup() {
+            status=$?
+            if (( status != 0 )); then
+              docker inspect --format '{{json .State}}' evidenceloop-demo-ci || true
+              docker logs --tail 60 evidenceloop-demo-ci || true
+            fi
+            docker rm -f evidenceloop-demo-ci >/dev/null 2>&1 || true
+            exit "$status"
+          }
+          trap cleanup EXIT
           docker run -d --name evidenceloop-demo-ci --memory=512m --memory-swap=512m --cpus=0.1 \
             -p 127.0.0.1:17860:7860 -e APP_ORIGIN=https://demo.example.org evidenceloop-demo:ci
           python - <<'PY'
@@ -98,7 +107,7 @@ jobs:
                       health = json.load(response)
                   if health['status'] == 'ok' and health['schema_version'] == 2:
                       break
-              except (URLError, TimeoutError):
+              except (URLError, TimeoutError, ConnectionError):
                   time.sleep(2)
           else:
               raise SystemExit('Container did not become database-ready within 210 seconds.')
