@@ -1,0 +1,34 @@
+{
+  "artifact_kind": "offline_corpus_integrity_and_scorer_selftest",
+  "not_model_results": true,
+  "model_calls": 0,
+  "checked_at": "2026-10-13T09:35:17.019799+00:00",
+  "benchmark_id": "fictional-extraction-challenge-20261013-v1",
+  "case_count": 8,
+  "corpus_files_sha256": {
+    "validation.inputs.jsonl": "5c3afa09cf184da98cc8bbb7d2584d9215e77394cd93ef1fb486c1b467891e21",
+    "validation.labels.jsonl": "a631c616c52e2fff80af642fb731561a132d5cbea5c0a1f2467994b16b496aa3"
+  },
+  "scorer_sha256": "6164b7a254c557129d52acc5ad781beead378f98573b6c97808269ce0ceb155d",
+  "selftest_sha256": "32e76f5c2c196cf2cf4503fa8f76d0a3726e2a2b4033a71d4f7475f5213bc476",
+  "unchanged_engineering_gates": true,
+  "integrity_passed": true,
+  "fabricated_gold_shaped_converter_cases_passed": 8,
+  "fabricated_gold_shaped_scorer_cases_passed": 8,
+  "literal_boundary_variants_checked": 18,
+  "negative_controls_passed": [
+    "missing_predictions",
+    "duplicate_predictions",
+    "over_stage_latency",
+    "reversed_negation",
+    "reversed_association_roles",
+    "invented_ambiguous_polarity",
+    "lost_reported_speech_act",
+    "invented_unknown",
+    "corrupted_span",
+    "repeated_quote_without_occurrence",
+    "out_of_range_occurrence"
+  ],
+  "human_adjudication": false,
+  "claim_limit": "Checks authored data consistency, the production slot converter, and scorer mechanics only. No inference or model performance was measured."
+}

@@ -1,0 +1,9 @@
+# Candidate source packets — not an approved library
+
+Six inspected NCCIH web publications have partial, exact text packets with source credit, section locators, code-point anchors and rights references. They are editor preparation material only. Run `python scripts/import_quarantine.py` to import them into the private review queue. No source is promoted to runtime evidence by this command, and it creates no qualified reviewer or medical approval.
+
+The packet title and canonical URL identify each original publication. Article dates are preserved at the precision displayed on the page; a site-wide footer date is not treated as the article update date. All were inspected on 30 September 2026. Text reuse follows the [NCCIH public-domain text policy](https://www.nccih.nih.gov/tools/privacy); photos, logos and linked journal papers are excluded. NCCIH does not endorse this application.
+
+The diabetes overview, cinnamon and berberine publications are related summaries, not independent replications. Their shared origin group conservatively keeps them together. The supplement, antioxidant and research-method packets provide possible context only; they do not establish treatment effects for adults with type 2 diabetes. Six documents are not six reviewed clinical families. The proposed six-family/6–10-source library target remains unfulfilled until a qualified reviewer selects enough relevant source material and approves exact conclusions and mappings.
+
+Reviewers should open each canonical source, inspect the omitted surrounding sections and cited studies, verify currentness and source overlap, then expand or reject these partial packets as needed. Do not infer efficacy, dose, individual suitability, medication replacement or a scientific verdict from this selection of passages. No clinical conclusion or appraisal has been approved.

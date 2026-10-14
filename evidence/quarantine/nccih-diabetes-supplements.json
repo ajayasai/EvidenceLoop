@@ -1,0 +1,53 @@
+{
+  "source_id": "nccih-diabetes-supplements",
+  "previous_version_id": null,
+  "title": "Diabetes and Dietary Supplements: What You Need To Know",
+  "publisher": "National Center for Complementary and Integrative Health (NIH)",
+  "canonical_url": "https://www.nccih.nih.gov/health/diabetes-and-dietary-supplements-what-you-need-to-know",
+  "source_date": null,
+  "source_type": "official_information",
+  "language": "en",
+  "text": "This fact sheet focuses on type 2 diabetes.\n\nFor a few dietary supplements, there is weak evidence of a possible benefit.\n\nFor most supplements, there isn’t evidence to support a beneficial effect on diabetes or its complications.\n\nIt’s very important not to replace medical treatment for diabetes with an unproven health product or practice.",
+  "licensing_note": "NCCIH identifies its website text as public domain and requests source credit. Only text is retained; no copyrighted photographs or linked journal articles are copied. This partial packet is quarantined, not clinically approved.",
+  "storage_permission": "public_domain",
+  "permission_reference": "https://www.nccih.nih.gov/tools/privacy#copyright-policy; text policy verified 2026-09-30",
+  "permission_attested": true,
+  "snapshot_complete": false,
+  "origin_group_ids": [
+    "nccih-diabetes-supplements-overview"
+  ],
+  "anchors": [
+    {
+      "anchor_id": "nccih-diabetes-a1",
+      "start": 0,
+      "end": 43,
+      "quote": "This fact sheet focuses on type 2 diabetes.",
+      "section": "Scope",
+      "original_locator": "What’s the Bottom Line?; exact paragraph excerpt; retrieved 2026-09-30"
+    },
+    {
+      "anchor_id": "nccih-diabetes-a2",
+      "start": 45,
+      "end": 121,
+      "quote": "For a few dietary supplements, there is weak evidence of a possible benefit.",
+      "section": "Possible benefit",
+      "original_locator": "What’s the Bottom Line?; exact paragraph excerpt; retrieved 2026-09-30"
+    },
+    {
+      "anchor_id": "nccih-diabetes-a3",
+      "start": 123,
+      "end": 230,
+      "quote": "For most supplements, there isn’t evidence to support a beneficial effect on diabetes or its complications.",
+      "section": "Limit of evidence",
+      "original_locator": "What’s the Bottom Line?; exact paragraph excerpt; retrieved 2026-09-30"
+    },
+    {
+      "anchor_id": "nccih-diabetes-a4",
+      "start": 232,
+      "end": 342,
+      "quote": "It’s very important not to replace medical treatment for diabetes with an unproven health product or practice.",
+      "section": "Replacement boundary",
+      "original_locator": "What’s the Bottom Line?; exact paragraph excerpt; retrieved 2026-09-30"
+    }
+  ]
+}

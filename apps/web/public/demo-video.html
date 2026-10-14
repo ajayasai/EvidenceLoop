@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="EvidenceLoop: a recorded screenshot walkthrough of a fictional self-care question-preparation prototype, with synthetic narration and English captions.">
+    <title>Recorded walkthrough | EvidenceLoop</title>
+    <style>
+      :root { color-scheme: light; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, sans-serif; color: #27342f; background: #f6f5ef; --teal: #215b50; --line: #dedfd5; --muted: #536159; }
+      * { box-sizing: border-box; }
+      body { margin: 0; min-width: 280px; }
+      a { color: var(--teal); text-underline-offset: .2em; }
+      a:focus-visible, summary:focus-visible, video:focus-visible { outline: 3px solid #527e70; outline-offset: 5px; }
+      .skip-link { position: absolute; left: 20px; top: -80px; padding: 12px 16px; background: #fffefa; z-index: 2; }
+      .skip-link:focus { top: 12px; }
+      .shell { width: min(1080px, calc(100% - 48px)); margin: 0 auto; }
+      header { display: flex; align-items: center; justify-content: space-between; gap: 24px; min-height: 90px; border-bottom: 1px solid var(--line); }
+      .brand { color: #27342f; font-size: 23px; font-weight: 700; letter-spacing: -.8px; text-decoration: none; }
+      .brand span { font-weight: 400; }
+      .back-link { font-size: 14px; line-height: 1.5; }
+      main { padding: 44px 0 48px; }
+      .eyebrow { margin: 0 0 14px; color: var(--teal); font-size: 12px; font-weight: 700; letter-spacing: .09em; text-transform: uppercase; }
+      h1 { margin: 0 0 20px; max-width: 830px; font: 400 clamp(36px, 5vw, 60px)/1.08 Georgia, "Times New Roman", serif; letter-spacing: -.035em; }
+      .intro { max-width: 760px; margin: 0 0 24px; font-size: 17px; line-height: 1.7; color: var(--muted); }
+      .disclosure { margin: 0 0 24px; padding: 15px 18px; border: 1px solid #cdd9ca; border-radius: 8px; background: #eaf0e4; font-size: 14px; line-height: 1.7; }
+      .player { overflow: hidden; border: 1px solid var(--line); border-radius: 12px; background: #fffefa; box-shadow: 0 12px 38px #233f2910; }
+      video { display: block; width: 100%; height: auto; aspect-ratio: 16 / 9; background: #143f3a; }
+      .player-note { margin: 0; padding: 14px 18px; color: var(--muted); font-size: 13px; line-height: 1.65; }
+      .context { display: grid; grid-template-columns: 1fr 1fr; gap: 36px; margin: 32px 0; }
+      h2 { margin: 0 0 10px; font: 400 26px/1.2 Georgia, "Times New Roman", serif; letter-spacing: -.02em; }
+      .context p { margin: 0; color: var(--muted); font-size: 15px; line-height: 1.75; }
+      .action { display: inline-block; padding: 13px 19px; border: 1px solid var(--teal); border-radius: 6px; background: var(--teal); color: #fffefa; text-decoration: none; font-size: 14px; font-weight: 600; line-height: 1.5; }
+      .action:hover { background: #174b42; }
+      details { margin-top: 32px; padding: 20px 0; border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
+      summary { width: fit-content; cursor: pointer; color: var(--teal); font-size: 15px; font-weight: 600; line-height: 1.6; }
+      .transcript { max-width: 840px; padding-top: 8px; }
+      .transcript p { color: var(--muted); font-size: 15px; line-height: 1.85; }
+      footer { padding: 0 0 28px; color: var(--muted); font-size: 12px; line-height: 1.8; }
+      @media (max-width: 600px) { .shell { width: calc(100% - 32px); } header { min-height: 78px; gap: 16px; } .back-link { max-width: 128px; text-align: right; font-size: 12px; } main { padding-top: 32px; } .intro { font-size: 16px; } .context { grid-template-columns: 1fr; gap: 24px; } .player-note { padding: 12px; } }
+      @media (prefers-reduced-motion: reduce) { * { scroll-behavior: auto !important; } }
+    </style>
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to walkthrough</a>
+    <div class="shell">
+      <header>
+        <a class="brand" href="/" aria-label="EvidenceLoop home">Evidence<span>Loop</span></a>
+        <a class="back-link" href="/">Open interactive prototype</a>
+      </header>
+      <main id="main" tabindex="-1">
+        <p class="eyebrow">Recorded walkthrough · 6 minutes 04 seconds</p>
+        <h1>Keep a question connected to its evidence.</h1>
+        <p class="intro">Follow a fictional claim through confirmation, source inspection, consented saving and a later self-reported check-in.</p>
+        <p class="disclosure" id="video-disclosure"><strong>Fictional engineering demonstration.</strong> This video uses static screenshots and synthetic narration. It is not a recording of live AI or continuous app operation, and it does not provide a clinical recommendation.</p>
+        <div class="player">
+          <video controls playsinline preload="metadata" poster="demo/cover.png" aria-label="EvidenceLoop recorded screenshot walkthrough" aria-describedby="video-disclosure video-notes">
+            <source src="demo/EvidenceLoop-recorded-walkthrough.mp4" type="video/mp4">
+            <track kind="captions" src="demo/EvidenceLoop-recorded-walkthrough.vtt" srclang="en" label="English" default>
+            Your browser cannot play this video. <a href="demo/EvidenceLoop-recorded-walkthrough.mp4">Download the recorded walkthrough</a> or read the narration below.
+          </video>
+          <p class="player-note" id="video-notes">English captions are available through the player controls. <a href="demo/EvidenceLoop-recorded-walkthrough.mp4" download>Download video</a> · <a href="demo/EvidenceLoop-recorded-walkthrough.vtt" download>Download captions</a></p>
+        </div>
+        <div class="context">
+          <section aria-labelledby="demonstrates">
+            <h2 id="demonstrates">A return journey</h2>
+            <p>The walkthrough shows a fictional fern example, an exact question saved by choice, a simulated later visit and a source-withdrawal exercise. Check-ins are self-reports, not verified adherence or health outcomes.</p>
+          </section>
+          <section aria-labelledby="checkpoint">
+            <h2 id="checkpoint">Read the results in context</h2>
+            <p>Numerical test and model results shown in the slides describe the <strong>13 October 2026 checkpoint</strong>. Live AI remains disabled because no candidate qualified. The demonstration library is fictional and has no clinical approval.</p>
+          </section>
+        </div>
+        <a class="action" href="/">Explore the interactive prototype</a>
+        <details>
+          <summary>Read the narration</summary>
+          <div class="transcript">
+            <p>This is a recorded screenshot walkthrough with synthetic narration. A convincing claim can leave a person with an unresolved question: what does this finding actually establish, and what should I ask at my next discussion? EvidenceLoop connects that question to its source and keeps the context available when the person returns. Our focus is Healthcare Challenge 2: long-term self-care.</p>
+            <p>This is a working local engineering prototype. The demonstration uses a fictional fern study, and replay is visibly labeled. It is not a health recommendation or a live model response. We chose this example so you can inspect the behavior without confusing an unfinished clinical evidence library with approved medical advice.</p>
+            <p>First, the user checks what the claim means. The fictional study describes glow water, fern height, seven days and a plain-water comparison. The user&#x27;s intention is separate from the words of the claim. Confirmation records the meaning to assess; it does not make the claim true. Unstated information can remain unknown instead of becoming an invented detail.</p>
+            <p>The receipt keeps the source and its limits inspectable. A finding about one outcome in one setting does not establish a guarantee for every situation. The interface separates the evidence relationship, coverage and intended action. These are bounded demonstration results. A source passage can show where a statement came from; it cannot by itself prove that every inference or personal action is justified.</p>
+            <p>The next step is an exact question the user can preview. Saving is a separate choice. The screen explains what will be retained, and the save button requires consent. The original pasted text is not stored with the saved record. Now we simulate a later visit. The person chooses to record that they discussed the question. This is labeled a self-report, not verified adherence, improved understanding or a health outcome.</p>
+            <p>A saved answer must not quietly preserve authority after its evidence changes. These captures show the result of withdrawing a fictional source. When the user reopens the saved receipt, the application checks current source status again. The historical record remains inspectable, but the withdrawn dependency blocks relevant new use. This is a synthetic withdrawal exercise, not a real publisher correction or a claim that we automatically monitor medical literature.</p>
+            <p>Ambiguous input should not produce confident advice. This fictional sentence does not identify the people, intervention or outcome. The user can clarify what they mean, or leave it unresolved. The application shows its limits. Our live reader remains disabled because no tested model has passed qualification, so this screen is manual fallback, not a staged AI success.</p>
+            <p>React presents the workflow, FastAPI enforces policy and versions, and PostgreSQL stores consented records and separate evidence-review history. Before save, drafts live in expiring server memory. The optional model can propose structure, but it cannot approve evidence or authorize a write. The application checks quotes, schemas, ownership, consent and current evidence. A local single-process design keeps the prototype small; it does not provide production hosting or cross-device recovery.</p>
+            <p>WorkBuddy contributed genuine development review. Its Hy3 model examined consent and source-withdrawal code and proposed missing negative tests. Codex corrected and implemented the proposals and ran the local checks: forty-four related tests passed. These captures record the contribution and corrections. WorkBuddy did not run the tests or provide clinical approval.</p>
+            <p>The evidence is deliberately specific. At the October thirteenth checkpoint, the Python suite passed four hundred ninety-nine tests plus fifty-one subtests. At that checkpoint, a reader probe matched ten of twelve known regression cases and still failed qualification. We have no clinical validation or measured health benefit. EvidenceLoop demonstrates a way to keep meaning, consent and changing evidence connected. The next proof is reliable reading, independent source review and observed use with fictional tasks.</p>
+          </div>
+        </details>
+      </main>
+      <footer>EvidenceLoop · AJ_001 · Solo entry, NTU<br>Healthcare Challenge 2: long-term self-care · Walkthrough prepared 14 October 2026</footer>
+    </div>
+  </body>
+</html>

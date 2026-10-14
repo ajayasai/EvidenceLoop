@@ -1,0 +1,515 @@
+{
+  "schema_version": "EvidencePack/1.0",
+  "publication_id": "synthetic-publication-v1",
+  "label": "Fictional nonclinical demonstration — no real research or clinical review",
+  "domain": "synthetic_nonclinical",
+  "clinical_review": false,
+  "trust_state": "current",
+  "sources": [
+    {
+      "source_id": "SYN-FERN",
+      "source_version_id": "SYN-FERN-v1",
+      "title": "Fictional Fern Lab: glow-water exercise",
+      "publisher": "EvidenceLoop synthetic fixture authors",
+      "source_date": "2026-09-30",
+      "canonical_url": null,
+      "synthetic": true,
+      "origin_group_ids": [
+        "fern-experiment"
+      ],
+      "text": "FICTIONAL DATA: In the fictional Fern Lab, glow water increased fern height over seven days compared with plain water. This exercise does not establish survival, safety, effects in other plants, or equivalence of glow spray.",
+      "content_hash": "c60a4242e18ddfc8aa9f11af53082ecc3aefc1d8635012a0d93d5c8852462218",
+      "trust_state": "current",
+      "anchors": [
+        {
+          "anchor_id": "A-FERN-1",
+          "source_version_id": "SYN-FERN-v1",
+          "start": 0,
+          "end": 224,
+          "quote": "FICTIONAL DATA: In the fictional Fern Lab, glow water increased fern height over seven days compared with plain water. This exercise does not establish survival, safety, effects in other plants, or equivalence of glow spray.",
+          "quote_hash": "c60a4242e18ddfc8aa9f11af53082ecc3aefc1d8635012a0d93d5c8852462218",
+          "section": "Complete synthetic fixture",
+          "original_locator": "synthetic_nonclinical.json#SYN-FERN-v1"
+        }
+      ]
+    },
+    {
+      "source_id": "SYN-MOON",
+      "source_version_id": "SYN-MOON-v1",
+      "title": "Fictional Study Club: incomplete moon-card exercise",
+      "publisher": "EvidenceLoop synthetic fixture authors",
+      "source_date": "2026-09-30",
+      "canonical_url": null,
+      "synthetic": true,
+      "origin_group_ids": [
+        "moon-experiment"
+      ],
+      "text": "FICTIONAL DATA: The fictional Study Club moon-card exercise was incomplete. Its measurements cannot resolve whether moon cards change next-day recall. No finding of no effect is established.",
+      "content_hash": "ab750997f44b1d0eac0e150ec1814c338a7c8cc1bcfeea95e5e38888d7b2c312",
+      "trust_state": "current",
+      "anchors": [
+        {
+          "anchor_id": "A-MOON-1",
+          "source_version_id": "SYN-MOON-v1",
+          "start": 0,
+          "end": 190,
+          "quote": "FICTIONAL DATA: The fictional Study Club moon-card exercise was incomplete. Its measurements cannot resolve whether moon cards change next-day recall. No finding of no effect is established.",
+          "quote_hash": "ab750997f44b1d0eac0e150ec1814c338a7c8cc1bcfeea95e5e38888d7b2c312",
+          "section": "Complete synthetic fixture",
+          "original_locator": "synthetic_nonclinical.json#SYN-MOON-v1"
+        }
+      ]
+    },
+    {
+      "source_id": "SYN-QUIET",
+      "source_version_id": "SYN-QUIET-v1",
+      "title": "Fictional Study Club: quiet-card equivalence exercise",
+      "publisher": "EvidenceLoop synthetic fixture authors",
+      "source_date": "2026-09-30",
+      "canonical_url": null,
+      "synthetic": true,
+      "origin_group_ids": [
+        "quiet-experiment"
+      ],
+      "text": "FICTIONAL DATA: In a deliberately constructed equivalence exercise, quiet cards did not meaningfully change next-day recall in the fictional Study Club compared with plain cards. This explicit fixture result is not inferred from a nonsignificant p-value.",
+      "content_hash": "9c711ae05f6839bec1de49fda75b8d16214483a63441364a1f38f469ce060ae3",
+      "trust_state": "current",
+      "anchors": [
+        {
+          "anchor_id": "A-QUIET-1",
+          "source_version_id": "SYN-QUIET-v1",
+          "start": 0,
+          "end": 254,
+          "quote": "FICTIONAL DATA: In a deliberately constructed equivalence exercise, quiet cards did not meaningfully change next-day recall in the fictional Study Club compared with plain cards. This explicit fixture result is not inferred from a nonsignificant p-value.",
+          "quote_hash": "9c711ae05f6839bec1de49fda75b8d16214483a63441364a1f38f469ce060ae3",
+          "section": "Complete synthetic fixture",
+          "original_locator": "synthetic_nonclinical.json#SYN-QUIET-v1"
+        }
+      ]
+    },
+    {
+      "source_id": "SYN-BLUE-A",
+      "source_version_id": "SYN-BLUE-A-v1",
+      "title": "Fictional Study Club: blue-card exercise A",
+      "publisher": "EvidenceLoop synthetic fixture authors",
+      "source_date": "2026-09-30",
+      "canonical_url": null,
+      "synthetic": true,
+      "origin_group_ids": [
+        "blue-experiment-a"
+      ],
+      "text": "FICTIONAL DATA: Exercise A found that blue cards improved next-day recall in the fictional Study Club compared with plain cards. Exercise B used the same defined scope and found worse recall; this synthetic disagreement is unresolved.",
+      "content_hash": "238f71c7e47d5095db979042c18ddaeedc00ff1d3edafbd642db43e4157a58db",
+      "trust_state": "current",
+      "anchors": [
+        {
+          "anchor_id": "A-BLUE-A-1",
+          "source_version_id": "SYN-BLUE-A-v1",
+          "start": 0,
+          "end": 234,
+          "quote": "FICTIONAL DATA: Exercise A found that blue cards improved next-day recall in the fictional Study Club compared with plain cards. Exercise B used the same defined scope and found worse recall; this synthetic disagreement is unresolved.",
+          "quote_hash": "238f71c7e47d5095db979042c18ddaeedc00ff1d3edafbd642db43e4157a58db",
+          "section": "Complete synthetic fixture",
+          "original_locator": "synthetic_nonclinical.json#SYN-BLUE-A-v1"
+        }
+      ]
+    },
+    {
+      "source_id": "SYN-BLUE-B",
+      "source_version_id": "SYN-BLUE-B-v1",
+      "title": "Fictional Study Club: blue-card exercise B",
+      "publisher": "EvidenceLoop synthetic fixture authors",
+      "source_date": "2026-09-30",
+      "canonical_url": null,
+      "synthetic": true,
+      "origin_group_ids": [
+        "blue-experiment-b"
+      ],
+      "text": "FICTIONAL DATA: Exercise B found that blue cards worsened next-day recall in the fictional Study Club compared with plain cards. Exercise A used the same defined scope and found better recall; this synthetic disagreement is unresolved.",
+      "content_hash": "e9c137c5327380b006c7dd9a439643652fba47d20dc1b1345c75ba8bbcf1e373",
+      "trust_state": "current",
+      "anchors": [
+        {
+          "anchor_id": "A-BLUE-B-1",
+          "source_version_id": "SYN-BLUE-B-v1",
+          "start": 0,
+          "end": 235,
+          "quote": "FICTIONAL DATA: Exercise B found that blue cards worsened next-day recall in the fictional Study Club compared with plain cards. Exercise A used the same defined scope and found better recall; this synthetic disagreement is unresolved.",
+          "quote_hash": "e9c137c5327380b006c7dd9a439643652fba47d20dc1b1345c75ba8bbcf1e373",
+          "section": "Complete synthetic fixture",
+          "original_locator": "synthetic_nonclinical.json#SYN-BLUE-B-v1"
+        }
+      ]
+    },
+    {
+      "source_id": "SYN-QUIZ",
+      "source_version_id": "SYN-QUIZ-v1",
+      "title": "Fictional Study Club: quizzes alongside lessons",
+      "publisher": "EvidenceLoop synthetic fixture authors",
+      "source_date": "2026-09-30",
+      "canonical_url": null,
+      "synthetic": true,
+      "origin_group_ids": [
+        "quiz-experiment"
+      ],
+      "text": "FICTIONAL DATA: In the fictional Study Club, short quizzes alongside normal lessons improved next-day recall compared with normal lessons alone. The exercise does not establish that quizzes can replace normal lessons or improve graduation outcomes.",
+      "content_hash": "e7b637b69631b62774e3eab3baa107d421034a061a373ec791ce4bd0ee21c7a0",
+      "trust_state": "current",
+      "anchors": [
+        {
+          "anchor_id": "A-QUIZ-1",
+          "source_version_id": "SYN-QUIZ-v1",
+          "start": 0,
+          "end": 248,
+          "quote": "FICTIONAL DATA: In the fictional Study Club, short quizzes alongside normal lessons improved next-day recall compared with normal lessons alone. The exercise does not establish that quizzes can replace normal lessons or improve graduation outcomes.",
+          "quote_hash": "e7b637b69631b62774e3eab3baa107d421034a061a373ec791ce4bd0ee21c7a0",
+          "section": "Complete synthetic fixture",
+          "original_locator": "synthetic_nonclinical.json#SYN-QUIZ-v1"
+        }
+      ]
+    },
+    {
+      "source_id": "SYN-SPARK",
+      "source_version_id": "SYN-SPARK-v1",
+      "title": "Fictional Study Club: observational spark-card exercise",
+      "publisher": "EvidenceLoop synthetic fixture authors",
+      "source_date": "2026-09-30",
+      "canonical_url": null,
+      "synthetic": true,
+      "origin_group_ids": [
+        "spark-observation"
+      ],
+      "text": "FICTIONAL DATA: In a fictional Study Club observation, spark-card use was associated with better next-day recall. The exercise does not establish that spark cards caused the change or that a proposed attention mechanism establishes benefit.",
+      "content_hash": "d472449b0c94483d6e0918b9a2a38300fba817c357b609f9bfc1ec54a71499e7",
+      "trust_state": "current",
+      "anchors": [
+        {
+          "anchor_id": "A-SPARK-1",
+          "source_version_id": "SYN-SPARK-v1",
+          "start": 0,
+          "end": 240,
+          "quote": "FICTIONAL DATA: In a fictional Study Club observation, spark-card use was associated with better next-day recall. The exercise does not establish that spark cards caused the change or that a proposed attention mechanism establishes benefit.",
+          "quote_hash": "d472449b0c94483d6e0918b9a2a38300fba817c357b609f9bfc1ec54a71499e7",
+          "section": "Complete synthetic fixture",
+          "original_locator": "synthetic_nonclinical.json#SYN-SPARK-v1"
+        }
+      ]
+    }
+  ],
+  "families": [
+    {
+      "family_id": "F01",
+      "name": "Fictional fern growth",
+      "population_id": "fern-lab",
+      "intervention_id": "glow-water",
+      "intervention_aliases": [
+        "glow water",
+        "glow spray"
+      ],
+      "outcome_id": "fern-height",
+      "outcome_aliases": [
+        "fern height",
+        "height",
+        "grow taller"
+      ],
+      "comparator_id": "plain-water",
+      "formulation": "water",
+      "relation": "causal",
+      "scope": "fictional Fern Lab",
+      "conclusion_ids": [
+        "C-FERN-1"
+      ],
+      "enabled_operators": [
+        "L03",
+        "L05",
+        "L07",
+        "L08",
+        "L11",
+        "L15"
+      ],
+      "warrant_mode": "bounded_effect",
+      "trust_state": "current"
+    },
+    {
+      "family_id": "F02",
+      "name": "Fictional incomplete study",
+      "population_id": "study-club",
+      "intervention_id": "moon-cards",
+      "intervention_aliases": [
+        "moon cards"
+      ],
+      "outcome_id": "next-day-recall",
+      "outcome_aliases": [
+        "next-day recall"
+      ],
+      "comparator_id": "plain-cards",
+      "formulation": "cards",
+      "relation": "causal",
+      "scope": "fictional Study Club",
+      "conclusion_ids": [
+        "C-MOON-1"
+      ],
+      "enabled_operators": [],
+      "warrant_mode": "insufficient",
+      "trust_state": "current"
+    },
+    {
+      "family_id": "F03",
+      "name": "Fictional explicit no effect",
+      "population_id": "study-club",
+      "intervention_id": "quiet-cards",
+      "intervention_aliases": [
+        "quiet cards"
+      ],
+      "outcome_id": "next-day-recall",
+      "outcome_aliases": [
+        "next-day recall"
+      ],
+      "comparator_id": "plain-cards",
+      "formulation": "cards",
+      "relation": "causal",
+      "scope": "fictional Study Club",
+      "conclusion_ids": [
+        "C-QUIET-1"
+      ],
+      "enabled_operators": [],
+      "warrant_mode": "no_effect",
+      "trust_state": "current"
+    },
+    {
+      "family_id": "F04",
+      "name": "Fictional conflicting study findings",
+      "population_id": "study-club",
+      "intervention_id": "blue-cards",
+      "intervention_aliases": [
+        "blue cards"
+      ],
+      "outcome_id": "next-day-recall",
+      "outcome_aliases": [
+        "next-day recall"
+      ],
+      "comparator_id": "plain-cards",
+      "formulation": "cards",
+      "relation": "causal",
+      "scope": "fictional Study Club",
+      "conclusion_ids": [
+        "C-BLUE-A-1",
+        "C-BLUE-B-1"
+      ],
+      "enabled_operators": [],
+      "warrant_mode": "conflicting",
+      "trust_state": "current"
+    },
+    {
+      "family_id": "F05",
+      "name": "Fictional adjunct versus replacement",
+      "population_id": "study-club",
+      "intervention_id": "short-quizzes",
+      "intervention_aliases": [
+        "short quizzes",
+        "quizzes"
+      ],
+      "outcome_id": "next-day-recall",
+      "outcome_aliases": [
+        "next-day recall"
+      ],
+      "comparator_id": "normal-lessons",
+      "formulation": "quizzes",
+      "relation": "causal",
+      "scope": "fictional Study Club",
+      "conclusion_ids": [
+        "C-QUIZ-1"
+      ],
+      "enabled_operators": [
+        "L03",
+        "L08",
+        "L09"
+      ],
+      "warrant_mode": "adjunct",
+      "trust_state": "current"
+    },
+    {
+      "family_id": "F06",
+      "name": "Fictional association and mechanism",
+      "population_id": "study-club",
+      "intervention_id": "spark-cards",
+      "intervention_aliases": [
+        "spark cards",
+        "spark-card use"
+      ],
+      "outcome_id": "next-day-recall",
+      "outcome_aliases": [
+        "next-day recall"
+      ],
+      "comparator_id": "plain-cards",
+      "formulation": "cards",
+      "relation": "associative",
+      "scope": "fictional Study Club",
+      "conclusion_ids": [
+        "C-SPARK-1"
+      ],
+      "enabled_operators": [
+        "L04",
+        "L15"
+      ],
+      "warrant_mode": "association",
+      "trust_state": "current"
+    }
+  ],
+  "conclusions": [
+    {
+      "conclusion_id": "C-FERN-1",
+      "family_id": "F01",
+      "brief_version_id": "B-FERN-v1",
+      "source_version_id": "SYN-FERN-v1",
+      "anchor_ids": [
+        "A-FERN-1"
+      ],
+      "statement": "In this fictional exercise, glow water increased fern height over seven days compared with plain water.",
+      "effect_direction": "benefit",
+      "outcome_id": "fern-height",
+      "limitations": [
+        "Fictional findings are provided only to demonstrate software behavior.",
+        "Height does not establish survival or safety.",
+        "Other plants and glow spray are outside this fixture's scope."
+      ],
+      "allowed_relations": [
+        "supports_within_scope",
+        "insufficient",
+        "contradicts_within_scope"
+      ],
+      "review_id": "synthetic-author-check-v1",
+      "review_status": "synthetic_author_check_only"
+    },
+    {
+      "conclusion_id": "C-MOON-1",
+      "family_id": "F02",
+      "brief_version_id": "B-MOON-v1",
+      "source_version_id": "SYN-MOON-v1",
+      "anchor_ids": [
+        "A-MOON-1"
+      ],
+      "statement": "The fictional moon-card exercise cannot resolve a change in next-day recall.",
+      "effect_direction": "undetermined",
+      "outcome_id": "next-day-recall",
+      "limitations": [
+        "Incomplete measurements do not establish no effect.",
+        "This is a fictional fixture, not a real study."
+      ],
+      "allowed_relations": [
+        "insufficient"
+      ],
+      "review_id": "synthetic-author-check-v1",
+      "review_status": "synthetic_author_check_only"
+    },
+    {
+      "conclusion_id": "C-QUIET-1",
+      "family_id": "F03",
+      "brief_version_id": "B-QUIET-v1",
+      "source_version_id": "SYN-QUIET-v1",
+      "anchor_ids": [
+        "A-QUIET-1"
+      ],
+      "statement": "The fictional equivalence exercise explicitly finds no meaningful change in next-day recall from quiet cards.",
+      "effect_direction": "no_effect",
+      "outcome_id": "next-day-recall",
+      "limitations": [
+        "The no-effect result is explicitly authored for this fixture; statistical nonsignificance alone would not justify it.",
+        "This is a fictional fixture, not a real study."
+      ],
+      "allowed_relations": [
+        "supports_within_scope",
+        "contradicts_within_scope"
+      ],
+      "review_id": "synthetic-author-check-v1",
+      "review_status": "synthetic_author_check_only"
+    },
+    {
+      "conclusion_id": "C-BLUE-A-1",
+      "family_id": "F04",
+      "brief_version_id": "B-BLUE-A-v1",
+      "source_version_id": "SYN-BLUE-A-v1",
+      "anchor_ids": [
+        "A-BLUE-A-1"
+      ],
+      "statement": "Fictional exercise A reports improved next-day recall from blue cards.",
+      "effect_direction": "benefit",
+      "outcome_id": "next-day-recall",
+      "limitations": [
+        "Fictional exercise B reports the opposite result in the same defined scope."
+      ],
+      "allowed_relations": [
+        "conflicting"
+      ],
+      "review_id": "synthetic-author-check-v1",
+      "review_status": "synthetic_author_check_only"
+    },
+    {
+      "conclusion_id": "C-BLUE-B-1",
+      "family_id": "F04",
+      "brief_version_id": "B-BLUE-B-v1",
+      "source_version_id": "SYN-BLUE-B-v1",
+      "anchor_ids": [
+        "A-BLUE-B-1"
+      ],
+      "statement": "Fictional exercise B reports worse next-day recall from blue cards.",
+      "effect_direction": "harm",
+      "outcome_id": "next-day-recall",
+      "limitations": [
+        "Fictional exercise A reports the opposite result in the same defined scope."
+      ],
+      "allowed_relations": [
+        "conflicting"
+      ],
+      "review_id": "synthetic-author-check-v1",
+      "review_status": "synthetic_author_check_only"
+    },
+    {
+      "conclusion_id": "C-QUIZ-1",
+      "family_id": "F05",
+      "brief_version_id": "B-QUIZ-v1",
+      "source_version_id": "SYN-QUIZ-v1",
+      "anchor_ids": [
+        "A-QUIZ-1"
+      ],
+      "statement": "In the fictional exercise, short quizzes alongside normal lessons improved next-day recall.",
+      "effect_direction": "benefit",
+      "outcome_id": "next-day-recall",
+      "limitations": [
+        "Replacing normal lessons was not established.",
+        "Next-day recall does not establish graduation outcomes.",
+        "This is a fictional fixture, not a real study."
+      ],
+      "allowed_relations": [
+        "supports_within_scope",
+        "insufficient",
+        "contradicts_within_scope"
+      ],
+      "review_id": "synthetic-author-check-v1",
+      "review_status": "synthetic_author_check_only"
+    },
+    {
+      "conclusion_id": "C-SPARK-1",
+      "family_id": "F06",
+      "brief_version_id": "B-SPARK-v1",
+      "source_version_id": "SYN-SPARK-v1",
+      "anchor_ids": [
+        "A-SPARK-1"
+      ],
+      "statement": "The fictional observation links spark-card use with next-day recall without establishing causation.",
+      "effect_direction": "benefit",
+      "outcome_id": "next-day-recall",
+      "limitations": [
+        "An association does not establish causation in this fixture.",
+        "A proposed mechanism does not establish the claimed benefit.",
+        "This is a fictional fixture, not a real study."
+      ],
+      "allowed_relations": [
+        "supports_within_scope",
+        "insufficient"
+      ],
+      "review_id": "synthetic-author-check-v1",
+      "review_status": "synthetic_author_check_only"
+    }
+  ]
+}

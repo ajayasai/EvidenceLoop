@@ -1,0 +1,45 @@
+{
+  "source_id": "nccih-antioxidants",
+  "previous_version_id": null,
+  "title": "Antioxidant Supplements: What You Need To Know",
+  "publisher": "National Center for Complementary and Integrative Health (NIH)",
+  "canonical_url": "https://www.nccih.nih.gov/health/antioxidant-supplements-what-you-need-to-know",
+  "source_date": "July 2023",
+  "source_type": "official_information",
+  "language": "en",
+  "text": "As research has progressed, it has become evident that antioxidants—especially in larger-than-usual amounts—may not always be beneficial.\n\nThe beneficial health effects of a diet high in vegetables and fruits or other antioxidant-rich foods may be due to other substances in these foods or other aspects of people’s lifestyles that are associated with eating these foods.\n\nAntioxidants consumed as purified chemicals might act differently than those consumed in foods, which contain complex mixtures of substances.",
+  "licensing_note": "NCCIH website text is public domain; source, title and displayed article date are credited. Only partial text is retained, without images or linked third-party articles. Quarantined for independent scope review; no NIH endorsement of EvidenceLoop is implied.",
+  "storage_permission": "public_domain",
+  "permission_reference": "https://www.nccih.nih.gov/tools/privacy; text policy verified 2026-09-30",
+  "permission_attested": true,
+  "snapshot_complete": false,
+  "origin_group_ids": [
+    "nccih-supplement-methodology"
+  ],
+  "anchors": [
+    {
+      "anchor_id": "nccih-antioxidants-a1",
+      "start": 0,
+      "end": 137,
+      "quote": "As research has progressed, it has become evident that antioxidants—especially in larger-than-usual amounts—may not always be beneficial.",
+      "section": "What are antioxidants?",
+      "original_locator": "What are antioxidants?; exact paragraph excerpt; retrieved 2026-09-30"
+    },
+    {
+      "anchor_id": "nccih-antioxidants-a2",
+      "start": 139,
+      "end": 371,
+      "quote": "The beneficial health effects of a diet high in vegetables and fruits or other antioxidant-rich foods may be due to other substances in these foods or other aspects of people’s lifestyles that are associated with eating these foods.",
+      "section": "Have studies been done on the health effects of antioxidants?",
+      "original_locator": "Have studies been done on the health effects of antioxidants?; exact paragraph excerpt; retrieved 2026-09-30"
+    },
+    {
+      "anchor_id": "nccih-antioxidants-a3",
+      "start": 373,
+      "end": 514,
+      "quote": "Antioxidants consumed as purified chemicals might act differently than those consumed in foods, which contain complex mixtures of substances.",
+      "section": "Have studies been done on the health effects of antioxidants?",
+      "original_locator": "Have studies been done on the health effects of antioxidants?; exact paragraph excerpt; retrieved 2026-09-30"
+    }
+  ]
+}

@@ -1,0 +1,90 @@
+{
+  "captured_date": "2026-10-13",
+  "timezone": "Asia/Singapore",
+  "packaged_at_utc": "2026-10-13T14:26:56.441005+00:00",
+  "product": "WorkBuddy web UI",
+  "browser": "Chrome",
+  "model_display": "Hy3",
+  "model_multiplier_display": "0.00x",
+  "plan_observed": "Free",
+  "event_credits_redeemed": 1000,
+  "balance_after_redemption": 1350,
+  "balance_after_review_observed": 1350,
+  "paid_upgrade_or_payment_setup_performed": false,
+  "conversation_url": "https://www.codebuddy.ai/agents/task/2110009682776473600",
+  "attribution": {
+    "WorkBuddy": "Source review and proposed tests, refined through real follow-up interactions",
+    "Codex": "Review, corrections/extensions, implementation, local test execution, capture and packaging"
+  },
+  "validation": {
+    "passed": 44,
+    "warnings": 1,
+    "seconds": 51.89,
+    "added_parameter_cases": 5,
+    "executed_by": "Codex locally"
+  },
+  "artifacts": [
+    {
+      "path": "01-source-withdrawal-request.png",
+      "sha256": "e0a4fe6b6238379777b297b94e98f3526b15f06c98e7d345486dffe09b9e71cd"
+    },
+    {
+      "path": "02-source-withdrawal-review.png",
+      "sha256": "806d51a221c81cb5e7bc8e08879a586477560d8487672920f49fb66cd3523d9a"
+    },
+    {
+      "path": "03-transaction-test-proposal.png",
+      "sha256": "6c3cc1171bf9f774c605efd35a60deaad274e5c6f6faeafa1f259f196096b539"
+    },
+    {
+      "path": "04-local-validation-review.png",
+      "sha256": "21264c3be7b3b81ab298eda17e428911ba48324dd7a935018068607a2f7c8eac"
+    },
+    {
+      "path": "README.md",
+      "sha256": "ba015eb8937c1de8436ad72161e2c75235006fc4fcd555835e59e67fd611e849"
+    },
+    {
+      "path": "validation.txt",
+      "sha256": "da2bd74630af86a998408a910ecbb5240a6f29ee1df410ee26749ed64bddd822"
+    }
+  ],
+  "changed_test_files": [
+    {
+      "path": "tests/test_api.py",
+      "sha256": "3536d3a850e6e636e2cb053b1ac4f276df60a9c32046e8945f0523a7c054a43d"
+    },
+    {
+      "path": "tests/test_api_review.py",
+      "sha256": "d2bc8c65e20a8bbb3ff9bcf40c35a31e3a15079eb4ffe36df6d193a8bd64eb25"
+    }
+  ],
+  "production_sources": [
+    {
+      "path": "services/api/app/main.py",
+      "sha256": "dc8c71f9c7a8a0bdfa2238a713bb46498de9db6edad9e3a277492ae6ace5b7ec",
+      "unchanged_from_review_input": true
+    },
+    {
+      "path": "services/api/app/review.py",
+      "sha256": "e290028044ed3cdf1b3714e3869c17636956c5a654422c2cf004c5f147e3258c",
+      "unchanged_from_review_input": true
+    },
+    {
+      "path": "services/api/app/storage.py",
+      "sha256": "5c207aeffc2e2aeace618791c2f136b547755bce8a3530445630c0cac6ab284f",
+      "unchanged_from_review_input": true
+    }
+  ],
+  "input_source_prompt_files": [
+    {
+      "name": "review-prompt.txt",
+      "sha256": "da87d792a9aed7b872441dd59f40ce9734432c675fbb95dbf1fb365be5867e61"
+    },
+    {
+      "name": "withdrawal-review-prompt.txt",
+      "sha256": "6b3d5fb9d95be707bf7fc056b73ed31739bc78662ca5538be98368eb5ad68661"
+    }
+  ],
+  "scope": "Fictional engineering fixtures; ordered invalidation window, not general concurrency or clinical validation; no application inference qualification."
+}

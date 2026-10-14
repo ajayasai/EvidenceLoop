@@ -1,0 +1,10 @@
+{
+  "planned": 2,
+  "recorded": 2,
+  "unrecorded": 0,
+  "model_requests": 0,
+  "code_unchanged": true,
+  "token_count_requests": 2,
+  "additional_paid_service_enabled": false,
+  "quality_result": "Run the separate scorer; successful HTTP is not accuracy."
+}

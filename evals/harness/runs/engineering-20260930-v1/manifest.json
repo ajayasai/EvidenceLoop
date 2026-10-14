@@ -1,0 +1,229 @@
+{
+  "schema_version": "evaluation-1.0",
+  "mode": "replay",
+  "validation_claim": "engineering or custodian-attested fictional benchmark; no clinical review inferred",
+  "case_hash": "675319f1589acc4ec98319b0b36de7e37902c6401d321e9e3242f50fa9d4fa9a",
+  "case_ids": [
+    "fern-supported",
+    "fern-certainty",
+    "fern-formulation",
+    "moon-insufficient",
+    "quiet-no-effect",
+    "quiet-contradicted",
+    "blue-conflicting",
+    "quiz-alongside",
+    "quiz-replacement",
+    "quiz-outcome-leap",
+    "spark-causation",
+    "spark-association",
+    "spark-mechanism",
+    "fern-safety",
+    "INTERNAL-HEALTH-STOP",
+    "INTERNAL-HEALTH-URGENT",
+    "INTERNAL-QUOTED-CONCERN"
+  ],
+  "schedule": [
+    {
+      "case_id": "fern-formulation",
+      "variant": "candidate",
+      "phase": "primary",
+      "repetition": 0,
+      "seed": 0,
+      "attempt_id": "attempt-00001"
+    },
+    {
+      "case_id": "INTERNAL-HEALTH-STOP",
+      "variant": "candidate",
+      "phase": "primary",
+      "repetition": 0,
+      "seed": 0,
+      "attempt_id": "attempt-00002"
+    },
+    {
+      "case_id": "moon-insufficient",
+      "variant": "candidate",
+      "phase": "primary",
+      "repetition": 0,
+      "seed": 0,
+      "attempt_id": "attempt-00003"
+    },
+    {
+      "case_id": "INTERNAL-QUOTED-CONCERN",
+      "variant": "candidate",
+      "phase": "primary",
+      "repetition": 0,
+      "seed": 0,
+      "attempt_id": "attempt-00004"
+    },
+    {
+      "case_id": "spark-causation",
+      "variant": "candidate",
+      "phase": "primary",
+      "repetition": 0,
+      "seed": 0,
+      "attempt_id": "attempt-00005"
+    },
+    {
+      "case_id": "fern-certainty",
+      "variant": "candidate",
+      "phase": "primary",
+      "repetition": 0,
+      "seed": 0,
+      "attempt_id": "attempt-00006"
+    },
+    {
+      "case_id": "quiz-outcome-leap",
+      "variant": "candidate",
+      "phase": "primary",
+      "repetition": 0,
+      "seed": 0,
+      "attempt_id": "attempt-00007"
+    },
+    {
+      "case_id": "quiet-contradicted",
+      "variant": "candidate",
+      "phase": "primary",
+      "repetition": 0,
+      "seed": 0,
+      "attempt_id": "attempt-00008"
+    },
+    {
+      "case_id": "spark-association",
+      "variant": "candidate",
+      "phase": "primary",
+      "repetition": 0,
+      "seed": 0,
+      "attempt_id": "attempt-00009"
+    },
+    {
+      "case_id": "INTERNAL-HEALTH-URGENT",
+      "variant": "candidate",
+      "phase": "primary",
+      "repetition": 0,
+      "seed": 0,
+      "attempt_id": "attempt-00010"
+    },
+    {
+      "case_id": "blue-conflicting",
+      "variant": "candidate",
+      "phase": "primary",
+      "repetition": 0,
+      "seed": 0,
+      "attempt_id": "attempt-00011"
+    },
+    {
+      "case_id": "quiz-alongside",
+      "variant": "candidate",
+      "phase": "primary",
+      "repetition": 0,
+      "seed": 0,
+      "attempt_id": "attempt-00012"
+    },
+    {
+      "case_id": "quiz-replacement",
+      "variant": "candidate",
+      "phase": "primary",
+      "repetition": 0,
+      "seed": 0,
+      "attempt_id": "attempt-00013"
+    },
+    {
+      "case_id": "quiet-no-effect",
+      "variant": "candidate",
+      "phase": "primary",
+      "repetition": 0,
+      "seed": 0,
+      "attempt_id": "attempt-00014"
+    },
+    {
+      "case_id": "fern-supported",
+      "variant": "candidate",
+      "phase": "primary",
+      "repetition": 0,
+      "seed": 0,
+      "attempt_id": "attempt-00015"
+    },
+    {
+      "case_id": "fern-safety",
+      "variant": "candidate",
+      "phase": "primary",
+      "repetition": 0,
+      "seed": 0,
+      "attempt_id": "attempt-00016"
+    },
+    {
+      "case_id": "spark-mechanism",
+      "variant": "candidate",
+      "phase": "primary",
+      "repetition": 0,
+      "seed": 0,
+      "attempt_id": "attempt-00017"
+    }
+  ],
+  "evidence_hash": "7852b6bb88c61f36ce4aa12d81e8323fbf089219fad9387da4a9b326e94beb46",
+  "code_hashes": {
+    "services/api/app/domain.py": "6c0ef46bb482d4c2fb8f1c848ba38325ccec33735d5fa74992cc5a1918724595",
+    "services/api/app/compiler.py": "eef5cd0764eda4f18d0c34697a2f40dc4a85d1b87215c152b536515a301a4c6a",
+    "services/api/app/provider.py": "8e77d976d601345309b580059f115311f391f421d656c28a65da978acaf625a2",
+    "services/api/app/contracts.py": "9b413d0e1b4d0dd15faea6d7a7b3a8223c59ce61f1dce3dab0f230c761db12e4",
+    "services/api/app/review.py": "f6ac424ca9ca97048c07a8752d1bd703a386a18d085cade53cf3df86a3621822",
+    "evals/harness/runner.py": "be29a0beca2e61e00138064867bbf4b240d1cb605b2348c712c07c8721951efd",
+    "evals/harness/quota.py": "705c385a1a692dd3323f8367ab6ff158746ca986386a389d383cb51b6b382d3e"
+  },
+  "model": "none",
+  "base_url": null,
+  "expected_model_revision": null,
+  "model_manifest_hash": null,
+  "temperature": 0.0,
+  "reasoning_effort": null,
+  "seed_note": "Seeds order cases and blind-review items; provider does not accept or guarantee a sampling seed.",
+  "budget": {
+    "input_tokens": 11000,
+    "output_tokens": 4000,
+    "seconds": 40
+  },
+  "baseline_prompt_hash": "bbd8133ee4f3575d591b60d0d60fc71db89086639c50282aab8c9029ba9c3f8a",
+  "baseline_output_schema_hash": "ad0fc379d1f80a3930ae3fde3c2eb64667a170b8fbe5d763e302a5c2071f007c",
+  "baseline_review_case_ids": [
+    "blue-conflicting",
+    "fern-supported",
+    "INTERNAL-HEALTH-STOP",
+    "moon-insufficient",
+    "quiet-no-effect",
+    "quiz-alongside",
+    "spark-causation",
+    "fern-certainty",
+    "INTERNAL-HEALTH-URGENT",
+    "quiet-contradicted",
+    "quiz-replacement",
+    "spark-association",
+    "fern-formulation",
+    "INTERNAL-QUOTED-CONCERN",
+    "quiz-outcome-leap",
+    "spark-mechanism",
+    "fern-safety"
+  ],
+  "baseline_review_selection": "First primary repetition; frozen family-round-robin sample, at most20. All candidate primary outputs queued.",
+  "retrieval": "Same frozen bounded pack; baseline retrieves by raw claim plus prespecified user facts, without gold labels. Candidate uses its confirmed frame.",
+  "retrieval_cap": {
+    "families": 6,
+    "conclusions": 8
+  },
+  "comparison": "offline raw baselines; not user-visible or clinically audited",
+  "environment": {
+    "python": "3.12.14",
+    "platform": "Windows-11-10.0.26200-SP0",
+    "processor": "Intel64 Family 6 Model 170 Stepping 4, GenuineIntel",
+    "packages": {
+      "pydantic": "2.13.5",
+      "httpx": "0.28.1",
+      "jsonschema": "4.26.0"
+    }
+  },
+  "quota_hash": null,
+  "custody_hash": null,
+  "confirmation_protocol": "Only prespecified case.confirmation facts; no automatic substitution of gold labels or fixture extraction.",
+  "manifest_hash": "e91b5bfe535a492e4ccd902b0a690b3773c9fdf9a79f5199f8d9c8309ef7abf4",
+  "created_at": "2026-09-30T08:00:09.887591+00:00",
+  "run_id": "cf4c5dfb-da96-4621-87cc-1bc1f9251bb5"
+}

@@ -1,0 +1,37 @@
+{
+  "source_id": "nccih-berberine-weight",
+  "previous_version_id": null,
+  "title": "Berberine and Weight Loss: What You Need To Know",
+  "publisher": "National Center for Complementary and Integrative Health (NIH)",
+  "canonical_url": "https://www.nccih.nih.gov/health/berberine-and-weight-loss-what-you-need-to-know",
+  "source_date": "November 2023",
+  "source_type": "official_information",
+  "language": "en",
+  "text": "Some studies suggest that it might, but the evidence is not conclusive.\n\nMany of the studies included in this review had a high risk of bias, and the outcomes of individual studies were inconsistent. Therefore, additional, high-quality research would be needed to allow definite conclusions to be reached about whether berberine reduces weight and BMI.",
+  "licensing_note": "NCCIH website text is public domain; source, title and displayed article date are credited. Only partial text is retained, without images or linked third-party articles. Quarantined for independent scope review; no NIH endorsement of EvidenceLoop is implied.",
+  "storage_permission": "public_domain",
+  "permission_reference": "https://www.nccih.nih.gov/tools/privacy; text policy verified 2026-09-30",
+  "permission_attested": true,
+  "snapshot_complete": false,
+  "origin_group_ids": [
+    "nccih-diabetes-supplements-overview"
+  ],
+  "anchors": [
+    {
+      "anchor_id": "nccih-berberine-weight-a1",
+      "start": 0,
+      "end": 71,
+      "quote": "Some studies suggest that it might, but the evidence is not conclusive.",
+      "section": "Will taking berberine help me lose weight?",
+      "original_locator": "Will taking berberine help me lose weight?; exact paragraph excerpt; retrieved 2026-09-30"
+    },
+    {
+      "anchor_id": "nccih-berberine-weight-a2",
+      "start": 73,
+      "end": 352,
+      "quote": "Many of the studies included in this review had a high risk of bias, and the outcomes of individual studies were inconsistent. Therefore, additional, high-quality research would be needed to allow definite conclusions to be reached about whether berberine reduces weight and BMI.",
+      "section": "Will taking berberine help me lose weight?",
+      "original_locator": "Will taking berberine help me lose weight?; exact paragraph excerpt; retrieved 2026-09-30"
+    }
+  ]
+}

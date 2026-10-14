@@ -1,0 +1,6 @@
+# Separate optional environment: application replay does not require these.
+onnxruntime==1.30.0
+onnxruntime-genai==0.17.1
+fastapi==0.142.1
+uvicorn==0.54.0
+numpy==2.5.3

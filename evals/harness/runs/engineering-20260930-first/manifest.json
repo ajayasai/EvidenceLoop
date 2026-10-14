@@ -1,0 +1,209 @@
+{
+  "schema_version": "evaluation-1.0",
+  "mode": "replay",
+  "engineering_only": true,
+  "case_hash": "675319f1589acc4ec98319b0b36de7e37902c6401d321e9e3242f50fa9d4fa9a",
+  "case_ids": [
+    "fern-supported",
+    "fern-certainty",
+    "fern-formulation",
+    "moon-insufficient",
+    "quiet-no-effect",
+    "quiet-contradicted",
+    "blue-conflicting",
+    "quiz-alongside",
+    "quiz-replacement",
+    "quiz-outcome-leap",
+    "spark-causation",
+    "spark-association",
+    "spark-mechanism",
+    "fern-safety",
+    "INTERNAL-HEALTH-STOP",
+    "INTERNAL-HEALTH-URGENT",
+    "INTERNAL-QUOTED-CONCERN"
+  ],
+  "schedule": [
+    {
+      "case_id": "fern-formulation",
+      "variant": "candidate",
+      "phase": "primary",
+      "repetition": 0,
+      "seed": 0,
+      "attempt_id": "attempt-00001"
+    },
+    {
+      "case_id": "INTERNAL-HEALTH-STOP",
+      "variant": "candidate",
+      "phase": "primary",
+      "repetition": 0,
+      "seed": 0,
+      "attempt_id": "attempt-00002"
+    },
+    {
+      "case_id": "moon-insufficient",
+      "variant": "candidate",
+      "phase": "primary",
+      "repetition": 0,
+      "seed": 0,
+      "attempt_id": "attempt-00003"
+    },
+    {
+      "case_id": "INTERNAL-QUOTED-CONCERN",
+      "variant": "candidate",
+      "phase": "primary",
+      "repetition": 0,
+      "seed": 0,
+      "attempt_id": "attempt-00004"
+    },
+    {
+      "case_id": "spark-causation",
+      "variant": "candidate",
+      "phase": "primary",
+      "repetition": 0,
+      "seed": 0,
+      "attempt_id": "attempt-00005"
+    },
+    {
+      "case_id": "fern-certainty",
+      "variant": "candidate",
+      "phase": "primary",
+      "repetition": 0,
+      "seed": 0,
+      "attempt_id": "attempt-00006"
+    },
+    {
+      "case_id": "quiz-outcome-leap",
+      "variant": "candidate",
+      "phase": "primary",
+      "repetition": 0,
+      "seed": 0,
+      "attempt_id": "attempt-00007"
+    },
+    {
+      "case_id": "quiet-contradicted",
+      "variant": "candidate",
+      "phase": "primary",
+      "repetition": 0,
+      "seed": 0,
+      "attempt_id": "attempt-00008"
+    },
+    {
+      "case_id": "spark-association",
+      "variant": "candidate",
+      "phase": "primary",
+      "repetition": 0,
+      "seed": 0,
+      "attempt_id": "attempt-00009"
+    },
+    {
+      "case_id": "INTERNAL-HEALTH-URGENT",
+      "variant": "candidate",
+      "phase": "primary",
+      "repetition": 0,
+      "seed": 0,
+      "attempt_id": "attempt-00010"
+    },
+    {
+      "case_id": "blue-conflicting",
+      "variant": "candidate",
+      "phase": "primary",
+      "repetition": 0,
+      "seed": 0,
+      "attempt_id": "attempt-00011"
+    },
+    {
+      "case_id": "quiz-alongside",
+      "variant": "candidate",
+      "phase": "primary",
+      "repetition": 0,
+      "seed": 0,
+      "attempt_id": "attempt-00012"
+    },
+    {
+      "case_id": "quiz-replacement",
+      "variant": "candidate",
+      "phase": "primary",
+      "repetition": 0,
+      "seed": 0,
+      "attempt_id": "attempt-00013"
+    },
+    {
+      "case_id": "quiet-no-effect",
+      "variant": "candidate",
+      "phase": "primary",
+      "repetition": 0,
+      "seed": 0,
+      "attempt_id": "attempt-00014"
+    },
+    {
+      "case_id": "fern-supported",
+      "variant": "candidate",
+      "phase": "primary",
+      "repetition": 0,
+      "seed": 0,
+      "attempt_id": "attempt-00015"
+    },
+    {
+      "case_id": "fern-safety",
+      "variant": "candidate",
+      "phase": "primary",
+      "repetition": 0,
+      "seed": 0,
+      "attempt_id": "attempt-00016"
+    },
+    {
+      "case_id": "spark-mechanism",
+      "variant": "candidate",
+      "phase": "primary",
+      "repetition": 0,
+      "seed": 0,
+      "attempt_id": "attempt-00017"
+    }
+  ],
+  "evidence_hash": "7852b6bb88c61f36ce4aa12d81e8323fbf089219fad9387da4a9b326e94beb46",
+  "code_hashes": {
+    "services/api/app/domain.py": "fd27db8859c9acb2812971b971604680caf7cf33dd4b4624f608dcc3ad1d0d03",
+    "services/api/app/compiler.py": "74f3969d25dc52e7b80385867a06fff25a98f3db7796909446f1cdd74d91a179",
+    "services/api/app/provider.py": "8e77d976d601345309b580059f115311f391f421d656c28a65da978acaf625a2",
+    "services/api/app/contracts.py": "9b413d0e1b4d0dd15faea6d7a7b3a8223c59ce61f1dce3dab0f230c761db12e4",
+    "services/api/app/review.py": "f6ac424ca9ca97048c07a8752d1bd703a386a18d085cade53cf3df86a3621822",
+    "evals/harness/runner.py": "259b2ff1bce9e24caa1f8f5f9d92884f1633b268a806919349826ff3fadd47d9",
+    "evals/harness/quota.py": "30cecfc935acc2a5277ec13d3c90a91fd882ba0dc27e1a32438a18942a28a240"
+  },
+  "model": "none",
+  "base_url": null,
+  "expected_model_revision": null,
+  "model_manifest_hash": null,
+  "temperature": 0.0,
+  "reasoning_effort": null,
+  "seed_note": "Seeds order cases and blind-review items; provider does not accept or guarantee a sampling seed.",
+  "budget": {
+    "input_tokens": 11000,
+    "output_tokens": 4000,
+    "seconds": 40
+  },
+  "baseline_prompt_hash": "bbd8133ee4f3575d591b60d0d60fc71db89086639c50282aab8c9029ba9c3f8a",
+  "baseline_output_schema_hash": "ad0fc379d1f80a3930ae3fde3c2eb64667a170b8fbe5d763e302a5c2071f007c",
+  "retrieval": "Same frozen bounded pack; baseline retrieves by raw claim plus prespecified user facts, without gold labels. Candidate uses its confirmed frame.",
+  "retrieval_cap": {
+    "families": 6,
+    "conclusions": 8
+  },
+  "comparison": "offline raw baselines; not user-visible or clinically audited",
+  "environment": {
+    "python": "3.12.14",
+    "platform": "Windows-11-10.0.26200-SP0",
+    "processor": "Intel64 Family 6 Model 170 Stepping 4, GenuineIntel",
+    "packages": {
+      "pydantic": "2.13.5",
+      "httpx": "0.28.1",
+      "jsonschema": "4.26.0"
+    }
+  },
+  "quota_hash": null,
+  "custody_hash": null,
+  "confirmation_protocol": "Only prespecified case.confirmation facts; no automatic substitution of gold labels or fixture extraction.",
+  "manifest_hash": "a8d12cda72c0baa3063ff509d48638fe0eb3a1fb5384037b0a6bc9ad74547294",
+  "created_at": "2026-09-30T07:53:13.516338+00:00",
+  "run_id": "c5158af0-cd1f-4f7b-b5e2-2813bd612c44"
+}

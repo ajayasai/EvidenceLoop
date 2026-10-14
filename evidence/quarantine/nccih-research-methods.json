@@ -1,0 +1,45 @@
+{
+  "source_id": "nccih-research-methods",
+  "previous_version_id": null,
+  "title": "Know the Science: How To Make Sense of a Scientific Journal Article — Types of Research",
+  "publisher": "National Center for Complementary and Integrative Health (NIH)",
+  "canonical_url": "https://www.nccih.nih.gov/health/know-science/how-to-make-sense-of-a-scientific-journal-article/methods/types-of-research",
+  "source_date": null,
+  "source_type": "official_information",
+  "language": "en",
+  "text": "Detailed information on the type of research or approach used, the study’s design, the participants, the measurements or outcomes recorded, and steps taken to avoid bias.\n\nBasic research: Scientists ask questions about theories or concepts, and test hypotheses to improve scientific knowledge. It’s the first step in any research.\n\nTranslational research: Researchers build on the observations and results of basic research to develop and test new ways to prevent, detect, or treat conditions and diseases.",
+  "licensing_note": "NCCIH website text is public domain; source, title and displayed article date are credited. Only partial text is retained, without images or linked third-party articles. Quarantined for independent scope review; no NIH endorsement of EvidenceLoop is implied.",
+  "storage_permission": "public_domain",
+  "permission_reference": "https://www.nccih.nih.gov/tools/privacy; text policy verified 2026-09-30",
+  "permission_attested": true,
+  "snapshot_complete": false,
+  "origin_group_ids": [
+    "nccih-research-education"
+  ],
+  "anchors": [
+    {
+      "anchor_id": "nccih-research-methods-a1",
+      "start": 0,
+      "end": 170,
+      "quote": "Detailed information on the type of research or approach used, the study’s design, the participants, the measurements or outcomes recorded, and steps taken to avoid bias.",
+      "section": "Methods",
+      "original_locator": "Methods; exact paragraph excerpt; retrieved 2026-09-30"
+    },
+    {
+      "anchor_id": "nccih-research-methods-a2",
+      "start": 172,
+      "end": 330,
+      "quote": "Basic research: Scientists ask questions about theories or concepts, and test hypotheses to improve scientific knowledge. It’s the first step in any research.",
+      "section": "Types of Research",
+      "original_locator": "Types of Research; exact paragraph excerpt; retrieved 2026-09-30"
+    },
+    {
+      "anchor_id": "nccih-research-methods-a3",
+      "start": 332,
+      "end": 506,
+      "quote": "Translational research: Researchers build on the observations and results of basic research to develop and test new ways to prevent, detect, or treat conditions and diseases.",
+      "section": "Types of Research",
+      "original_locator": "Types of Research; exact paragraph excerpt; retrieved 2026-09-30"
+    }
+  ]
+}

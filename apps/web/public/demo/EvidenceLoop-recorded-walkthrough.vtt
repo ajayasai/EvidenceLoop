@@ -1,0 +1,209 @@
+WEBVTT
+
+1
+00:00:00.000 --> 00:00:05.946
+This is a recorded screenshot walkthrough with synthetic narration. A convincing claim can
+
+2
+00:00:05.946 --> 00:00:11.892
+leave a person with an unresolved question: what does this finding actually establish,
+
+3
+00:00:11.892 --> 00:00:17.838
+and what should I ask at my next discussion? EvidenceLoop connects that question
+
+4
+00:00:17.838 --> 00:00:23.783
+to its source and keeps the context available when the person returns. Our
+
+5
+00:00:23.783 --> 00:00:26.985
+focus is Healthcare Challenge 2: long-term self-care.
+
+6
+00:00:30.000 --> 00:00:35.808
+This is a working local engineering prototype. The demonstration uses a fictional fern
+
+7
+00:00:35.808 --> 00:00:41.616
+study, and replay is visibly labeled. It is not a health recommendation or
+
+8
+00:00:41.616 --> 00:00:47.424
+a live model response. We chose this example so you can inspect the
+
+9
+00:00:47.424 --> 00:00:52.786
+behavior without confusing an unfinished clinical evidence library with approved medical advice.
+
+10
+00:00:55.000 --> 00:01:00.991
+First, the user checks what the claim means. The fictional study describes glow
+
+11
+00:01:00.991 --> 00:01:06.983
+water, fern height, seven days and a plain-water comparison. The user's intention is
+
+12
+00:01:06.983 --> 00:01:12.974
+separate from the words of the claim. Confirmation records the meaning to assess;
+
+13
+00:01:12.974 --> 00:01:18.966
+it does not make the claim true. Unstated information can remain unknown instead
+
+14
+00:01:18.966 --> 00:01:21.270
+of becoming an invented detail.
+
+15
+00:01:35.000 --> 00:01:40.927
+The receipt keeps the source and its limits inspectable. A finding about one
+
+16
+00:01:40.927 --> 00:01:46.855
+outcome in one setting does not establish a guarantee for every situation. The
+
+17
+00:01:46.855 --> 00:01:52.782
+interface separates the evidence relationship, coverage and intended action. These are bounded demonstration
+
+18
+00:01:52.782 --> 00:01:58.709
+results. A source passage can show where a statement came from; it cannot
+
+19
+00:01:58.709 --> 00:02:03.725
+by itself prove that every inference or personal action is justified.
+
+20
+00:02:15.000 --> 00:02:20.850
+The next step is an exact question the user can preview. Saving is
+
+21
+00:02:20.850 --> 00:02:26.700
+a separate choice. The screen explains what will be retained, and the save
+
+22
+00:02:26.700 --> 00:02:32.550
+button requires consent. The original pasted text is not stored with the saved
+
+23
+00:02:32.550 --> 00:02:38.399
+record. Now we simulate a later visit. The person chooses to record that
+
+24
+00:02:38.399 --> 00:02:44.249
+they discussed the question. This is labeled a self-report, not verified adherence, improved
+
+25
+00:02:44.249 --> 00:02:46.499
+understanding or a health outcome.
+
+26
+00:03:00.000 --> 00:03:06.111
+A saved answer must not quietly preserve authority after its evidence changes. These
+
+27
+00:03:06.111 --> 00:03:12.221
+captures show the result of withdrawing a fictional source. When the user reopens
+
+28
+00:03:12.221 --> 00:03:18.332
+the saved receipt, the application checks current source status again. The historical record
+
+29
+00:03:18.332 --> 00:03:24.443
+remains inspectable, but the withdrawn dependency blocks relevant new use. This is a
+
+30
+00:03:24.443 --> 00:03:30.554
+synthetic withdrawal exercise, not a real publisher correction or a claim that we
+
+31
+00:03:30.554 --> 00:03:32.434
+automatically monitor medical literature.
+
+32
+00:03:45.000 --> 00:03:51.559
+Ambiguous input should not produce confident advice. This fictional sentence does not identify
+
+33
+00:03:51.559 --> 00:03:58.119
+the people, intervention or outcome. The user can clarify what they mean, or
+
+34
+00:03:58.119 --> 00:04:04.678
+leave it unresolved. The application shows its limits. Our live reader remains disabled
+
+35
+00:04:04.678 --> 00:04:11.237
+because no tested model has passed qualification, so this screen is manual fallback,
+
+36
+00:04:11.237 --> 00:04:13.760
+not a staged AI success.
+
+37
+00:04:15.260 --> 00:04:22.571
+React presents the workflow, FastAPI enforces policy and versions, and PostgreSQL stores consented
+
+38
+00:04:22.571 --> 00:04:29.883
+records and separate evidence-review history. Before save, drafts live in expiring server memory.
+
+39
+00:04:29.883 --> 00:04:37.194
+The optional model can propose structure, but it cannot approve evidence or authorize
+
+40
+00:04:37.194 --> 00:04:44.505
+a write. The application checks quotes, schemas, ownership, consent and current evidence. A
+
+41
+00:04:44.505 --> 00:04:51.816
+local single-process design keeps the prototype small; it does not provide production hosting
+
+42
+00:04:51.816 --> 00:04:53.503
+or cross-device recovery.
+
+43
+00:04:55.260 --> 00:05:02.264
+WorkBuddy contributed genuine development review. Its Hy3 model examined consent and source-withdrawal code
+
+44
+00:05:02.264 --> 00:05:09.269
+and proposed missing negative tests. Codex corrected and implemented the proposals and ran
+
+45
+00:05:09.269 --> 00:05:16.273
+the local checks: forty-four related tests passed. These captures record the contribution and
+
+46
+00:05:16.273 --> 00:05:22.200
+corrections. WorkBuddy did not run the tests or provide clinical approval.
+
+47
+00:05:25.260 --> 00:05:31.759
+The evidence is deliberately specific. At the October thirteenth checkpoint, the Python suite
+
+48
+00:05:31.759 --> 00:05:38.258
+passed four hundred ninety-nine tests plus fifty-one subtests. At that checkpoint, a reader
+
+49
+00:05:38.258 --> 00:05:44.756
+probe matched ten of twelve known regression cases and still failed qualification. We
+
+50
+00:05:44.756 --> 00:05:51.255
+have no clinical validation or measured health benefit. EvidenceLoop demonstrates a way to
+
+51
+00:05:51.255 --> 00:05:57.754
+keep meaning, consent and changing evidence connected. The next proof is reliable reading,
+
+52
+00:05:57.754 --> 00:06:02.253
+independent source review and observed use with fictional tasks.

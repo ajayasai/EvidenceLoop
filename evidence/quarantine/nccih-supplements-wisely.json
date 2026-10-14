@@ -1,0 +1,45 @@
+{
+  "source_id": "nccih-supplements-wisely",
+  "previous_version_id": null,
+  "title": "Using Dietary Supplements Wisely",
+  "publisher": "National Center for Complementary and Integrative Health (NIH)",
+  "canonical_url": "https://www.nccih.nih.gov/health/using-dietary-supplements-wisely",
+  "source_date": "January 2019",
+  "source_type": "official_information",
+  "language": "en",
+  "text": "Supplements you buy from stores or online may differ in important ways from products tested in studies.\n\nDietary supplements may interact with your medications or pose risks if you have certain medical problems or are going to have surgery.\n\nA manufacturer’s use of the term “standardized” (or “verified” or “certified”) does not necessarily guarantee product quality or consistency.",
+  "licensing_note": "NCCIH website text is public domain; source, title and displayed article date are credited. Only partial text is retained, without images or linked third-party articles. Quarantined for independent scope review; no NIH endorsement of EvidenceLoop is implied.",
+  "storage_permission": "public_domain",
+  "permission_reference": "https://www.nccih.nih.gov/tools/privacy; text policy verified 2026-09-30",
+  "permission_attested": true,
+  "snapshot_complete": false,
+  "origin_group_ids": [
+    "nccih-supplement-methodology"
+  ],
+  "anchors": [
+    {
+      "anchor_id": "nccih-supplements-wisely-a1",
+      "start": 0,
+      "end": 103,
+      "quote": "Supplements you buy from stores or online may differ in important ways from products tested in studies.",
+      "section": "What do we know about the effectiveness of dietary supplements?",
+      "original_locator": "What do we know about the effectiveness of dietary supplements?; exact paragraph excerpt; retrieved 2026-09-30"
+    },
+    {
+      "anchor_id": "nccih-supplements-wisely-a2",
+      "start": 105,
+      "end": 240,
+      "quote": "Dietary supplements may interact with your medications or pose risks if you have certain medical problems or are going to have surgery.",
+      "section": "What do we know about the safety of dietary supplements?",
+      "original_locator": "What do we know about the safety of dietary supplements?; exact paragraph excerpt; retrieved 2026-09-30"
+    },
+    {
+      "anchor_id": "nccih-supplements-wisely-a3",
+      "start": 242,
+      "end": 383,
+      "quote": "A manufacturer’s use of the term “standardized” (or “verified” or “certified”) does not necessarily guarantee product quality or consistency.",
+      "section": "What the Science Says About the Safety and Side Effects of Dietary Supplements",
+      "original_locator": "What the Science Says About the Safety and Side Effects of Dietary Supplements; exact paragraph excerpt; retrieved 2026-09-30"
+    }
+  ]
+}

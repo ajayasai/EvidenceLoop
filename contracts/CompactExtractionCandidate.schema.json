@@ -1,0 +1,139 @@
+{
+  "$defs": {
+    "CompactExtractedField": {
+      "additionalProperties": false,
+      "properties": {
+        "name": {
+          "enum": [
+            "population",
+            "condition_context",
+            "intervention",
+            "comparator",
+            "measured_outcome",
+            "claimed_clinical_outcome",
+            "mechanism",
+            "safety_outcome",
+            "formulation",
+            "dose",
+            "route",
+            "co_intervention",
+            "relation",
+            "polarity",
+            "certainty",
+            "generalization",
+            "attribution_text"
+          ],
+          "title": "Name",
+          "type": "string"
+        },
+        "value": {
+          "maxLength": 160,
+          "minLength": 1,
+          "title": "Value",
+          "type": "string"
+        },
+        "quote": {
+          "maxLength": 600,
+          "minLength": 1,
+          "title": "Quote",
+          "type": "string"
+        },
+        "occurrence": {
+          "anyOf": [
+            {
+              "maximum": 99,
+              "minimum": 0,
+              "type": "integer"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Occurrence"
+        }
+      },
+      "required": [
+        "name",
+        "value",
+        "quote"
+      ],
+      "title": "CompactExtractedField",
+      "type": "object"
+    },
+    "CompactProposition": {
+      "additionalProperties": false,
+      "properties": {
+        "proposition_id": {
+          "maxLength": 100,
+          "minLength": 1,
+          "pattern": "^[A-Za-z0-9_.:-]+$",
+          "title": "Proposition Id",
+          "type": "string"
+        },
+        "speaker": {
+          "enum": [
+            "quoted_source",
+            "user",
+            "unknown"
+          ],
+          "title": "Speaker",
+          "type": "string"
+        },
+        "speech_act": {
+          "enum": [
+            "assertion",
+            "question",
+            "reported_assertion"
+          ],
+          "title": "Speech Act",
+          "type": "string"
+        },
+        "fields": {
+          "items": {
+            "$ref": "#/$defs/CompactExtractedField"
+          },
+          "maxItems": 17,
+          "minItems": 1,
+          "title": "Fields",
+          "type": "array"
+        }
+      },
+      "required": [
+        "proposition_id",
+        "speaker",
+        "speech_act",
+        "fields"
+      ],
+      "title": "CompactProposition",
+      "type": "object"
+    }
+  },
+  "additionalProperties": false,
+  "properties": {
+    "propositions": {
+      "items": {
+        "$ref": "#/$defs/CompactProposition"
+      },
+      "maxItems": 3,
+      "minItems": 1,
+      "title": "Propositions",
+      "type": "array"
+    },
+    "unresolved_fields": {
+      "items": {
+        "maxLength": 160,
+        "minLength": 1,
+        "type": "string"
+      },
+      "maxItems": 40,
+      "title": "Unresolved Fields",
+      "type": "array"
+    }
+  },
+  "required": [
+    "propositions"
+  ],
+  "title": "CompactExtractionCandidate",
+  "type": "object"
+}

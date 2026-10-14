@@ -1,0 +1,45 @@
+{
+  "source_id": "nccih-cinnamon",
+  "previous_version_id": null,
+  "title": "Cinnamon",
+  "publisher": "National Center for Complementary and Integrative Health (NIH)",
+  "canonical_url": "https://www.nccih.nih.gov/health/cinnamon",
+  "source_date": "November 2024",
+  "source_type": "official_information",
+  "language": "en",
+  "text": "There have been many studies of cinnamon, especially for diabetes. However, the results of the studies are difficult to interpret because it’s often unclear which species or part of the cinnamon plant was tested.\n\nIt’s unclear whether cinnamon supplementation is helpful for diabetes or weight loss. Higher quality research would be needed to clarify any benefits.\n\nCinnamon products may not clearly indicate which species (e.g., Ceylon, cassia) or parts (e.g., bark, leaves, roots) of cinnamon have been used in the making of a product.",
+  "licensing_note": "NCCIH website text is public domain; source, title and displayed article date are credited. Only partial text is retained, without images or linked third-party articles. Quarantined for independent scope review; no NIH endorsement of EvidenceLoop is implied.",
+  "storage_permission": "public_domain",
+  "permission_reference": "https://www.nccih.nih.gov/tools/privacy; text policy verified 2026-09-30",
+  "permission_attested": true,
+  "snapshot_complete": false,
+  "origin_group_ids": [
+    "nccih-diabetes-supplements-overview"
+  ],
+  "anchors": [
+    {
+      "anchor_id": "nccih-cinnamon-a1",
+      "start": 0,
+      "end": 212,
+      "quote": "There have been many studies of cinnamon, especially for diabetes. However, the results of the studies are difficult to interpret because it’s often unclear which species or part of the cinnamon plant was tested.",
+      "section": "How Much Do We Know?",
+      "original_locator": "How Much Do We Know?; exact paragraph excerpt; retrieved 2026-09-30"
+    },
+    {
+      "anchor_id": "nccih-cinnamon-a2",
+      "start": 214,
+      "end": 364,
+      "quote": "It’s unclear whether cinnamon supplementation is helpful for diabetes or weight loss. Higher quality research would be needed to clarify any benefits.",
+      "section": "What Have We Learned?",
+      "original_locator": "What Have We Learned?; exact paragraph excerpt; retrieved 2026-09-30"
+    },
+    {
+      "anchor_id": "nccih-cinnamon-a3",
+      "start": 366,
+      "end": 537,
+      "quote": "Cinnamon products may not clearly indicate which species (e.g., Ceylon, cassia) or parts (e.g., bark, leaves, roots) of cinnamon have been used in the making of a product.",
+      "section": "What Do We Know About Safety?",
+      "original_locator": "What Do We Know About Safety?; exact paragraph excerpt; retrieved 2026-09-30"
+    }
+  ]
+}

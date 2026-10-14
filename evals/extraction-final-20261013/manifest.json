@@ -1,0 +1,71 @@
+{
+  "benchmark_id": "fictional-extraction-final-20261013-v1",
+  "version": 1,
+  "frozen_at": "2026-10-13T08:51:48.983515+00:00",
+  "authorship": "Developer-authored by Codex subagent /root/gemini_error_handling; AI-authored inputs and expected labels. No independent human adjudication.",
+  "author_access": "Author previously read original development inputs/labels and authored the first replacement partition. For this partition, the author did not inspect any model outputs, receive exact prior failures, or inspect the current provider prompt. Prior authored material remains known to the author; root is withheld from this new content.",
+  "scope": "One scientific-style fictional nonclinical proposition per input. No treatment, medical efficacy, or clinical decision evaluation.",
+  "partition_counts": {
+    "validation": 12
+  },
+  "files_sha256": {
+    "validation.inputs.jsonl": "ec8b49b92d0c4ce09382003a5042ce85e1c7b03c52d773b4269801637b74e1d4",
+    "validation.labels.jsonl": "ce9e715fcb2074cf5b284f3469a47fdfd93c28cd466aada82cb379c74e7bbd7c",
+    "offline_selftest.py": "27fa671e4ff2daf95047468ac83eed71b974fd8cd0110503cd5fca7f182ca8ac",
+    "offline_integrity.json": "0ef10ed0db8802e18e648dc7d8693427eb8c6410910c27943f73c26f289a49b6"
+  },
+  "novelty": "Fresh fictional inputs vary vocabulary, predicate wording, voice, clause order, source placement and comparison structure. Behavioral families overlap the development curriculum and prior authored material; this is not an independent linguistic distribution.",
+  "validation_protocol": "Final engineering holdout for the current qualification sequence. Keep inputs/labels hidden from root prompt tuning. Freeze model revision, provider prompt, schemas, decoding, budgets and runtime source hashes before running all twelve cases once. Only input text and explicit intent may be supplied to the model. Once results or labels inform changes, this partition is regression-only, and its gate outcome must not be relabeled as unseen performance.",
+  "prior_partition_status": "Original evals/extraction validation and evals/extraction-next-20261013 were inspected by root after their runs and are regression-only. Their failures are retained; no prior labels or gates were changed by this authorship task.",
+  "status": "Frozen before any model execution; offline integrity and fabricated gold-shaped controls are separate from model results.",
+  "required_metrics": [
+    "known_field_accuracy",
+    "unknown_field_preservation",
+    "critical_field_errors",
+    "exact_case_success",
+    "useful_essential_extraction",
+    "original_span_integrity",
+    "operational_failures",
+    "latency_all_attempts"
+  ],
+  "engineering_gate": {
+    "known_field_accuracy_min": 0.95,
+    "critical_field_errors_max": 0,
+    "invented_unknown_fields_max": 0,
+    "span_integrity_errors_max": 0,
+    "useful_essential_extraction_min": 0.9,
+    "operational_failures_max": 0,
+    "extraction_stage_seconds_max": 10.0
+  },
+  "label_field_names": [
+    "population",
+    "intervention",
+    "measured_outcome",
+    "comparator",
+    "attribution_text",
+    "condition_context",
+    "claimed_clinical_outcome",
+    "mechanism",
+    "safety_outcome",
+    "polarity",
+    "relation",
+    "certainty"
+  ],
+  "label_policy": "Every existing scored field is present, unknown by default unless explicitly supported. Accepted literal variants are contiguous original substrings that preserve meaningful identity and effect qualifiers. One principal proposition per case. Causal wording describes the asserted relation, never establishes causation; questions and reported disagreement do not authorize endorsement inference.",
+  "claim_limit": "Passing these 12 unseen developer-authored nonclinical cases is a small engineering check, not reliability or clinical validation.",
+  "review": {
+    "kind": "Separate AI-agent semantic and literal-boundary review before freeze",
+    "reviewer": "Codex subagent /root/gemini_error_handling/schema_projection_review",
+    "scope": "Only this new corpus and original scorer/manifest; no previous validation, model outputs, provider prompt or source/docs inspected during review.",
+    "blocking_findings": 0,
+    "fields_with_boundary_additions_before_freeze": 2,
+    "independent_human_adjudication": false
+  },
+  "offline_verification": {
+    "script": "offline_selftest.py",
+    "report": "offline_integrity.json",
+    "model_calls": 0,
+    "gold_shaped_predictions_persisted": false,
+    "purpose": "Corpus integrity, requested family coverage, production converter and scorer mechanics using fabricated expected data; not model evaluation."
+  }
+}

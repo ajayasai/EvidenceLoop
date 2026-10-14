@@ -1,0 +1,41 @@
+{
+  "kind": "fictional_extraction_probe",
+  "independent_clinical_review": false,
+  "started_utc": "2026-10-13T08:41:10.313913+00:00",
+  "partition": "validation",
+  "benchmark_id": "fictional-extraction-next-20261013-v1",
+  "model": "gemini-3.5-flash-lite",
+  "base_url": "https://generativelanguage.googleapis.com/v1beta/openai",
+  "reasoning_effort": "low",
+  "temperature": null,
+  "free_verification": "docs/FREE_AI_SETUP_20261013.md",
+  "planned_cases": [
+    "NV01",
+    "NV02",
+    "NV03",
+    "NV04",
+    "NV05",
+    "NV06",
+    "NV07",
+    "NV08",
+    "NV09",
+    "NV10",
+    "NV11",
+    "NV12"
+  ],
+  "input_sha256": "9cf57e5cf6c5ccd0cfa749d2c7959fd96e671816cbdae693df5fe1cd319cf13e",
+  "code_sha256": {
+    "services\\api\\app\\compiler.py": "3f76b68081dce6a29173d7e5d8171d50c1b9d0e3d06faaedcc7abbfe5566fcf9",
+    "services\\api\\app\\provider.py": "b7cb0a5cf75f43a9ca1274942eb22cc49dcfdee22891b8074834814fd80bdf75",
+    "services\\api\\app\\domain.py": "0e95dc745c059f71ddb55dd9ea7959e9df84c891943dd2335c18536c6f21ae7b",
+    "services\\api\\app\\contracts.py": "9b413d0e1b4d0dd15faea6d7a7b3a8223c59ce61f1dce3dab0f230c761db12e4",
+    "services\\api\\app\\gemini.py": "64b0b250c50b0720873b1c731d99be8ec27058c4933badfd3569d6dbf20de84e",
+    "services\\api\\app\\gemini_schema.py": "f0cb0d34316a5401ebcef41c02ac9ef16a69a7b8e4bb1ee13658ae82add0b59e",
+    "services\\api\\app\\slot_extraction.py": "0a0939dab33a8d9f2e595d529b4bde7d2bce831c821ef450e418de7308ae5605",
+    "scripts\\run_extraction_probe.py": "d25f3f8b8b8c69c57a77df002c50e15fde0472a2d3919947a11ce37419feea75"
+  },
+  "pause_seconds": 12,
+  "stage_seconds": 10,
+  "max_model_requests": 24,
+  "automatic_paid_fallback": false
+}

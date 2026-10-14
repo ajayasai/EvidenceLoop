@@ -1,0 +1,28 @@
+{
+  "artifact_kind": "offline_corpus_integrity_and_scorer_selftest",
+  "not_model_results": true,
+  "model_calls": 0,
+  "checked_at": "2026-10-13T08:22:46.600792+00:00",
+  "benchmark_id": "fictional-extraction-next-20261013-v1",
+  "case_count": 12,
+  "corpus_files_sha256": {
+    "validation.inputs.jsonl": "9cf57e5cf6c5ccd0cfa749d2c7959fd96e671816cbdae693df5fe1cd319cf13e",
+    "validation.labels.jsonl": "fd0233884b4a05f4b1fc7a972288414a5d37da1d1ce395fddd23194955cc1f66"
+  },
+  "scorer_sha256": "6164b7a254c557129d52acc5ad781beead378f98573b6c97808269ce0ceb155d",
+  "selftest_sha256": "1b12496e3a4be1e9ecb146a976248a61eff44f2a630beec0787364eedee839ab",
+  "unchanged_engineering_gates": true,
+  "integrity_passed": true,
+  "fabricated_gold_shaped_converter_cases_passed": 12,
+  "fabricated_gold_shaped_scorer_cases_passed": 12,
+  "negative_scorer_controls_passed": [
+    "missing_predictions",
+    "duplicate_predictions",
+    "over_stage_latency",
+    "reversed_negation",
+    "invented_unknown",
+    "corrupted_span"
+  ],
+  "human_adjudication": false,
+  "claim_limit": "Checks authored data consistency, the production converter, and scorer mechanics only. No inference or model performance was measured."
+}

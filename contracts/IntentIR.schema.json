@@ -1,0 +1,484 @@
+{
+  "$defs": {
+    "Provenance": {
+      "additionalProperties": false,
+      "properties": {
+        "kind": {
+          "enum": [
+            "input_span",
+            "user_confirmation",
+            "saved_ref"
+          ],
+          "title": "Kind",
+          "type": "string"
+        },
+        "input_hash": {
+          "anyOf": [
+            {
+              "pattern": "^[a-f0-9]{64}$",
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Input Hash"
+        },
+        "start": {
+          "anyOf": [
+            {
+              "minimum": 0,
+              "type": "integer"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Start"
+        },
+        "end": {
+          "anyOf": [
+            {
+              "minimum": 0,
+              "type": "integer"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "End"
+        },
+        "quote": {
+          "anyOf": [
+            {
+              "maxLength": 600,
+              "minLength": 1,
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Quote"
+        },
+        "confirmation_event_id": {
+          "anyOf": [
+            {
+              "maxLength": 100,
+              "minLength": 1,
+              "pattern": "^[A-Za-z0-9_.:-]+$",
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Confirmation Event Id"
+        },
+        "ref_id": {
+          "anyOf": [
+            {
+              "maxLength": 100,
+              "minLength": 1,
+              "pattern": "^[A-Za-z0-9_.:-]+$",
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Ref Id"
+        }
+      },
+      "required": [
+        "kind"
+      ],
+      "title": "Provenance",
+      "type": "object"
+    },
+    "SemanticField_Annotated_str__FieldInfo_annotation_NoneType__required_True__metadata__MinLen_min_length_1___MaxLen_max_length_160_____": {
+      "additionalProperties": false,
+      "properties": {
+        "state": {
+          "default": "unknown",
+          "enum": [
+            "stated",
+            "unknown",
+            "ambiguous",
+            "not_applicable"
+          ],
+          "title": "State",
+          "type": "string"
+        },
+        "value": {
+          "anyOf": [
+            {
+              "maxLength": 160,
+              "minLength": 1,
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Value"
+        },
+        "provenance": {
+          "items": {
+            "$ref": "#/$defs/Provenance"
+          },
+          "maxItems": 6,
+          "title": "Provenance",
+          "type": "array"
+        },
+        "reason_code": {
+          "anyOf": [
+            {
+              "maxLength": 100,
+              "minLength": 1,
+              "pattern": "^[A-Za-z0-9_.:-]+$",
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Reason Code"
+        }
+      },
+      "title": "SemanticField[Annotated[str, FieldInfo(annotation=NoneType, required=True, metadata=[MinLen(min_length=1), MaxLen(max_length=160)])]]",
+      "type": "object"
+    },
+    "SemanticField_Literal__alongside____instead_of____unrelated___": {
+      "additionalProperties": false,
+      "properties": {
+        "state": {
+          "default": "unknown",
+          "enum": [
+            "stated",
+            "unknown",
+            "ambiguous",
+            "not_applicable"
+          ],
+          "title": "State",
+          "type": "string"
+        },
+        "value": {
+          "anyOf": [
+            {
+              "enum": [
+                "alongside",
+                "instead_of",
+                "unrelated"
+              ],
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Value"
+        },
+        "provenance": {
+          "items": {
+            "$ref": "#/$defs/Provenance"
+          },
+          "maxItems": 6,
+          "title": "Provenance",
+          "type": "array"
+        },
+        "reason_code": {
+          "anyOf": [
+            {
+              "maxLength": 100,
+              "minLength": 1,
+              "pattern": "^[A-Za-z0-9_.:-]+$",
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Reason Code"
+        }
+      },
+      "title": "SemanticField[Literal['alongside', 'instead_of', 'unrelated']]",
+      "type": "object"
+    },
+    "SemanticField_Literal__learn____discuss____start____add____replace____stop____delay____change_dose____prevent____seek_cure____other___": {
+      "additionalProperties": false,
+      "properties": {
+        "state": {
+          "default": "unknown",
+          "enum": [
+            "stated",
+            "unknown",
+            "ambiguous",
+            "not_applicable"
+          ],
+          "title": "State",
+          "type": "string"
+        },
+        "value": {
+          "anyOf": [
+            {
+              "enum": [
+                "learn",
+                "discuss",
+                "start",
+                "add",
+                "replace",
+                "stop",
+                "delay",
+                "change_dose",
+                "prevent",
+                "seek_cure",
+                "other"
+              ],
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Value"
+        },
+        "provenance": {
+          "items": {
+            "$ref": "#/$defs/Provenance"
+          },
+          "maxItems": 6,
+          "title": "Provenance",
+          "type": "array"
+        },
+        "reason_code": {
+          "anyOf": [
+            {
+              "maxLength": 100,
+              "minLength": 1,
+              "pattern": "^[A-Za-z0-9_.:-]+$",
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Reason Code"
+        }
+      },
+      "title": "SemanticField[Literal['learn', 'discuss', 'start', 'add', 'replace', 'stop', 'delay', 'change_dose', 'prevent', 'seek_cure', 'other']]",
+      "type": "object"
+    },
+    "SemanticField_Literal__self____another_person____hypothetical___": {
+      "additionalProperties": false,
+      "properties": {
+        "state": {
+          "default": "unknown",
+          "enum": [
+            "stated",
+            "unknown",
+            "ambiguous",
+            "not_applicable"
+          ],
+          "title": "State",
+          "type": "string"
+        },
+        "value": {
+          "anyOf": [
+            {
+              "enum": [
+                "self",
+                "another_person",
+                "hypothetical"
+              ],
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Value"
+        },
+        "provenance": {
+          "items": {
+            "$ref": "#/$defs/Provenance"
+          },
+          "maxItems": 6,
+          "title": "Provenance",
+          "type": "array"
+        },
+        "reason_code": {
+          "anyOf": [
+            {
+              "maxLength": 100,
+              "minLength": 1,
+              "pattern": "^[A-Za-z0-9_.:-]+$",
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Reason Code"
+        }
+      },
+      "title": "SemanticField[Literal['self', 'another_person', 'hypothetical']]",
+      "type": "object"
+    },
+    "SemanticField_Literal__supports____rejects____uncertain____not_stated___": {
+      "additionalProperties": false,
+      "properties": {
+        "state": {
+          "default": "unknown",
+          "enum": [
+            "stated",
+            "unknown",
+            "ambiguous",
+            "not_applicable"
+          ],
+          "title": "State",
+          "type": "string"
+        },
+        "value": {
+          "anyOf": [
+            {
+              "enum": [
+                "supports",
+                "rejects",
+                "uncertain",
+                "not_stated"
+              ],
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Value"
+        },
+        "provenance": {
+          "items": {
+            "$ref": "#/$defs/Provenance"
+          },
+          "maxItems": 6,
+          "title": "Provenance",
+          "type": "array"
+        },
+        "reason_code": {
+          "anyOf": [
+            {
+              "maxLength": 100,
+              "minLength": 1,
+              "pattern": "^[A-Za-z0-9_.:-]+$",
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Reason Code"
+        }
+      },
+      "title": "SemanticField[Literal['supports', 'rejects', 'uncertain', 'not_stated']]",
+      "type": "object"
+    }
+  },
+  "additionalProperties": false,
+  "properties": {
+    "schema_version": {
+      "const": "IntentIR/1.0",
+      "default": "IntentIR/1.0",
+      "title": "Schema Version",
+      "type": "string"
+    },
+    "intent_id": {
+      "maxLength": 100,
+      "minLength": 1,
+      "pattern": "^[A-Za-z0-9_.:-]+$",
+      "title": "Intent Id",
+      "type": "string"
+    },
+    "version_id": {
+      "maxLength": 100,
+      "minLength": 1,
+      "pattern": "^[A-Za-z0-9_.:-]+$",
+      "title": "Version Id",
+      "type": "string"
+    },
+    "claim_version_id": {
+      "maxLength": 100,
+      "minLength": 1,
+      "pattern": "^[A-Za-z0-9_.:-]+$",
+      "title": "Claim Version Id",
+      "type": "string"
+    },
+    "confirmation_event_id": {
+      "anyOf": [
+        {
+          "maxLength": 100,
+          "minLength": 1,
+          "pattern": "^[A-Za-z0-9_.:-]+$",
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Confirmation Event Id"
+    },
+    "confirmed_at": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Confirmed At"
+    },
+    "action_kind": {
+      "$ref": "#/$defs/SemanticField_Literal__learn____discuss____start____add____replace____stop____delay____change_dose____prevent____seek_cure____other___"
+    },
+    "target": {
+      "$ref": "#/$defs/SemanticField_Annotated_str__FieldInfo_annotation_NoneType__required_True__metadata__MinLen_min_length_1___MaxLen_max_length_160_____"
+    },
+    "current_care_relationship": {
+      "$ref": "#/$defs/SemanticField_Literal__alongside____instead_of____unrelated___"
+    },
+    "timing": {
+      "$ref": "#/$defs/SemanticField_Annotated_str__FieldInfo_annotation_NoneType__required_True__metadata__MinLen_min_length_1___MaxLen_max_length_160_____"
+    },
+    "actor": {
+      "$ref": "#/$defs/SemanticField_Literal__self____another_person____hypothetical___"
+    },
+    "endorsement": {
+      "$ref": "#/$defs/SemanticField_Literal__supports____rejects____uncertain____not_stated___"
+    }
+  },
+  "required": [
+    "intent_id",
+    "version_id",
+    "claim_version_id"
+  ],
+  "title": "IntentIR",
+  "type": "object"
+}

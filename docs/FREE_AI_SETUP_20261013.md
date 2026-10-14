@@ -1,0 +1,26 @@
+# Free AI setup observation — 13 October 2026
+
+The user authorized creating an API key, saving it privately to the local application configuration and using it for bounded fictional-data integration tests.
+
+A separate EvidenceLoop project was created through Google AI Studio. Its Projects row showed **Free tier** and **Set up billing** before and after creating the `EvidenceLoop-local` key. Google's [billing-status documentation](https://ai.google.dev/gemini-api/docs/billing#verify-billing-status) states that **Set up billing** means no billing account is attached. The existing, unrelated project showed **Set up prepay / Prepay required** and was not modified.
+
+The new authorization key is stored only in ignored `.env.ai` for the application's dedicated `EVIDENCELOOP_MODEL_API_KEY` setting. The key was not printed in chat or saved in a screenshot. Private setup screenshots and project identifiers remain under ignored `.runtime/ai-setup`. No payment method, billing account, prepaid credits or automatic recharge was added.
+
+Google's [current pricing](https://ai.google.dev/gemini-api/docs/pricing) lists standard Gemini 3.5 Flash-Lite input and output as free on the free tier. This does not establish model quality. The first working candidate was `gemini-3.5-flash-lite`, with low reasoning and temperature omitted; earlier diagnostics used minimal reasoning and a later regression used medium reasoning. It failed fresh semantic qualification. Model selection was checked against the current pricing, model documentation, authenticated quota dashboard and actual API response.
+
+The authenticated Rate Limit dashboard, with EvidenceLoop selected and All models enabled, showed these quotas with zero recorded usage at setup: Gemini 2.5 Flash Lite **10 RPM / 250K TPM / 20 RPD**; Gemini 2.5 Flash **5 RPM / 250K TPM / 20 RPD**; Gemini 3.1 Flash Lite and Gemini 3.5 Flash Lite each **15 RPM / 250K TPM / 500 RPD**. These are dated observations, not guaranteed future limits; the dashboard warns that usage reporting may lag 15 minutes.
+
+Initial live diagnostics are retained, including failures:
+
+- Two 2.5 Flash-Lite pilot cases stopped at token counting. A separate diagnostic returned HTTP 404 stating that this model is unavailable to new users. The quota listing alone did not establish model availability.
+- Two 3.5 Flash-Lite pilot cases counted successfully but generation returned HTTP 400 for the original structured schema. Additional bounded controls confirmed that a plain response and a minimal schema both work.
+- Inlining local references and removing string constraints still returned HTTP 400. Also removing numeric and array bounds from the wire schema returned HTTP 200. This establishes a working reduced wire format, not the exact offending keyword. The original full schema and domain checks remain authoritative locally.
+- Native protocol controls were not successful and did not replace the compatibility endpoint. One control included an extraneous model body property; a corrected control using the documented new response format was rejected because its MIME type was not accepted by the API. These controls are not evidence of model quality.
+
+Diagnostics use fictional nonclinical text only. Private diagnostic records are under ignored `.runtime/ai-setup`; repeatable pilot artifacts are under `evals/development`. The application remains in replay mode until extraction qualification succeeds. Account setup is not clinical or release approval.
+
+After the Flash-Lite candidate failed fresh semantic validation, stronger free candidates were checked. The same selected unpaid project's All models table showed Gemini 3.8 Flash and Gemini 3.6 Flash each at **5 RPM / 250K TPM / 20 RPD**. Google's [pricing page](https://ai.google.dev/gemini-api/docs/pricing) listed standard Gemini 3.8 Flash input/output as free on the free tier, and the [official compatibility example](https://ai.google.dev/gemini-api/docs/openai#thinking) used it with low reasoning. Each planned pilot stopped after its first generation failed; a separate 3.8 diagnostic returned HTTP 503. Neither candidate reached fresh validation. Gemma 4 31B controls also failed with HTTP 500 and a read timeout. Complete results are in the [dated verification report](AI_EXTRACTION_VERIFICATION_20261013.md).
+
+No model is qualified and live application AI remains disabled. The existing private key and free project are sufficient for later bounded tests; another key or payment is not required to resolve these quality and availability failures. Billing remains unlinked. The dashboard usage figures are delayed and are not used as an authoritative live request counter.
+
+During resumed work on 13 October, the Projects page again showed EvidenceLoop as **Free tier / Set up billing**. No billing setting was changed. Gemini 3.1 Flash-Lite subsequently passed its development partition but failed regression; stronger free-model and extended-time diagnostics also did not qualify. See the dated verification report for counts and results. Event credits supplied in the user's screenshots are separate sponsor-product entitlements; their applicability to programmatic inference has not been verified or redeemed.

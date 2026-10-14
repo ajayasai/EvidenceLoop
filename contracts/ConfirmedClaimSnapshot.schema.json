@@ -1,0 +1,1079 @@
+{
+  "$defs": {
+    "Assumption": {
+      "additionalProperties": false,
+      "properties": {
+        "code": {
+          "maxLength": 100,
+          "minLength": 1,
+          "pattern": "^[A-Za-z0-9_.:-]+$",
+          "title": "Code",
+          "type": "string"
+        },
+        "affected_edge_id": {
+          "maxLength": 100,
+          "minLength": 1,
+          "pattern": "^[A-Za-z0-9_.:-]+$",
+          "title": "Affected Edge Id",
+          "type": "string"
+        },
+        "required_field_paths": {
+          "items": {
+            "maxLength": 160,
+            "minLength": 1,
+            "type": "string"
+          },
+          "maxItems": 8,
+          "title": "Required Field Paths",
+          "type": "array"
+        }
+      },
+      "required": [
+        "code",
+        "affected_edge_id",
+        "required_field_paths"
+      ],
+      "title": "Assumption",
+      "type": "object"
+    },
+    "Concept": {
+      "additionalProperties": false,
+      "properties": {
+        "surface": {
+          "maxLength": 160,
+          "minLength": 1,
+          "title": "Surface",
+          "type": "string"
+        },
+        "concept_id": {
+          "anyOf": [
+            {
+              "maxLength": 100,
+              "minLength": 1,
+              "pattern": "^[A-Za-z0-9_.:-]+$",
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Concept Id"
+        }
+      },
+      "required": [
+        "surface"
+      ],
+      "title": "Concept",
+      "type": "object"
+    },
+    "Magnitude": {
+      "additionalProperties": false,
+      "properties": {
+        "value": {
+          "title": "Value",
+          "type": "number"
+        },
+        "unit": {
+          "maxLength": 160,
+          "minLength": 1,
+          "title": "Unit",
+          "type": "string"
+        },
+        "basis": {
+          "enum": [
+            "absolute",
+            "relative",
+            "unspecified"
+          ],
+          "title": "Basis",
+          "type": "string"
+        }
+      },
+      "required": [
+        "value",
+        "unit",
+        "basis"
+      ],
+      "title": "Magnitude",
+      "type": "object"
+    },
+    "Proposition": {
+      "additionalProperties": false,
+      "properties": {
+        "proposition_id": {
+          "maxLength": 100,
+          "minLength": 1,
+          "pattern": "^[A-Za-z0-9_.:-]+$",
+          "title": "Proposition Id",
+          "type": "string"
+        },
+        "speaker": {
+          "default": "unknown",
+          "enum": [
+            "quoted_source",
+            "user",
+            "unknown"
+          ],
+          "title": "Speaker",
+          "type": "string"
+        },
+        "speech_act": {
+          "default": "assertion",
+          "enum": [
+            "assertion",
+            "question",
+            "reported_assertion"
+          ],
+          "title": "Speech Act",
+          "type": "string"
+        },
+        "attribution_text": {
+          "$ref": "#/$defs/SemanticField_Annotated_str__FieldInfo_annotation_NoneType__required_True__metadata__MinLen_min_length_1___MaxLen_max_length_600_____"
+        },
+        "population": {
+          "$ref": "#/$defs/SemanticField_Concept_"
+        },
+        "condition_context": {
+          "$ref": "#/$defs/SemanticField_Concept_"
+        },
+        "intervention": {
+          "$ref": "#/$defs/SemanticField_Concept_"
+        },
+        "comparator": {
+          "$ref": "#/$defs/SemanticField_Concept_"
+        },
+        "formulation": {
+          "$ref": "#/$defs/SemanticField_Annotated_str__FieldInfo_annotation_NoneType__required_True__metadata__MinLen_min_length_1___MaxLen_max_length_160_____"
+        },
+        "dose": {
+          "$ref": "#/$defs/SemanticField_Annotated_str__FieldInfo_annotation_NoneType__required_True__metadata__MinLen_min_length_1___MaxLen_max_length_160_____"
+        },
+        "route": {
+          "$ref": "#/$defs/SemanticField_Annotated_str__FieldInfo_annotation_NoneType__required_True__metadata__MinLen_min_length_1___MaxLen_max_length_160_____"
+        },
+        "co_intervention": {
+          "$ref": "#/$defs/SemanticField_Annotated_str__FieldInfo_annotation_NoneType__required_True__metadata__MinLen_min_length_1___MaxLen_max_length_160_____"
+        },
+        "measured_outcome": {
+          "$ref": "#/$defs/SemanticField_Concept_"
+        },
+        "claimed_clinical_outcome": {
+          "$ref": "#/$defs/SemanticField_Concept_"
+        },
+        "mechanism": {
+          "$ref": "#/$defs/SemanticField_Concept_"
+        },
+        "safety_outcome": {
+          "$ref": "#/$defs/SemanticField_Concept_"
+        },
+        "magnitude": {
+          "$ref": "#/$defs/SemanticField_Magnitude_"
+        },
+        "timeframe": {
+          "$ref": "#/$defs/SemanticField_Timeframe_"
+        },
+        "generalization": {
+          "$ref": "#/$defs/SemanticField_Literal__subgroup____scoped_population____universal___"
+        },
+        "relation": {
+          "$ref": "#/$defs/SemanticField_Literal__causal____associative____descriptive___"
+        },
+        "certainty": {
+          "$ref": "#/$defs/SemanticField_Literal__possible____probable____asserted____guaranteed___"
+        },
+        "polarity": {
+          "$ref": "#/$defs/SemanticField_Literal__affirmed____negated___"
+        },
+        "negation_scope": {
+          "$ref": "#/$defs/SemanticField_list_Annotated_str__FieldInfo_annotation_NoneType__required_True__metadata__MinLen_min_length_1___MaxLen_max_length_160______"
+        },
+        "claimed_evidence_type": {
+          "$ref": "#/$defs/SemanticField_Annotated_str__FieldInfo_annotation_NoneType__required_True__metadata__MinLen_min_length_1___MaxLen_max_length_160_____"
+        },
+        "claimed_source_type": {
+          "$ref": "#/$defs/SemanticField_Annotated_str__FieldInfo_annotation_NoneType__required_True__metadata__MinLen_min_length_1___MaxLen_max_length_160_____"
+        },
+        "missing_assumptions": {
+          "items": {
+            "$ref": "#/$defs/Assumption"
+          },
+          "maxItems": 8,
+          "title": "Missing Assumptions",
+          "type": "array"
+        }
+      },
+      "required": [
+        "proposition_id"
+      ],
+      "title": "Proposition",
+      "type": "object"
+    },
+    "Provenance": {
+      "additionalProperties": false,
+      "properties": {
+        "kind": {
+          "enum": [
+            "input_span",
+            "user_confirmation",
+            "saved_ref"
+          ],
+          "title": "Kind",
+          "type": "string"
+        },
+        "input_hash": {
+          "anyOf": [
+            {
+              "pattern": "^[a-f0-9]{64}$",
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Input Hash"
+        },
+        "start": {
+          "anyOf": [
+            {
+              "minimum": 0,
+              "type": "integer"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Start"
+        },
+        "end": {
+          "anyOf": [
+            {
+              "minimum": 0,
+              "type": "integer"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "End"
+        },
+        "quote": {
+          "anyOf": [
+            {
+              "maxLength": 600,
+              "minLength": 1,
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Quote"
+        },
+        "confirmation_event_id": {
+          "anyOf": [
+            {
+              "maxLength": 100,
+              "minLength": 1,
+              "pattern": "^[A-Za-z0-9_.:-]+$",
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Confirmation Event Id"
+        },
+        "ref_id": {
+          "anyOf": [
+            {
+              "maxLength": 100,
+              "minLength": 1,
+              "pattern": "^[A-Za-z0-9_.:-]+$",
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Ref Id"
+        }
+      },
+      "required": [
+        "kind"
+      ],
+      "title": "Provenance",
+      "type": "object"
+    },
+    "ProvenanceReference": {
+      "additionalProperties": false,
+      "properties": {
+        "ref_id": {
+          "maxLength": 100,
+          "minLength": 1,
+          "pattern": "^[A-Za-z0-9_.:-]+$",
+          "title": "Ref Id",
+          "type": "string"
+        },
+        "field_path": {
+          "maxLength": 160,
+          "minLength": 1,
+          "title": "Field Path",
+          "type": "string"
+        },
+        "input_hash": {
+          "anyOf": [
+            {
+              "pattern": "^[a-f0-9]{64}$",
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Input Hash"
+        },
+        "start": {
+          "anyOf": [
+            {
+              "minimum": 0,
+              "type": "integer"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Start"
+        },
+        "end": {
+          "anyOf": [
+            {
+              "minimum": 0,
+              "type": "integer"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "End"
+        },
+        "confirmation_event_id": {
+          "anyOf": [
+            {
+              "maxLength": 100,
+              "minLength": 1,
+              "pattern": "^[A-Za-z0-9_.:-]+$",
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Confirmation Event Id"
+        }
+      },
+      "required": [
+        "ref_id",
+        "field_path"
+      ],
+      "title": "ProvenanceReference",
+      "type": "object"
+    },
+    "SemanticField_Annotated_str__FieldInfo_annotation_NoneType__required_True__metadata__MinLen_min_length_1___MaxLen_max_length_160_____": {
+      "additionalProperties": false,
+      "properties": {
+        "state": {
+          "default": "unknown",
+          "enum": [
+            "stated",
+            "unknown",
+            "ambiguous",
+            "not_applicable"
+          ],
+          "title": "State",
+          "type": "string"
+        },
+        "value": {
+          "anyOf": [
+            {
+              "maxLength": 160,
+              "minLength": 1,
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Value"
+        },
+        "provenance": {
+          "items": {
+            "$ref": "#/$defs/Provenance"
+          },
+          "maxItems": 6,
+          "title": "Provenance",
+          "type": "array"
+        },
+        "reason_code": {
+          "anyOf": [
+            {
+              "maxLength": 100,
+              "minLength": 1,
+              "pattern": "^[A-Za-z0-9_.:-]+$",
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Reason Code"
+        }
+      },
+      "title": "SemanticField[Annotated[str, FieldInfo(annotation=NoneType, required=True, metadata=[MinLen(min_length=1), MaxLen(max_length=160)])]]",
+      "type": "object"
+    },
+    "SemanticField_Annotated_str__FieldInfo_annotation_NoneType__required_True__metadata__MinLen_min_length_1___MaxLen_max_length_600_____": {
+      "additionalProperties": false,
+      "properties": {
+        "state": {
+          "default": "unknown",
+          "enum": [
+            "stated",
+            "unknown",
+            "ambiguous",
+            "not_applicable"
+          ],
+          "title": "State",
+          "type": "string"
+        },
+        "value": {
+          "anyOf": [
+            {
+              "maxLength": 600,
+              "minLength": 1,
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Value"
+        },
+        "provenance": {
+          "items": {
+            "$ref": "#/$defs/Provenance"
+          },
+          "maxItems": 6,
+          "title": "Provenance",
+          "type": "array"
+        },
+        "reason_code": {
+          "anyOf": [
+            {
+              "maxLength": 100,
+              "minLength": 1,
+              "pattern": "^[A-Za-z0-9_.:-]+$",
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Reason Code"
+        }
+      },
+      "title": "SemanticField[Annotated[str, FieldInfo(annotation=NoneType, required=True, metadata=[MinLen(min_length=1), MaxLen(max_length=600)])]]",
+      "type": "object"
+    },
+    "SemanticField_Concept_": {
+      "additionalProperties": false,
+      "properties": {
+        "state": {
+          "default": "unknown",
+          "enum": [
+            "stated",
+            "unknown",
+            "ambiguous",
+            "not_applicable"
+          ],
+          "title": "State",
+          "type": "string"
+        },
+        "value": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/Concept"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null
+        },
+        "provenance": {
+          "items": {
+            "$ref": "#/$defs/Provenance"
+          },
+          "maxItems": 6,
+          "title": "Provenance",
+          "type": "array"
+        },
+        "reason_code": {
+          "anyOf": [
+            {
+              "maxLength": 100,
+              "minLength": 1,
+              "pattern": "^[A-Za-z0-9_.:-]+$",
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Reason Code"
+        }
+      },
+      "title": "SemanticField[Concept]",
+      "type": "object"
+    },
+    "SemanticField_Literal__affirmed____negated___": {
+      "additionalProperties": false,
+      "properties": {
+        "state": {
+          "default": "unknown",
+          "enum": [
+            "stated",
+            "unknown",
+            "ambiguous",
+            "not_applicable"
+          ],
+          "title": "State",
+          "type": "string"
+        },
+        "value": {
+          "anyOf": [
+            {
+              "enum": [
+                "affirmed",
+                "negated"
+              ],
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Value"
+        },
+        "provenance": {
+          "items": {
+            "$ref": "#/$defs/Provenance"
+          },
+          "maxItems": 6,
+          "title": "Provenance",
+          "type": "array"
+        },
+        "reason_code": {
+          "anyOf": [
+            {
+              "maxLength": 100,
+              "minLength": 1,
+              "pattern": "^[A-Za-z0-9_.:-]+$",
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Reason Code"
+        }
+      },
+      "title": "SemanticField[Literal['affirmed', 'negated']]",
+      "type": "object"
+    },
+    "SemanticField_Literal__causal____associative____descriptive___": {
+      "additionalProperties": false,
+      "properties": {
+        "state": {
+          "default": "unknown",
+          "enum": [
+            "stated",
+            "unknown",
+            "ambiguous",
+            "not_applicable"
+          ],
+          "title": "State",
+          "type": "string"
+        },
+        "value": {
+          "anyOf": [
+            {
+              "enum": [
+                "causal",
+                "associative",
+                "descriptive"
+              ],
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Value"
+        },
+        "provenance": {
+          "items": {
+            "$ref": "#/$defs/Provenance"
+          },
+          "maxItems": 6,
+          "title": "Provenance",
+          "type": "array"
+        },
+        "reason_code": {
+          "anyOf": [
+            {
+              "maxLength": 100,
+              "minLength": 1,
+              "pattern": "^[A-Za-z0-9_.:-]+$",
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Reason Code"
+        }
+      },
+      "title": "SemanticField[Literal['causal', 'associative', 'descriptive']]",
+      "type": "object"
+    },
+    "SemanticField_Literal__possible____probable____asserted____guaranteed___": {
+      "additionalProperties": false,
+      "properties": {
+        "state": {
+          "default": "unknown",
+          "enum": [
+            "stated",
+            "unknown",
+            "ambiguous",
+            "not_applicable"
+          ],
+          "title": "State",
+          "type": "string"
+        },
+        "value": {
+          "anyOf": [
+            {
+              "enum": [
+                "possible",
+                "probable",
+                "asserted",
+                "guaranteed"
+              ],
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Value"
+        },
+        "provenance": {
+          "items": {
+            "$ref": "#/$defs/Provenance"
+          },
+          "maxItems": 6,
+          "title": "Provenance",
+          "type": "array"
+        },
+        "reason_code": {
+          "anyOf": [
+            {
+              "maxLength": 100,
+              "minLength": 1,
+              "pattern": "^[A-Za-z0-9_.:-]+$",
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Reason Code"
+        }
+      },
+      "title": "SemanticField[Literal['possible', 'probable', 'asserted', 'guaranteed']]",
+      "type": "object"
+    },
+    "SemanticField_Literal__subgroup____scoped_population____universal___": {
+      "additionalProperties": false,
+      "properties": {
+        "state": {
+          "default": "unknown",
+          "enum": [
+            "stated",
+            "unknown",
+            "ambiguous",
+            "not_applicable"
+          ],
+          "title": "State",
+          "type": "string"
+        },
+        "value": {
+          "anyOf": [
+            {
+              "enum": [
+                "subgroup",
+                "scoped_population",
+                "universal"
+              ],
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Value"
+        },
+        "provenance": {
+          "items": {
+            "$ref": "#/$defs/Provenance"
+          },
+          "maxItems": 6,
+          "title": "Provenance",
+          "type": "array"
+        },
+        "reason_code": {
+          "anyOf": [
+            {
+              "maxLength": 100,
+              "minLength": 1,
+              "pattern": "^[A-Za-z0-9_.:-]+$",
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Reason Code"
+        }
+      },
+      "title": "SemanticField[Literal['subgroup', 'scoped_population', 'universal']]",
+      "type": "object"
+    },
+    "SemanticField_Magnitude_": {
+      "additionalProperties": false,
+      "properties": {
+        "state": {
+          "default": "unknown",
+          "enum": [
+            "stated",
+            "unknown",
+            "ambiguous",
+            "not_applicable"
+          ],
+          "title": "State",
+          "type": "string"
+        },
+        "value": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/Magnitude"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null
+        },
+        "provenance": {
+          "items": {
+            "$ref": "#/$defs/Provenance"
+          },
+          "maxItems": 6,
+          "title": "Provenance",
+          "type": "array"
+        },
+        "reason_code": {
+          "anyOf": [
+            {
+              "maxLength": 100,
+              "minLength": 1,
+              "pattern": "^[A-Za-z0-9_.:-]+$",
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Reason Code"
+        }
+      },
+      "title": "SemanticField[Magnitude]",
+      "type": "object"
+    },
+    "SemanticField_Timeframe_": {
+      "additionalProperties": false,
+      "properties": {
+        "state": {
+          "default": "unknown",
+          "enum": [
+            "stated",
+            "unknown",
+            "ambiguous",
+            "not_applicable"
+          ],
+          "title": "State",
+          "type": "string"
+        },
+        "value": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/Timeframe"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null
+        },
+        "provenance": {
+          "items": {
+            "$ref": "#/$defs/Provenance"
+          },
+          "maxItems": 6,
+          "title": "Provenance",
+          "type": "array"
+        },
+        "reason_code": {
+          "anyOf": [
+            {
+              "maxLength": 100,
+              "minLength": 1,
+              "pattern": "^[A-Za-z0-9_.:-]+$",
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Reason Code"
+        }
+      },
+      "title": "SemanticField[Timeframe]",
+      "type": "object"
+    },
+    "SemanticField_list_Annotated_str__FieldInfo_annotation_NoneType__required_True__metadata__MinLen_min_length_1___MaxLen_max_length_160______": {
+      "additionalProperties": false,
+      "properties": {
+        "state": {
+          "default": "unknown",
+          "enum": [
+            "stated",
+            "unknown",
+            "ambiguous",
+            "not_applicable"
+          ],
+          "title": "State",
+          "type": "string"
+        },
+        "value": {
+          "anyOf": [
+            {
+              "items": {
+                "maxLength": 160,
+                "minLength": 1,
+                "type": "string"
+              },
+              "type": "array"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Value"
+        },
+        "provenance": {
+          "items": {
+            "$ref": "#/$defs/Provenance"
+          },
+          "maxItems": 6,
+          "title": "Provenance",
+          "type": "array"
+        },
+        "reason_code": {
+          "anyOf": [
+            {
+              "maxLength": 100,
+              "minLength": 1,
+              "pattern": "^[A-Za-z0-9_.:-]+$",
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Reason Code"
+        }
+      },
+      "title": "SemanticField[list[Annotated[str, FieldInfo(annotation=NoneType, required=True, metadata=[MinLen(min_length=1), MaxLen(max_length=160)])]]]",
+      "type": "object"
+    },
+    "Timeframe": {
+      "additionalProperties": false,
+      "properties": {
+        "value": {
+          "exclusiveMinimum": 0,
+          "maximum": 100000,
+          "title": "Value",
+          "type": "number"
+        },
+        "unit": {
+          "maxLength": 160,
+          "minLength": 1,
+          "title": "Unit",
+          "type": "string"
+        }
+      },
+      "required": [
+        "value",
+        "unit"
+      ],
+      "title": "Timeframe",
+      "type": "object"
+    }
+  },
+  "additionalProperties": false,
+  "properties": {
+    "schema_version": {
+      "const": "ConfirmedClaimSnapshot/1.0",
+      "default": "ConfirmedClaimSnapshot/1.0",
+      "title": "Schema Version",
+      "type": "string"
+    },
+    "claim_id": {
+      "maxLength": 100,
+      "minLength": 1,
+      "pattern": "^[A-Za-z0-9_.:-]+$",
+      "title": "Claim Id",
+      "type": "string"
+    },
+    "version_id": {
+      "maxLength": 100,
+      "minLength": 1,
+      "pattern": "^[A-Za-z0-9_.:-]+$",
+      "title": "Version Id",
+      "type": "string"
+    },
+    "parent_version_id": {
+      "anyOf": [
+        {
+          "maxLength": 100,
+          "minLength": 1,
+          "pattern": "^[A-Za-z0-9_.:-]+$",
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Parent Version Id"
+    },
+    "selected_proposition_id": {
+      "maxLength": 100,
+      "minLength": 1,
+      "pattern": "^[A-Za-z0-9_.:-]+$",
+      "title": "Selected Proposition Id",
+      "type": "string"
+    },
+    "confirmed_proposition": {
+      "$ref": "#/$defs/Proposition"
+    },
+    "confirmed_at": {
+      "title": "Confirmed At",
+      "type": "string"
+    },
+    "confirmation_event_id": {
+      "maxLength": 100,
+      "minLength": 1,
+      "pattern": "^[A-Za-z0-9_.:-]+$",
+      "title": "Confirmation Event Id",
+      "type": "string"
+    },
+    "origin_claim_ir_version": {
+      "maxLength": 100,
+      "minLength": 1,
+      "pattern": "^[A-Za-z0-9_.:-]+$",
+      "title": "Origin Claim Ir Version",
+      "type": "string"
+    },
+    "provenance_refs": {
+      "items": {
+        "$ref": "#/$defs/ProvenanceReference"
+      },
+      "maxItems": 250,
+      "title": "Provenance Refs",
+      "type": "array"
+    },
+    "safety_flags": {
+      "items": {
+        "maxLength": 100,
+        "minLength": 1,
+        "pattern": "^[A-Za-z0-9_.:-]+$",
+        "type": "string"
+      },
+      "maxItems": 30,
+      "title": "Safety Flags",
+      "type": "array"
+    },
+    "mode": {
+      "enum": [
+        "replay",
+        "manual",
+        "live"
+      ],
+      "title": "Mode",
+      "type": "string"
+    }
+  },
+  "required": [
+    "claim_id",
+    "version_id",
+    "selected_proposition_id",
+    "confirmed_proposition",
+    "confirmed_at",
+    "confirmation_event_id",
+    "origin_claim_ir_version",
+    "provenance_refs",
+    "mode"
+  ],
+  "title": "ConfirmedClaimSnapshot",
+  "type": "object"
+}

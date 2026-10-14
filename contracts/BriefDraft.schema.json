@@ -1,0 +1,404 @@
+{
+  "$defs": {
+    "ConflictGroup": {
+      "additionalProperties": false,
+      "properties": {
+        "conflict_id": {
+          "maxLength": 100,
+          "minLength": 1,
+          "title": "Conflict Id",
+          "type": "string"
+        },
+        "conclusion_ids": {
+          "items": {
+            "type": "string"
+          },
+          "maxItems": 8,
+          "minItems": 2,
+          "title": "Conclusion Ids",
+          "type": "array"
+        },
+        "rationale": {
+          "maxLength": 1000,
+          "minLength": 20,
+          "title": "Rationale",
+          "type": "string"
+        }
+      },
+      "required": [
+        "conflict_id",
+        "conclusion_ids",
+        "rationale"
+      ],
+      "title": "ConflictGroup",
+      "type": "object"
+    },
+    "ReviewedAdmission": {
+      "additionalProperties": false,
+      "properties": {
+        "rule_id": {
+          "maxLength": 100,
+          "minLength": 1,
+          "pattern": "^[A-Za-z0-9_.:-]+$",
+          "title": "Rule Id",
+          "type": "string"
+        },
+        "relation": {
+          "enum": [
+            "supports_within_scope",
+            "contradicts_within_scope",
+            "insufficient"
+          ],
+          "title": "Relation",
+          "type": "string"
+        },
+        "predicates": {
+          "items": {
+            "$ref": "#/$defs/ReviewedPredicate"
+          },
+          "maxItems": 18,
+          "minItems": 5,
+          "title": "Predicates",
+          "type": "array"
+        }
+      },
+      "required": [
+        "rule_id",
+        "relation",
+        "predicates"
+      ],
+      "title": "ReviewedAdmission",
+      "type": "object"
+    },
+    "ReviewedConclusion": {
+      "additionalProperties": false,
+      "properties": {
+        "conclusion_id": {
+          "maxLength": 100,
+          "minLength": 1,
+          "pattern": "^[A-Za-z0-9_.:-]+$",
+          "title": "Conclusion Id",
+          "type": "string"
+        },
+        "statement": {
+          "maxLength": 1000,
+          "minLength": 10,
+          "title": "Statement",
+          "type": "string"
+        },
+        "outcome_id": {
+          "maxLength": 100,
+          "minLength": 1,
+          "title": "Outcome Id",
+          "type": "string"
+        },
+        "effect_direction": {
+          "enum": [
+            "benefit",
+            "no_effect",
+            "harm",
+            "mixed",
+            "undetermined"
+          ],
+          "title": "Effect Direction",
+          "type": "string"
+        },
+        "anchor_ids": {
+          "items": {
+            "type": "string"
+          },
+          "maxItems": 16,
+          "minItems": 1,
+          "title": "Anchor Ids",
+          "type": "array"
+        },
+        "limitations": {
+          "items": {
+            "type": "string"
+          },
+          "maxItems": 15,
+          "minItems": 1,
+          "title": "Limitations",
+          "type": "array"
+        },
+        "admissions": {
+          "items": {
+            "$ref": "#/$defs/ReviewedAdmission"
+          },
+          "maxItems": 10,
+          "minItems": 1,
+          "title": "Admissions",
+          "type": "array"
+        },
+        "operator_mappings": {
+          "items": {
+            "$ref": "#/$defs/ReviewedOperator"
+          },
+          "maxItems": 8,
+          "title": "Operator Mappings",
+          "type": "array"
+        },
+        "no_effect_rationale": {
+          "anyOf": [
+            {
+              "maxLength": 1000,
+              "minLength": 10,
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "No Effect Rationale"
+        }
+      },
+      "required": [
+        "conclusion_id",
+        "statement",
+        "outcome_id",
+        "effect_direction",
+        "anchor_ids",
+        "limitations",
+        "admissions"
+      ],
+      "title": "ReviewedConclusion",
+      "type": "object"
+    },
+    "ReviewedOperator": {
+      "additionalProperties": false,
+      "properties": {
+        "operator_id": {
+          "enum": [
+            "L03",
+            "L04",
+            "L05",
+            "L07",
+            "L08",
+            "L09",
+            "L11",
+            "L15"
+          ],
+          "title": "Operator Id",
+          "type": "string"
+        },
+        "predicates": {
+          "items": {
+            "$ref": "#/$defs/ReviewedPredicate"
+          },
+          "maxItems": 15,
+          "minItems": 1,
+          "title": "Predicates",
+          "type": "array"
+        },
+        "reason_code": {
+          "maxLength": 100,
+          "minLength": 1,
+          "pattern": "^[A-Za-z0-9_.:-]+$",
+          "title": "Reason Code",
+          "type": "string"
+        },
+        "explanation": {
+          "maxLength": 600,
+          "minLength": 10,
+          "title": "Explanation",
+          "type": "string"
+        },
+        "anchor_ids": {
+          "items": {
+            "type": "string"
+          },
+          "maxItems": 12,
+          "minItems": 1,
+          "title": "Anchor Ids",
+          "type": "array"
+        }
+      },
+      "required": [
+        "operator_id",
+        "predicates",
+        "reason_code",
+        "explanation",
+        "anchor_ids"
+      ],
+      "title": "ReviewedOperator",
+      "type": "object"
+    },
+    "ReviewedPredicate": {
+      "additionalProperties": false,
+      "properties": {
+        "field_path": {
+          "enum": [
+            "population",
+            "condition_context",
+            "intervention",
+            "comparator",
+            "measured_outcome",
+            "claimed_clinical_outcome",
+            "formulation",
+            "dose",
+            "route",
+            "co_intervention",
+            "relation",
+            "polarity",
+            "certainty",
+            "generalization",
+            "intent.action_kind",
+            "intent.current_care_relationship"
+          ],
+          "title": "Field Path",
+          "type": "string"
+        },
+        "allowed_values": {
+          "items": {
+            "type": "string"
+          },
+          "maxItems": 12,
+          "minItems": 1,
+          "title": "Allowed Values",
+          "type": "array"
+        }
+      },
+      "required": [
+        "field_path",
+        "allowed_values"
+      ],
+      "title": "ReviewedPredicate",
+      "type": "object"
+    },
+    "SourceDependency": {
+      "additionalProperties": false,
+      "properties": {
+        "source_version_id": {
+          "maxLength": 36,
+          "minLength": 36,
+          "title": "Source Version Id",
+          "type": "string"
+        },
+        "role": {
+          "enum": [
+            "supports",
+            "limits",
+            "conflicts",
+            "context"
+          ],
+          "title": "Role",
+          "type": "string"
+        }
+      },
+      "required": [
+        "source_version_id",
+        "role"
+      ],
+      "title": "SourceDependency",
+      "type": "object"
+    }
+  },
+  "additionalProperties": false,
+  "properties": {
+    "family_id": {
+      "maxLength": 100,
+      "minLength": 1,
+      "pattern": "^[A-Za-z0-9_.:-]+$",
+      "title": "Family Id",
+      "type": "string"
+    },
+    "name": {
+      "maxLength": 200,
+      "minLength": 1,
+      "title": "Name",
+      "type": "string"
+    },
+    "intended_population": {
+      "const": "adults_with_type_2_diabetes",
+      "title": "Intended Population",
+      "type": "string"
+    },
+    "language": {
+      "const": "en",
+      "default": "en",
+      "title": "Language",
+      "type": "string"
+    },
+    "intervention_aliases": {
+      "items": {
+        "type": "string"
+      },
+      "maxItems": 12,
+      "minItems": 1,
+      "title": "Intervention Aliases",
+      "type": "array"
+    },
+    "source_dependencies": {
+      "items": {
+        "$ref": "#/$defs/SourceDependency"
+      },
+      "maxItems": 8,
+      "minItems": 1,
+      "title": "Source Dependencies",
+      "type": "array"
+    },
+    "conclusions": {
+      "items": {
+        "$ref": "#/$defs/ReviewedConclusion"
+      },
+      "maxItems": 8,
+      "minItems": 1,
+      "title": "Conclusions",
+      "type": "array"
+    },
+    "conflicts": {
+      "items": {
+        "$ref": "#/$defs/ConflictGroup"
+      },
+      "maxItems": 4,
+      "title": "Conflicts",
+      "type": "array"
+    },
+    "review_due_at": {
+      "maxLength": 40,
+      "minLength": 20,
+      "title": "Review Due At",
+      "type": "string"
+    },
+    "quality_appraisal_label": {
+      "maxLength": 300,
+      "minLength": 5,
+      "title": "Quality Appraisal Label",
+      "type": "string"
+    },
+    "quality_appraisal_method": {
+      "maxLength": 1000,
+      "minLength": 10,
+      "title": "Quality Appraisal Method",
+      "type": "string"
+    },
+    "professional_question": {
+      "maxLength": 600,
+      "minLength": 10,
+      "title": "Professional Question",
+      "type": "string"
+    },
+    "scope_note": {
+      "maxLength": 1500,
+      "minLength": 20,
+      "title": "Scope Note",
+      "type": "string"
+    }
+  },
+  "required": [
+    "family_id",
+    "name",
+    "intended_population",
+    "intervention_aliases",
+    "source_dependencies",
+    "conclusions",
+    "review_due_at",
+    "quality_appraisal_label",
+    "quality_appraisal_method",
+    "professional_question",
+    "scope_note"
+  ],
+  "title": "BriefDraft",
+  "type": "object"
+}

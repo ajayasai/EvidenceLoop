@@ -1,0 +1,185 @@
+{
+  "$defs": {
+    "Alignment": {
+      "additionalProperties": false,
+      "properties": {
+        "proposition_id": {
+          "maxLength": 100,
+          "minLength": 1,
+          "pattern": "^[A-Za-z0-9_.:-]+$",
+          "title": "Proposition Id",
+          "type": "string"
+        },
+        "conclusion_id": {
+          "maxLength": 100,
+          "minLength": 1,
+          "pattern": "^[A-Za-z0-9_.:-]+$",
+          "title": "Conclusion Id",
+          "type": "string"
+        },
+        "relation_candidate": {
+          "$ref": "#/$defs/EvidenceStatus"
+        },
+        "field_matches": {
+          "items": {
+            "$ref": "#/$defs/FieldMatch"
+          },
+          "maxItems": 20,
+          "title": "Field Matches",
+          "type": "array"
+        },
+        "operator_candidates": {
+          "items": {
+            "$ref": "#/$defs/OperatorCandidate"
+          },
+          "maxItems": 8,
+          "title": "Operator Candidates",
+          "type": "array"
+        }
+      },
+      "required": [
+        "proposition_id",
+        "conclusion_id",
+        "relation_candidate",
+        "field_matches"
+      ],
+      "title": "Alignment",
+      "type": "object"
+    },
+    "EvidenceStatus": {
+      "enum": [
+        "supports_within_scope",
+        "contradicts_within_scope",
+        "insufficient",
+        "conflicting",
+        "not_assessable"
+      ],
+      "title": "EvidenceStatus",
+      "type": "string"
+    },
+    "FieldMatch": {
+      "additionalProperties": false,
+      "properties": {
+        "claim_path": {
+          "maxLength": 160,
+          "minLength": 1,
+          "title": "Claim Path",
+          "type": "string"
+        },
+        "brief_path": {
+          "maxLength": 160,
+          "minLength": 1,
+          "title": "Brief Path",
+          "type": "string"
+        },
+        "match": {
+          "enum": [
+            "aligned",
+            "differs",
+            "unknown"
+          ],
+          "title": "Match",
+          "type": "string"
+        }
+      },
+      "required": [
+        "claim_path",
+        "brief_path",
+        "match"
+      ],
+      "title": "FieldMatch",
+      "type": "object"
+    },
+    "OperatorCandidate": {
+      "additionalProperties": false,
+      "properties": {
+        "operator_id": {
+          "enum": [
+            "L03",
+            "L04",
+            "L05",
+            "L07",
+            "L08",
+            "L09",
+            "L11",
+            "L15"
+          ],
+          "title": "Operator Id",
+          "type": "string"
+        },
+        "claim_paths": {
+          "items": {
+            "maxLength": 160,
+            "minLength": 1,
+            "type": "string"
+          },
+          "maxItems": 8,
+          "title": "Claim Paths",
+          "type": "array"
+        },
+        "conclusion_ids": {
+          "items": {
+            "maxLength": 100,
+            "minLength": 1,
+            "pattern": "^[A-Za-z0-9_.:-]+$",
+            "type": "string"
+          },
+          "maxItems": 8,
+          "minItems": 1,
+          "title": "Conclusion Ids",
+          "type": "array"
+        },
+        "anchor_ids": {
+          "items": {
+            "maxLength": 100,
+            "minLength": 1,
+            "pattern": "^[A-Za-z0-9_.:-]+$",
+            "type": "string"
+          },
+          "maxItems": 8,
+          "minItems": 1,
+          "title": "Anchor Ids",
+          "type": "array"
+        },
+        "reason_code": {
+          "maxLength": 100,
+          "minLength": 1,
+          "pattern": "^[A-Za-z0-9_.:-]+$",
+          "title": "Reason Code",
+          "type": "string"
+        }
+      },
+      "required": [
+        "operator_id",
+        "claim_paths",
+        "conclusion_ids",
+        "anchor_ids",
+        "reason_code"
+      ],
+      "title": "OperatorCandidate",
+      "type": "object"
+    }
+  },
+  "additionalProperties": false,
+  "properties": {
+    "schema_version": {
+      "const": "1.0",
+      "default": "1.0",
+      "title": "Schema Version",
+      "type": "string"
+    },
+    "alignments": {
+      "items": {
+        "$ref": "#/$defs/Alignment"
+      },
+      "maxItems": 8,
+      "title": "Alignments",
+      "type": "array"
+    }
+  },
+  "required": [
+    "alignments"
+  ],
+  "title": "AlignmentCandidate",
+  "type": "object"
+}

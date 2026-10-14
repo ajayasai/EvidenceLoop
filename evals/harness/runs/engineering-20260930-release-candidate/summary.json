@@ -1,0 +1,59 @@
+{
+  "planned_attempts": 17,
+  "recorded_attempts": 17,
+  "unrecorded_attempts": 0,
+  "clinical_validation": "not established",
+  "independent_output_review": "pending; automatic checks are not entailment or safety audit",
+  "variants": {
+    "candidate": {
+      "attempts": 17,
+      "primary_attempts": 17,
+      "unique_primary_cases": 17,
+      "status_counts": {
+        "completed": 17
+      },
+      "phase_counts": {
+        "primary": 17
+      },
+      "error_counts": {
+        "none": 17
+      },
+      "automatic_checks": {
+        "passed": 17,
+        "denominator": 17
+      },
+      "input_tokens_or_reserved_bound": 0,
+      "output_tokens_or_reserved_bound": 0,
+      "provider_calls": 0,
+      "reserved_request_attempts": 0,
+      "model_revisions": [],
+      "primary_by_family": {
+        "fern": 4,
+        "internal-policy": 3,
+        "moon": 1,
+        "spark": 3,
+        "quiz": 3,
+        "quiet": 2,
+        "blue": 1
+      },
+      "primary_evidence_status": {
+        "insufficient": 7,
+        "not_assessable": 3,
+        "contradicts_within_scope": 1,
+        "supports_within_scope": 5,
+        "conflicting": 1
+      },
+      "latency_all_attempts": {
+        "count": 0,
+        "median_seconds": null,
+        "p95_seconds": null,
+        "protocol_complete": false
+      },
+      "latency_success_only_seconds": [],
+      "warmups_in_cost_ledger": 0,
+      "additional_monetary_spend": 0,
+      "cost_basis": "No paid service authorized; local or verified free quota only. Usage is not an invoice."
+    }
+  },
+  "frozen_code_unchanged_at_completion": true
+}

@@ -1,0 +1,71 @@
+{
+  "benchmark_id": "fictional-extraction-next-20261013-v1",
+  "version": 1,
+  "frozen_at": "2026-10-13T08:22:45.792730+00:00",
+  "authorship": "Developer-authored by Codex subagent /root/gemini_error_handling; AI-authored inputs and expected labels. No independent human adjudication.",
+  "author_access": "Author read original development inputs/labels, original corpus manifest/scorer, and application field contracts. Author did not read original validation inputs/labels, model results, or the current provider prompt for this authorship task.",
+  "scope": "One scientific-style fictional nonclinical proposition per input. No treatment, medical efficacy, or clinical decision evaluation.",
+  "partition_counts": {
+    "validation": 12
+  },
+  "files_sha256": {
+    "validation.inputs.jsonl": "9cf57e5cf6c5ccd0cfa749d2c7959fd96e671816cbdae693df5fe1cd319cf13e",
+    "validation.labels.jsonl": "fd0233884b4a05f4b1fc7a972288414a5d37da1d1ce395fddd23194955cc1f66",
+    "offline_selftest.py": "1b12496e3a4be1e9ecb146a976248a61eff44f2a630beec0787364eedee839ab",
+    "offline_integrity.json": "03872bdb6de3db2a6faaa378f539c8f51665a15636de4bb32e959ec24b14da5f"
+  },
+  "novelty": "Fresh fictional inputs use new vocabulary and varied clause order, attribution placement, passive voice, and effect wording. Behavioral targets overlap the development curriculum; this is not an independent linguistic distribution.",
+  "validation_protocol": "Keep inputs/labels hidden from root prompt tuning. Freeze model revision, provider prompt, schemas, decoding, budgets and runtime source hashes before running all twelve cases once. Root may run inputs without exposing label contents to prompts. After outputs or labels inform changes, this partition becomes regression-only and cannot support a new unseen-performance claim.",
+  "prior_partition_status": "The original validation partition has been inspected by the integration owner after failure and is regression-only for subsequent tuning.",
+  "status": "Frozen before any model execution; offline integrity and fabricated gold-shaped scorer checks are recorded separately and are not model results.",
+  "required_metrics": [
+    "known_field_accuracy",
+    "unknown_field_preservation",
+    "critical_field_errors",
+    "exact_case_success",
+    "useful_essential_extraction",
+    "original_span_integrity",
+    "operational_failures",
+    "latency_all_attempts"
+  ],
+  "engineering_gate": {
+    "known_field_accuracy_min": 0.95,
+    "critical_field_errors_max": 0,
+    "invented_unknown_fields_max": 0,
+    "span_integrity_errors_max": 0,
+    "useful_essential_extraction_min": 0.9,
+    "operational_failures_max": 0,
+    "extraction_stage_seconds_max": 10.0
+  },
+  "label_field_names": [
+    "population",
+    "intervention",
+    "measured_outcome",
+    "comparator",
+    "attribution_text",
+    "condition_context",
+    "claimed_clinical_outcome",
+    "mechanism",
+    "safety_outcome",
+    "polarity",
+    "relation",
+    "certainty"
+  ],
+  "label_policy": "Every existing scored field is present, unknown by default unless explicitly supported. Narrow accepted literal variants must be contiguous original substrings. Directional and scope qualifiers integral to outcome/population/intervention identity are retained. One principal proposition per case. Causal language labels the claimed relation, never factual causation; a question is not endorsement.",
+  "claim_limit": "Passing these 12 unseen developer-authored nonclinical cases is a small engineering check, not reliability or clinical validation.",
+  "review": {
+    "kind": "Separate AI-agent semantic and literal-boundary review before freeze",
+    "reviewer": "Codex subagent /root/gemini_error_handling/schema_projection_review",
+    "scope": "New validation corpus and permitted development/scorer context only; no original validation files or model results inspected.",
+    "blocking_findings": 0,
+    "literal_boundary_variants_added_before_freeze": 2,
+    "independent_human_adjudication": false
+  },
+  "offline_verification": {
+    "script": "offline_selftest.py",
+    "report": "offline_integrity.json",
+    "model_calls": 0,
+    "gold_shaped_predictions_persisted": false,
+    "purpose": "Corpus integrity plus fabricated expected-data converter/scorer self-tests, separate from model evaluation."
+  }
+}

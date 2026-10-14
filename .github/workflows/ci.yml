@@ -1,0 +1,113 @@
+name: Verify EvidenceLoop
+
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: verify-${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  verify:
+    # Standard public-repository hosted runners are free. Skip private repositories
+    # so a future push cannot exceed a private-account minute allowance.
+    # https://docs.github.com/en/actions/reference/runners/github-hosted-runners
+    if: github.event.repository.private == false
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    services:
+      postgres:
+        image: postgres:17
+        env:
+          POSTGRES_DB: evidenceloop_test
+          POSTGRES_USER: postgres
+          POSTGRES_PASSWORD: ephemeral-ci-admin
+        ports:
+          - 5432:5432
+        options: >-
+          --health-cmd "pg_isready -U postgres -d evidenceloop_test"
+          --health-interval 5s
+          --health-timeout 5s
+          --health-retries 12
+    env:
+      # These credentials exist only in the disposable CI service container.
+      TEST_DATABASE_ADMIN_URL: postgresql://postgres:ephemeral-ci-admin@127.0.0.1:5432/evidenceloop_test
+      TEST_DATABASE_URL: postgresql://evidenceloop_ci_app:ephemeral-ci-app@127.0.0.1:5432/evidenceloop_test
+      DATABASE_URL: postgresql://evidenceloop_ci_app:ephemeral-ci-app@127.0.0.1:5432/evidenceloop_test
+      EVIDENCELOOP_LIVE_ENABLED: "false"
+      EVIDENCELOOP_REVIEW_ACCESS_FILE: ""
+      EVIDENCELOOP_MODEL_API_KEY: ""
+      PYTHONDONTWRITEBYTECODE: "1"
+    steps:
+      - uses: actions/checkout@v7
+        with:
+          persist-credentials: false
+      - uses: actions/setup-python@v7
+        with:
+          python-version: "3.12"
+      - uses: actions/setup-node@v7
+        with:
+          node-version: "24"
+          package-manager-cache: false
+      - name: Install locked Python dependencies
+        run: python -m pip install -r requirements.lock.txt
+      - name: Create non-owner runtime role and verify migrations
+        run: >-
+          python scripts/migrate_db.py
+          --admin-env TEST_DATABASE_ADMIN_URL --app-env TEST_DATABASE_URL
+          --schema ci_bootstrap --create-schema --create-role
+      - name: Verify migration repeatability
+        run: >-
+          python scripts/migrate_db.py
+          --admin-env TEST_DATABASE_ADMIN_URL --app-env TEST_DATABASE_URL
+          --schema ci_bootstrap
+      - name: Python unit and PostgreSQL integration tests
+        run: python -m pytest
+      - name: Install locked frontend dependencies
+        working-directory: apps/web
+        run: npm ci --no-audit --no-fund
+      - name: Frontend tests
+        working-directory: apps/web
+        run: npm test
+      - name: Frontend production build
+        working-directory: apps/web
+        run: npm run build
+      - name: Build public replay container (no registry upload)
+        run: docker build -t evidenceloop-demo:ci .
+      - name: Verify container bootstrap within Free-tier resource limits
+        shell: bash
+        run: |
+          set -euo pipefail
+          trap 'docker rm -f evidenceloop-demo-ci >/dev/null 2>&1 || true' EXIT
+          docker run -d --name evidenceloop-demo-ci --memory=512m --memory-swap=512m --cpus=0.1 \
+            -p 127.0.0.1:17860:7860 -e APP_ORIGIN=https://demo.example.org evidenceloop-demo:ci
+          python - <<'PY'
+          import json, time
+          from urllib.error import URLError
+          from urllib.request import urlopen
+          base = 'http://127.0.0.1:17860/api'
+          deadline = time.monotonic() + 210
+          while time.monotonic() < deadline:
+              try:
+                  with urlopen(base + '/health', timeout=4) as response:
+                      health = json.load(response)
+                  if health['status'] == 'ok' and health['schema_version'] == 2:
+                      break
+              except (URLError, TimeoutError):
+                  time.sleep(2)
+          else:
+              raise SystemExit('Container did not become database-ready within 210 seconds.')
+          with urlopen(base + '/session', timeout=4) as response:
+              cookies = response.headers.get_all('Set-Cookie')
+              session = json.load(response)
+          assert session['public_demo'] and session['synthetic'] and session['storage_resets_on_restart']
+          assert not session['live_available'] and not session['extraction_available']
+          assert len(cookies) == 2 and all('Secure' in cookie and 'HttpOnly' in cookie for cookie in cookies)
+          print('Container health, ephemeral PostgreSQL, public replay and secure cookies verified.')
+          PY
+          docker stats --no-stream --format '{{.MemUsage}}' evidenceloop-demo-ci

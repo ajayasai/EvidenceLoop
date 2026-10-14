@@ -1,0 +1,40 @@
+{
+  "benchmark_id": "fictional-extraction-20260930-v1",
+  "version": 1,
+  "frozen_at": "2026-09-30T14:28:31.778768+00:00",
+  "authorship": "Developer-authored by Codex domain/evaluation agent, including expected labels; no independent human adjudication.",
+  "scope": "One scientific-style fictional nonclinical proposition per input. No treatment, medical efficacy, or clinical decision evaluation.",
+  "partition_counts": {
+    "development": 12,
+    "validation": 12
+  },
+  "files_sha256": {
+    "development.inputs.jsonl": "a96bb1aad6eee2132cdee5f10cfc84cd6c725f8b531f6c791e2e11a75e42751a",
+    "development.labels.jsonl": "4adf666c4bbd6a6031b181c09d5ffbc35ff5102763e8be0b56648b291033094a",
+    "validation.inputs.jsonl": "76339ebe655989a6316a7950985eaa56fbc2cb7859ac9237dbffc585f1f13bb0",
+    "validation.labels.jsonl": "b04ecc4a07e0e79f2a908e36255667a162525050697d54e78cbf2e026b641f7e"
+  },
+  "novelty": "New fictional vocabulary and inputs, distinct from runtime replay fixtures and previous model pilot prompts. Parallel behavioral templates mean the splits are not independent linguistic distributions.",
+  "validation_protocol": "Root and model prompt tuning use development inputs/labels only. Freeze prompt, contract, model revision and decoding before reading validation outputs/labels. Any tuned-after-validation set becomes regression data; create a new set for further unseen validation claims.",
+  "status": "No model has been run against these files at freeze time.",
+  "required_metrics": [
+    "known_field_accuracy",
+    "unknown_field_preservation",
+    "critical_field_errors",
+    "exact_case_success",
+    "useful_essential_extraction",
+    "original_span_integrity",
+    "operational_failures",
+    "latency_all_attempts"
+  ],
+  "engineering_gate": {
+    "known_field_accuracy_min": 0.95,
+    "critical_field_errors_max": 0,
+    "invented_unknown_fields_max": 0,
+    "span_integrity_errors_max": 0,
+    "useful_essential_extraction_min": 0.9,
+    "operational_failures_max": 0,
+    "extraction_stage_seconds_max": 10.0
+  },
+  "claim_limit": "Passing these 12 unseen developer-authored nonclinical cases is a small engineering check, not reliability or clinical validation."
+}

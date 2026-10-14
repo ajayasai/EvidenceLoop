@@ -1,0 +1,81 @@
+{
+  "benchmark_id": "fictional-extraction-challenge-20261013-v1",
+  "version": 1,
+  "frozen_at": "2026-10-13T09:35:41.456322+00:00",
+  "authorship": "Developer-authored by Codex subagent /root/gemini_error_handling; AI-authored inputs and expected labels. No independent human adjudication.",
+  "author_access": "Author inspected original development and original/extraction-next regression failures plus structured-1.11 prompt before challenge authorship. No extraction-final inputs or labels were opened during this task. Root receives no challenge inputs or labels before qualification results.",
+  "scope": "Eight single-proposition fictional nonclinical challenge cases with deliberately varied syntax. No treatment, medical efficacy, or clinical decision evaluation.",
+  "partition_counts": {
+    "validation": 8
+  },
+  "files_sha256": {
+    "validation.inputs.jsonl": "5c3afa09cf184da98cc8bbb7d2584d9215e77394cd93ef1fb486c1b467891e21",
+    "validation.labels.jsonl": "a631c616c52e2fff80af642fb731561a132d5cbea5c0a1f2467994b16b496aa3",
+    "offline_selftest.py": "32e76f5c2c196cf2cf4503fa8f76d0a3726e2a2b4033a71d4f7475f5213bc476",
+    "offline_integrity.json": "08675367c757bef821eee20e6749f88be34e4c1cb2fcbcbc800b3ca9406068a3"
+  },
+  "novelty": "Fresh fictional vocabulary and varied syntax beyond the original parallel sentence templates. Targets were selected after known regression failures; this is a separately frozen engineering challenge, not an independent population sample.",
+  "validation_protocol": "Freeze the provider configuration, model revision, prompt, schema and runtime sources before executing these eight cases. Do not expose labels to model prompts or root prompt tuning before qualification results. Any post-result tuning makes this partition regression-only.",
+  "status": "Frozen after separate AI review and passing offline integrity, fabricated gold-shaped slot-converter/scorer and negative controls. No model execution; inputs and labels withheld from root until qualification results.",
+  "required_metrics": [
+    "known_field_accuracy",
+    "unknown_field_preservation",
+    "critical_field_errors",
+    "exact_case_success",
+    "useful_essential_extraction",
+    "original_span_integrity",
+    "operational_failures",
+    "latency_all_attempts"
+  ],
+  "engineering_gate": {
+    "known_field_accuracy_min": 0.95,
+    "critical_field_errors_max": 0,
+    "invented_unknown_fields_max": 0,
+    "span_integrity_errors_max": 0,
+    "useful_essential_extraction_min": 0.9,
+    "operational_failures_max": 0,
+    "extraction_stage_seconds_max": 10.0
+  },
+  "label_field_names": [
+    "population",
+    "intervention",
+    "measured_outcome",
+    "comparator",
+    "attribution_text",
+    "condition_context",
+    "claimed_clinical_outcome",
+    "mechanism",
+    "safety_outcome",
+    "polarity",
+    "relation",
+    "certainty"
+  ],
+  "label_policy": "All original scored fields are present, unknown by default. Literal boundary variants retain directional and material scope qualifiers. Relation describes the proposed relationship, not established factual causation. Explicit may-or-may-not wording leaves polarity unknown while possibility remains stated. No inferred clinical or user intent fields.",
+  "coverage_categories": [
+    "result-first association with explicit exposure orientation",
+    "sentence-end according-to attribution",
+    "explicit denial versus affirmed decrease/prevention",
+    "absence of evidence with explicitly unresolved affirmation",
+    "unidentified roles in passive wording",
+    "complete question with interrupted predicate and comparator",
+    "untrusted input instruction",
+    "Unicode and repeated-quote occurrence admission"
+  ],
+  "repeated_quote_limit": "The unchanged scorer verifies original span integrity, not whether a valid repeated occurrence is the semantically preferred mention. Offline controls separately verify that repeated quotes require an occurrence and reject out-of-range indices.",
+  "claim_limit": "Passing eight developer-authored nonclinical challenge cases is a small engineering check, not broad reliability or clinical validation.",
+  "review": {
+    "kind": "Separate AI-agent semantic and literal-boundary review before freeze",
+    "reviewer": "Codex subagent /root/gemini_error_handling/schema_projection_review",
+    "scope": "New challenge corpus and unchanged scorer only; no other corpus or model outputs inspected by reviewer.",
+    "changes_before_freeze": "Removed one causal/modality wording ambiguity and added semantically sufficient classification support and source-boundary variants. Final read-only review requested six additional sufficient quote boundaries; all six were added without changing expected field values.",
+    "blocking_findings": 0,
+    "independent_human_adjudication": false
+  },
+  "offline_verification": {
+    "script": "offline_selftest.py",
+    "report": "offline_integrity.json",
+    "model_calls": 0,
+    "gold_shaped_predictions_persisted": false,
+    "purpose": "Corpus integrity and fabricated expected-data converter/scorer controls, separate from model evaluation."
+  }
+}

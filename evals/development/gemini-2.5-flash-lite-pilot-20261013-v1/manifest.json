@@ -1,0 +1,26 @@
+{
+  "kind": "fictional_extraction_probe",
+  "independent_clinical_review": false,
+  "started_utc": "2026-10-13T07:23:14.099188+00:00",
+  "partition": "development",
+  "model": "gemini-2.5-flash-lite",
+  "base_url": "https://generativelanguage.googleapis.com/v1beta/openai",
+  "reasoning_effort": "none",
+  "free_verification": "docs/FREE_AI_SETUP_20261013.md",
+  "planned_cases": [
+    "D01",
+    "D02"
+  ],
+  "input_sha256": "a96bb1aad6eee2132cdee5f10cfc84cd6c725f8b531f6c791e2e11a75e42751a",
+  "code_sha256": {
+    "services\\api\\app\\compiler.py": "6a7f6ea2ca0d4697915aebb10f2b1b669f9ebe3abe9f6d64a087366568557e89",
+    "services\\api\\app\\provider.py": "0b2d9e51692e94214d18a5dfeb427ab478d53ca2f4e6adc3326958206df5228c",
+    "services\\api\\app\\domain.py": "0e95dc745c059f71ddb55dd9ea7959e9df84c891943dd2335c18536c6f21ae7b",
+    "services\\api\\app\\contracts.py": "9b413d0e1b4d0dd15faea6d7a7b3a8223c59ce61f1dce3dab0f230c761db12e4",
+    "services\\api\\app\\gemini.py": "30d174fe66546366a00848625de1c014205e53a78cacabb58361313c4c516c10"
+  },
+  "pause_seconds": 20.0,
+  "stage_seconds": 10,
+  "max_model_requests": 4,
+  "automatic_paid_fallback": false
+}

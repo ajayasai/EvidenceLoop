@@ -1,0 +1,16 @@
+# Candidate configuration only; creating a service still requires user approval.
+# Explicit free plan is essential: never omit it or attach a paid disk/database.
+services:
+  - type: web
+    name: evidenceloop-demo
+    runtime: docker
+    plan: free
+    region: singapore
+    dockerfilePath: ./Dockerfile
+    dockerContext: .
+    healthCheckPath: /api/health
+    envVars:
+      - key: PORT
+        value: "10000"
+      - key: EVIDENCELOOP_PUBLIC_DEMO
+        value: "true"
