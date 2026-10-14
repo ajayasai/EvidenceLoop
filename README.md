@@ -1,8 +1,18 @@
 # EvidenceLoop
 
-EvidenceLoop separates a claim, its supporting evidence and the action someone is considering. The local application takes a claim through explicit confirmation, a bounded evidence receipt, a saved question and a later self-reported check-in.
+EvidenceLoop separates a claim, its supporting evidence and the action someone is considering. It takes a claim through explicit confirmation, a bounded evidence receipt, a saved question and a later self-reported check-in.
 
-**The local engineering build is runnable; live AI is disabled and no candidate is qualified.** The working library consists of clearly fictional, nonclinical mechanism examples. Clinical evidence and live-model release gates remain pending; no clinical validation is claimed. The strict additional-spending budget is zero.
+**The local build and public guided demonstration are working; live AI is disabled and no candidate is qualified.** The working library consists of clearly fictional, nonclinical mechanism examples. Clinical evidence and live-model release gates remain pending; no clinical validation is claimed. The strict additional-spending budget is zero.
+
+## Public demonstration
+
+- [Open the guided fictional demo](https://evidenceloop-aj-001.onrender.com/).
+- [Watch the captioned walkthrough](https://evidenceloop-aj-001.onrender.com/demo-video.html).
+- [Inspect the public source](https://github.com/ajayasai/EvidenceLoop).
+
+The Singapore Render service uses Free compute (0.1 CPU, 512 MB), with no card, model key, paid disk or external database. It accepts the supplied fictional examples, disables live AI and reviewer controls, and keeps saved steps private to the browser. The free service can sleep; saved demo records disappear on sleep, restart or redeployment. Use no personal or health information. The walkthrough explicitly uses static captures and synthetic narration.
+
+The external HTTPS flow through confirmation, source assessment, consent, save and a **Done · self-reported** check-in passed on 14 October. The video played with visible captions. [Linux CI](https://github.com/ajayasai/EvidenceLoop/actions/runs/38530016145) passed 599 backend tests plus 51 subtests, 35 frontend tests, the production build and Docker startup under the free resource limits. CI tested commit `f51c7641a22b09a0b976462f3bdd102fef017341`; the live service runs `6f1b125f20f9d49bdba2cccb2b2ea4ef67002d91`, with identical application/container code. The intervening change fixes only the readiness probe. Automatic deployment is off. See [hosting verification](docs/FREE_HOSTING_20261014.md) for the exact limits and observations.
 
 ## Run on this Windows computer
 
@@ -25,7 +35,7 @@ On other operating systems, use an existing PostgreSQL instance and set separate
 - Saves only the selected normalized claim, minimized provenance, receipt, approved question and explicit consent.
 - Uses PostgreSQL transactions, owner-bound cookies, CSRF checks, idempotency keys and optimistic versions.
 - Rechecks evidence trust on display, save and check-in. Withdrawing a source prevents old receipts from authorizing new actions.
-- Provides a clearly separate synthetic reviewer workspace, self-report check-ins, transfer exercise and deletion.
+- Provides a clearly separate local synthetic reviewer workspace, self-report check-ins, transfer exercise and deletion. Reviewer access is disabled on the public demo.
 - Provides source quarantine, independent reviewer authorization, immutable review decisions, publication and operational withdrawal for a future qualified clinical library.
 
 Replay and manual modes are explicitly identified. A bounded Gemini integration, native token counter and local ONNX inference server are implemented. A separate unpaid Google project and private local key were verified on 13 October 2026, but the tested models did not qualify. Gemini 3.1 and 3.5 Flash-Lite failed semantic checks; stronger Flash and Gemma probes encountered service errors, timeouts or unresolved semantic errors. The adapter now includes one bounded transient recovery and an optional rolling request cap. See the [dated AI verification report](docs/AI_EXTRACTION_VERIFICATION_20261013.md) for individual results. Neither extraction nor alignment is enabled.
@@ -52,12 +62,12 @@ The separate `EDITOR_TOKEN` opens the quarantine workspace. Six partial public-d
 
 The [local verification record](docs/VERIFICATION.md) preserves executed tests, build checks and engineering replay results at their recorded checkpoints. These passed checks do not establish clinical safety or live-model quality.
 
-Run `.venv/Scripts/python.exe -m pytest`. API integration tests create a unique temporary schema in the project PostgreSQL database and remove that exact schema afterward. No user application records are deleted by tests. For portable tests, set both `TEST_DATABASE_ADMIN_URL` and `TEST_DATABASE_URL`; CI fails rather than silently skipping these tests. Domain tests cover semantic states and safety boundaries; provider tests cover budgets, schema errors, quotas and failure behavior. Run `npm test` and `npm run build` in `apps/web` for interface verification. The prepared GitHub Actions workflow skips private repositories to protect the $0 constraint; it has not run remotely.
+Run `.venv/Scripts/python.exe -m pytest`. API integration tests create a unique temporary schema in the project PostgreSQL database and remove that exact schema afterward. No user application records are deleted by tests. For portable tests, set both `TEST_DATABASE_ADMIN_URL` and `TEST_DATABASE_URL`; CI fails rather than silently skipping these tests. Domain tests cover semantic states and safety boundaries; provider tests cover budgets, schema errors, quotas and failure behavior. Run `npm test` and `npm run build` in `apps/web` for interface verification. The GitHub Actions workflow skips private repositories to protect the $0 constraint; the linked public Linux run passed.
 
 See [build status](docs/BUILD_STATUS.md), [architecture](docs/ARCHITECTURE.md), [demo runbook](docs/DEMO_RUNBOOK.md), [evaluation runbook](docs/EVALUATION_RUNBOOK.md), [free inference notes](docs/FREE_INFERENCE.md) and the [original implementation plan](docs/planning/IMPLEMENTATION_PLAN.md). Actual results and remaining release gates are recorded separately from planned thresholds.
 
 ## Data and limits
 
-Use synthetic data while the project is under development. Unsaved drafts expire after 30 minutes of inactivity or two hours total, with a scheduled cleanup check every minute. Saved cases expire after 30 days of inactivity; seven-day operational audit records contain event IDs, not raw prompts. Immutable evidence-review records have a separate lifecycle and contain no end-user claims. This is a single-process local application. Anonymous browser ownership does not provide cross-device account recovery. Clearing the ownership cookie loses access to saved cases until expiry; no public deployment or backup policy is implied.
+Use synthetic data while the project is under development. Unsaved drafts expire after 30 minutes of inactivity or two hours total, with a scheduled cleanup check every minute. Saved cases expire after 30 days of inactivity, or sooner when the public free service sleeps, restarts or is redeployed; seven-day operational audit records contain event IDs, not raw prompts. Immutable local evidence-review records have a separate lifecycle and contain no end-user claims. Each application instance is a single process. Anonymous browser ownership does not provide cross-device account recovery. Clearing the ownership cookie loses access to saved cases until expiry. The public demo has no persistent disk or backup service.
 
-Genuine WorkBuddy development review and four inspected evidence captures are complete. The [submission materials](docs/submission/README.md) include an editable deck, recorded screenshot walkthrough, captions, cover and entry copy for AJ_001. Entry eligibility, final contact details, judge-accessible publication and submission remain separate from the local assets. Clinical use and live AI still require their own outstanding review and evaluation.
+Genuine WorkBuddy development review and four inspected evidence captures are complete. The [submission materials](docs/submission/README.md) include an editable deck, recorded screenshot walkthrough, captions, cover and entry copy for AJ_001. Public source and demo/video publication are complete. Organizer eligibility, final form review and submission remain separate; the final Submit action is reserved for the user. Clinical use and live AI still require their own outstanding review and evaluation.

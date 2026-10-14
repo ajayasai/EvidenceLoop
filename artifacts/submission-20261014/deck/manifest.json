@@ -1,0 +1,101 @@
+{
+  "prepared_date": "2026-10-14",
+  "title": "EvidenceLoop",
+  "entry_identifier": "AJ_001",
+  "team_size": 1,
+  "institution": "NTU",
+  "presentation_scope": "Recorded screenshot walkthrough of fictional replay/manual engineering prototype. Live AI and clinical qualifications remain open.",
+  "slide_count": 10,
+  "total_narration_seconds": 360,
+  "revision": 2,
+  "supersedes": "EvidenceLoop-judging-deck.pptx",
+  "artifacts": [
+    {
+      "path": "artifacts/submission-20261014/deck/EvidenceLoop-judging-deck-v2.pptx",
+      "bytes": 455581,
+      "sha256": "285feebd0467cd9c361fcf223c03c1101adc756317e98af15ae45123fcc042a2"
+    },
+    {
+      "path": "artifacts/submission-20261014/cover.png",
+      "bytes": 51994,
+      "sha256": "8af49ffb386248311ff319be6acf22739bbcb2a183577b37fe00b20b67e9871e",
+      "width": 1280,
+      "height": 720
+    },
+    {
+      "path": "artifacts/submission-20261014/deck/slides.json",
+      "bytes": 7659,
+      "sha256": "15faa07b3991d5cae43f38bd9eb14cf003556a03ddc9b5437575223cf3b5574c"
+    },
+    {
+      "path": "artifacts/submission-20261014/deck/slides/slide-01.png",
+      "bytes": 51994,
+      "sha256": "8af49ffb386248311ff319be6acf22739bbcb2a183577b37fe00b20b67e9871e",
+      "width": 1280,
+      "height": 720
+    },
+    {
+      "path": "artifacts/submission-20261014/deck/slides/slide-02.png",
+      "bytes": 219702,
+      "sha256": "2e18757027a234f77f44bf66eebf17e690f959b9fa05eec7d3e39929fe9faa3c",
+      "width": 1280,
+      "height": 720
+    },
+    {
+      "path": "artifacts/submission-20261014/deck/slides/slide-03.png",
+      "bytes": 206499,
+      "sha256": "48b8a88387a30c0749655d101fb7eea6ef5011f6217f9953ec92e43d705f8cd2",
+      "width": 1280,
+      "height": 720
+    },
+    {
+      "path": "artifacts/submission-20261014/deck/slides/slide-04.png",
+      "bytes": 165221,
+      "sha256": "2efe96882b7ca618e0a37c0cc4783dcb58c85bd0df9031e761cc5004eb8f2a4f",
+      "width": 1280,
+      "height": 720
+    },
+    {
+      "path": "artifacts/submission-20261014/deck/slides/slide-05.png",
+      "bytes": 191830,
+      "sha256": "bd779a981e806aff3ec97665e42fdcc808fc89b14f966d366836f8aad85bd8b4",
+      "width": 1280,
+      "height": 720
+    },
+    {
+      "path": "artifacts/submission-20261014/deck/slides/slide-06.png",
+      "bytes": 200326,
+      "sha256": "083636015b195b3c1427985dcc3e4996b902b3a0fcc990abc2453b136e359911",
+      "width": 1280,
+      "height": 720
+    },
+    {
+      "path": "artifacts/submission-20261014/deck/slides/slide-07.png",
+      "bytes": 235779,
+      "sha256": "8f81501b84c51f349917daf7fef972ca49690e92b86f3e6e6413a8ef7647e225",
+      "width": 1280,
+      "height": 720
+    },
+    {
+      "path": "artifacts/submission-20261014/deck/slides/slide-08.png",
+      "bytes": 75321,
+      "sha256": "cb784568555165090b3d0fbd57d72706f7d0151daab9fb4299bc717503fb64fe",
+      "width": 1280,
+      "height": 720
+    },
+    {
+      "path": "artifacts/submission-20261014/deck/slides/slide-09.png",
+      "bytes": 132315,
+      "sha256": "f98fc0c8388ed810e8f9debd7230fcacc9d8c501c9c725c8aeefebd5689e6db9",
+      "width": 1280,
+      "height": 720
+    },
+    {
+      "path": "artifacts/submission-20261014/deck/slides/slide-10.png",
+      "bytes": 73599,
+      "sha256": "d17822343c0a1a8daaf9734c55bfdcd4c0f93a106f64da946a70983b4d5b2526",
+      "width": 1280,
+      "height": 720
+    }
+  ]
+}

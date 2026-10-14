@@ -1,4 +1,5 @@
-# Candidate configuration only; creating a service still requires user approval.
+# Approved free deployment reference. The live manually created service is
+# evidenceloop-aj-001 in Singapore; its automatic deployment is off.
 # Explicit free plan is essential: never omit it or attach a paid disk/database.
 services:
   - type: web

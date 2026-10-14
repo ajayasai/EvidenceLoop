@@ -3,7 +3,7 @@
   "audit_scope": "Known local credentials and explicit paths only; not a universal secret or personal-information detector. Sponsor screenshots are the four previously reviewed captures.",
   "evaluation_scope": "Included original/development and next partitions are developer-authored fictional regression material. Final/challenge inputs and gold labels, raw prediction logs and private review keys are excluded. Metadata and summary scores do not constitute clinical validation.",
   "excluded": "Private .env and runtime files, dependencies, caches, models, downloaded PDFs, generated deck/other media binaries, sealed inputs/labels and raw evaluation predictions. The explicitly selected public demo video, cover and captions are included.",
-  "file_count": 281,
+  "file_count": 283,
   "files": [
     {
       "bytes": 634,
@@ -16,9 +16,9 @@
       "sha256": "34d0e105bf67f15576ea5328d618135c7521c8fd070869910dba8c6d3a179931"
     },
     {
-      "bytes": 4724,
+      "bytes": 5046,
       "path": ".github/workflows/ci.yml",
-      "sha256": "ac7e05e19efe80643ef3d064224a05f977fce01d08a472e77108d96974bef29b"
+      "sha256": "364225f8bcb98324c820c01a116e1fef0514ef8500a6d2b82f4f2222588c5514"
     },
     {
       "bytes": 186,
@@ -26,9 +26,9 @@
       "sha256": "dfcc650926165c68bd12ec0f9d2768f04973cb00876c5feb434f9b55d5309327"
     },
     {
-      "bytes": 1530,
+      "bytes": 1934,
       "path": "AGENTS.md",
-      "sha256": "e34e4f07ca68d7ad3ecce87e8e9ae181f597a9aac057161869fb024c07b69e3e"
+      "sha256": "577cc1a099bd2123a03d337d1f0c72e0a47b3ee72db4264d8ad19e272be04df3"
     },
     {
       "bytes": 1361,
@@ -36,9 +36,9 @@
       "sha256": "939e2900283fcde6ab8bcd8746e21a7a36377a097d9bd579197497fd4ffe9917"
     },
     {
-      "bytes": 10007,
+      "bytes": 11685,
       "path": "README.md",
-      "sha256": "b5f241783d4d3775e609caa5c0d2ea54adc192e56833687ce8113cf0f1348bdb"
+      "sha256": "ae6a60cc03d3e1d15d3eeee88c3c9b7a0c68daa2494eb0cd122b1b4647594361"
     },
     {
       "bytes": 605,
@@ -241,9 +241,9 @@
       "sha256": "5ca0ae093149d26fc27ba41d6f0454772ee8f0e5c46556f1e0a05c751ab13f05"
     },
     {
-      "bytes": 14243,
+      "bytes": 15787,
       "path": "docs/BUILD_STATUS.md",
-      "sha256": "4f537b78099e1de4834553296861c3a21348d2fcaa94e24e228e103f7b080ac8"
+      "sha256": "236dbe78e4d71c3d8d01a8c0eed5752d68618a6ee1d41fac8ebba0ac55493b3d"
     },
     {
       "bytes": 9587,
@@ -251,9 +251,9 @@
       "sha256": "f295865338392d0b3e53cfec427855dc64e7bad2786b994ac964abd5e900b61a"
     },
     {
-      "bytes": 7482,
+      "bytes": 8994,
       "path": "docs/DEPLOYMENT.md",
-      "sha256": "402e01aae7262d94406f9c52283cd22808b351c76954cc1cbfa8b34f2d8178b4"
+      "sha256": "93b17d17b86be0ee57d04e53fb356aee6df03b29e2a918936834661b107df887"
     },
     {
       "bytes": 11590,
@@ -271,9 +271,9 @@
       "sha256": "bfcbed61e1be460813b1494c446f3da2578da25eb5efaaee181cb11cfc8d047e"
     },
     {
-      "bytes": 3910,
+      "bytes": 5719,
       "path": "docs/FREE_HOSTING_20261014.md",
-      "sha256": "ce76159d0123d3187f557ca538fac31346c02d0e0c12eaf436be97b19a265195"
+      "sha256": "6c0011f11f000472cd28b4c4966e917b8eb61867c099b4c9739b11a7b4b24656"
     },
     {
       "bytes": 25150,
@@ -281,14 +281,24 @@
       "sha256": "227ff165d2e6951690ce90abf9074acede2439a703da90d69b32d4c6517359f3"
     },
     {
+      "bytes": 3983,
+      "path": "docs/PUBLIC_API_VERIFICATION_20261014.md",
+      "sha256": "1aef71d9f430e18d037bcbac42b46f079527d46350f53dcfae21c81e62be9c52"
+    },
+    {
+      "bytes": 3090,
+      "path": "docs/PUBLIC_BROWSER_VERIFICATION_20261014.md",
+      "sha256": "2dca3e4774960e8e4581d75a866fc6b4b91ae75940a36caf5968722889883b15"
+    },
+    {
       "bytes": 7743,
       "path": "docs/REVIEW_WORKFLOW.md",
       "sha256": "1ab342d43135299bd8078c342f1f830d071e102f8ac2f7a6a9909c7839839f12"
     },
     {
-      "bytes": 14517,
+      "bytes": 18237,
       "path": "docs/VERIFICATION.md",
-      "sha256": "28b85be1b00b4caa1fc9a25c57773b77be5bab3a79876e9ad5b4f4e1346bcca6"
+      "sha256": "898c42de988e94e17ef96a022f97426c4d0388fde4afc9495261e2d508833fda"
     },
     {
       "bytes": 30982,
@@ -346,9 +356,9 @@
       "sha256": "36fa85bb3d7fa1220974f66276ede1783741a8d1586bc7a34a2bfb24f3c71dc8"
     },
     {
-      "bytes": 15245,
+      "bytes": 16540,
       "path": "docs/planning/SPONSOR_VERIFICATION.md",
-      "sha256": "b113ccd08ce2b3d3169034102549e26d51ef2c1a7f214acfe77df0fa9735e269"
+      "sha256": "e64ac55176630b60c89e71ea9ee3dd71fd14165d3ee66622f47513717572fd0d"
     },
     {
       "bytes": 9945,
@@ -391,9 +401,9 @@
       "sha256": "da2bd74630af86a998408a910ecbb5240a6f29ee1df410ee26749ed64bddd822"
     },
     {
-      "bytes": 10906,
+      "bytes": 12904,
       "path": "docs/submission/ARCHITECTURE_AND_RESULTS.md",
-      "sha256": "ce476ed79d2692ffe932c2d249e7072d605df259c1ee4af873410c928d64d6d2"
+      "sha256": "15a705086f67d907bd6ed19945fa05af8d8ab7b6e0e6cc6e670dc7b80ae88ac7"
     },
     {
       "bytes": 9758,
@@ -401,24 +411,24 @@
       "sha256": "6a13dae1bd9d91c547f7c08dc5faa4f1b46231bd299a3b90e7efe6aaa43dd7c2"
     },
     {
-      "bytes": 10206,
+      "bytes": 11429,
       "path": "docs/submission/ENTRY_DRAFT.md",
-      "sha256": "110c325a3be026c858533c1e56cfce495ffa644a195b9336eacfed6b9a4a78f5"
+      "sha256": "d0a092bbae1ee20a2a75ef9269d2d7bc836dff9a126ed7e876f2c195df2f0ddb"
     },
     {
-      "bytes": 11661,
+      "bytes": 13976,
       "path": "docs/submission/EVIDENCE_MANIFEST.md",
-      "sha256": "beca3b82fa8fff548d8d15d0a87861c2e5f9559280e452e3e55ab3b1edd220af"
+      "sha256": "1a2d062847c72b193f4ec5a6cbdfac43348a42b3f33683a529cf14e1ea5ebafc"
     },
     {
-      "bytes": 9190,
+      "bytes": 9880,
       "path": "docs/submission/README.md",
-      "sha256": "605029720f3b67a0fba85caf980bb817fec32309f74e00d7378fafaba8942cb8"
+      "sha256": "4f7d1809c8bb8390d932f01fecefa66e6fe0bd7af7998404f05bef521eecd356"
     },
     {
-      "bytes": 3536,
+      "bytes": 4169,
       "path": "docs/submission/SOURCE_BUNDLE.md",
-      "sha256": "7a554a749e19e051a3c1a914c36e218cba3cdbed8c7b02c56463e1ceb7a8856b"
+      "sha256": "3255bae76b13f8664c6a5ee89515f5f92e001492a1b105a5cb83a61fff9e0cd7"
     },
     {
       "bytes": 7919,
@@ -1131,9 +1141,9 @@
       "sha256": "adee00782b26e54bd5e222022e6e464ced3f8235d4c8e6e8285c7eb8c136e25b"
     },
     {
-      "bytes": 472,
+      "bytes": 535,
       "path": "render.yaml",
-      "sha256": "1474cf0dabc6d95c5528b30ee6a2eaf8f3513136c0cb0c95d5b89a733feff24c"
+      "sha256": "94e17691af4b33f2f08812ff2e41f30d6df3c2cbfc7e79e8eb6de37732b40e06"
     },
     {
       "bytes": 615,
@@ -1226,9 +1236,9 @@
       "sha256": "e1763e38a2829123d726d24db2e18ed38ca078bbe894b3cd3d964c870ba5b94b"
     },
     {
-      "bytes": 3430,
+      "bytes": 3447,
       "path": "scripts/smoke_deployment.py",
-      "sha256": "56b5c5b29ba24072eb0f34c75e47994efb2bb3f5a5e081e9aeb9beafecf0cda8"
+      "sha256": "8ec484ec80aa31f0749ca21ed84577112d98cc6077b8e3bb64be13369d6899dd"
     },
     {
       "bytes": 698,
@@ -1415,6 +1425,6 @@
   "package_date": "2026-10-14",
   "reproducibility": "Sorted paths, fixed ZIP timestamps and permissions; unchanged selected bytes produce the same ZIP with the same Python/zlib implementation.",
   "scope": "Local source archive prepared for user review; no upload, publication or submission performed.",
-  "source_bytes": 7611089,
-  "source_tree_sha256": "db54e9654789c6dba76e4084121b03f44122a0adccfb67e7b454776f9579c925"
+  "source_bytes": 7637385,
+  "source_tree_sha256": "8f9b77def0ccf529a2acd3955854c7c6d4cf2a4e3a285bbfa743248167681706"
 }

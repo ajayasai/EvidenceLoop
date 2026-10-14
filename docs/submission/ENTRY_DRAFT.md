@@ -26,9 +26,9 @@ The working prototype links claim confirmation to a scoped evidence receipt and 
 
 This fits Healthcare Challenge 2 through question preparation, continuity and user control. It does not recommend a medicine, change treatment or verify adherence. The current demonstration uses fictional nonclinical examples. Real clinical source packets remain quarantined pending qualified review, and live AI remains disabled after failed qualification. The interface labels replay and manual interpretation explicitly.
 
-The optional reader is prompted to return bounded structured fields anchored to exact input quotations, preserve unknown information, and keep claim meaning separate from user intent. The server checks schema, provenance and policy; the model cannot approve evidence, authorize storage or invent a clinical next step. Tested free candidates still made semantic errors, so the submitted workflow uses labeled replay/manual interpretation rather than presenting an unqualified reader as working AI. Manual or edited claims show evidence context only when exact comparison cannot be established.
+The optional reader is prompted to return bounded structured fields anchored to exact input quotations, preserve unknown information, and keep claim meaning separate from user intent. The server checks schema, provenance and policy; the model cannot approve evidence, authorize storage or invent a clinical next step. Tested free candidates still made semantic errors, so the public workflow uses guided fictional example replay with no free-text or manual claim entry. The full local implementation also contains manual interpretation, with context-only restrictions when exact comparison cannot be established. An unqualified reader is not presented as working AI.
 
-The implementation uses React/TypeScript, FastAPI and PostgreSQL. Consent, ownership, versioning and source checks are enforced on the server. The prepared public mode is guided and fictional-only: it disables live AI and reviewer controls, accepts supplied examples, and warns that saved demonstration records may reset on free-host restart. Public hosting has not yet been created or verified. Genuine WorkBuddy development review contributed negative-test proposals for consent and source withdrawal. Codex corrected and implemented those proposals and ran 44 related passing tests. The evidence package includes four inspected captures and a sanitized validation log. These are engineering results, not clinical validation.
+The implementation uses React/TypeScript, FastAPI and PostgreSQL. Consent, ownership, versioning and source checks are enforced on the server. The public mode disables live AI and reviewer controls, accepts supplied fictional examples, and warns that saved demonstration records may reset on free-host restart. Source is published on GitHub. The public FERN journey through confirmation, consented saving and a self-reported check-in, plus hosted video playback, were verified in Chrome on 14 October. Genuine WorkBuddy development review contributed negative-test proposals for consent and source withdrawal. Codex corrected and implemented those proposals and ran 44 related passing tests. The evidence package includes four inspected captures and a sanitized log. These are engineering results, not clinical validation.
 
 Proposed business value is a reusable, auditable question-preparation workflow for patient-education or care-navigation teams, with explicit consent and source-status checks when people return. It could reduce repeated work reconstructing why a question was saved and make content-review responsibilities clearer. This is a hypothesis, not measured savings, demand or willingness to pay. An initial evaluation would compare time to prepare a source-linked question, unassisted task completion and staff rework against an existing workflow; adoption, cost and any health benefit would require separate evidence. No customers, revenue or clinical outcomes are claimed.
 
@@ -41,12 +41,12 @@ The official form deadline is **16 October 2026, 23:59 GMT+8**. The observed sec
 | Project Title | EvidenceLoop |
 | Blurb, fewer than 10 words | The nine-word blurb above |
 | Project Description | Form-ready description above covers target users, pain point, design/prompting and proposed business value |
-| Cover upload, maximum 1 MB | [Prepared cover](../../artifacts/submission-20261014/cover.png), 51,994 bytes, 16:9 |
-| Project Web Link, required browser experience | Guided fictional-only public candidate prepared; no live AI/reviewer controls and records reset on free-host restart. No service exists yet. Linux Docker/512 MB CI and final URL/access check pending; localhost/source ZIP are not substitutes. |
-| Demo Video Link, required 5-8 minutes | [Prepared browser page](../../apps/web/public/demo-video.html) at `/demo-video.html`, 6:03.78; local playback with English captions verified. Hosted URL and judge-access check pending. |
-| WorkBuddy/CodeBuddy Conversation History, one file, maximum 10 MB | [Sponsor evidence PDF](../../artifacts/submission-20261014/sponsor-evidence.pdf): conversation-history summary, four actual captures and sanitized local test result; 346,975 bytes. It is not a complete account transcript. |
-| Architecture Diagram PPT, one file, maximum 10 MB | [Editable deck revision 2](../../artifacts/submission-20261014/deck/EvidenceLoop-judging-deck-v2.pptx), 455,581 bytes; architecture/trust-boundary content on slide 8 |
-| GitHub source URL, required | Final repository URL and judge-access check pending; a local source ZIP alone does not fill this field |
+| Cover upload, maximum 1 MB | [Prepared cover](../../artifacts/submission-20261014/cover.png), 51,994 bytes, 16:9; uploaded to the form |
+| Project Web Link, required browser experience | [Live Render demo](https://evidenceloop-aj-001.onrender.com/), public FERN journey through consented save/check-in verified in Chrome. Guided fictional-only mode, no live AI/reviewer controls, records reset on restart; URL filled. |
+| Demo Video Link, required 5-8 minutes | [Hosted video](https://evidenceloop-aj-001.onrender.com/demo-video.html), 6:03.78; public muted playback advanced to 11.25 seconds with readyState 4 and no error; URL filled. |
+| WorkBuddy/CodeBuddy Conversation History, one file, maximum 10 MB | [Sponsor evidence PDF](../../artifacts/submission-20261014/sponsor-evidence.pdf): conversation-history summary, four actual captures and sanitized local test result; 346,975 bytes; uploaded. It is not a complete account transcript. |
+| Architecture Diagram PPT, one file, maximum 10 MB | [Editable deck revision 2](../../artifacts/submission-20261014/deck/EvidenceLoop-judging-deck-v2.pptx), 455,581 bytes; architecture/trust-boundary content on slide 8; uploaded and accepted chip visible |
+| GitHub source URL, required | [Published source](https://github.com/ajayasai/EvidenceLoop), initial commit `6f1b125`; URL filled in the form after user authorization |
 | Social bonus | Optional; no post or benefit claimed |
 
 ## What to highlight to judges
@@ -85,4 +85,20 @@ The prepared [cover](../../artifacts/submission-20261014/cover.png) uses a 16:9,
 **Does a check-in prove that someone followed advice or improved?** No. It is explicitly a self-report, and no clinical outcome or adherence improvement has been measured.
 
 **What is the next validation step?** Qualify a bounded reader on fresh fictional inputs, address the directional comparison gap, obtain independent review of a narrow clinical example, and observe whether people can use the workflow without coaching. These are separate pieces of evidence.
+
+## Optional social-bonus post — draft, not posted
+
+Ready to copy if the user chooses to post. The hashtags below are those shown by the form. Actual sponsor development use was WorkBuddy review; no CodeBuddy or Miora use is claimed, and no social bonus has been earned or verified.
+
+```text
+I built EvidenceLoop for Healthcare Challenge 2: a guided fictional prototype that connects a claim, its source, a question saved by choice and a later self-reported check-in.
+
+WorkBuddy contributed consent and source-withdrawal code review. Codex corrected and implemented the proposed regressions; 44 related tests passed. The public demo uses labeled example replay. Live AI remains disabled, and this is not clinically validated.
+
+Try it: https://evidenceloop-aj-001.onrender.com/
+Watch the 6-minute walkthrough: https://evidenceloop-aj-001.onrender.com/demo-video.html
+Source: https://github.com/ajayasai/EvidenceLoop
+
+#WorkBuddy #CodeBuddy #Miora #TencentCloudHackathon
+```
 

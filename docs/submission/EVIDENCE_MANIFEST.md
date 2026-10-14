@@ -1,6 +1,6 @@
 # Source and evidence manifest for judges
 
-Prepared 14 October 2026. Paths below point to existing repository artifacts; this index does not publish them or assert judge access. The final repository revision and video URL must be recorded when the submission package is frozen. Do not treat the private WorkBuddy conversation URL as a public share link.
+Prepared 14 October 2026. Following user authorization, [source was published on GitHub](https://github.com/ajayasai/EvidenceLoop) at initial commit `6f1b125`. Render reports Live for that commit; the [public FERN journey](https://evidenceloop-aj-001.onrender.com/) through consented save/check-in and [hosted video playback](https://evidenceloop-aj-001.onrender.com/demo-video.html) were verified in Chrome. The corrected [public CI run](https://github.com/ajayasai/EvidenceLoop/actions/runs/38530016145) at `f51c764` and separate public API checks passed. Final form submission remains unconfirmed. Do not treat the private WorkBuddy conversation URL as a public share link.
 
 ## Prepared presentation assets — 14 October 2026
 
@@ -14,8 +14,9 @@ Prepared 14 October 2026. Paths below point to existing repository artifacts; th
 | [Video manifest](../../artifacts/submission-20261014/video-manifest.json) | Final local media metadata and hashes, with private runtime paths removed |
 | [Public video page source](../../apps/web/public/demo-video.html), [MP4](../../apps/web/public/demo/EvidenceLoop-recorded-walkthrough.mp4), [VTT captions](../../apps/web/public/demo/EvidenceLoop-recorded-walkthrough.vtt) and [poster](../../apps/web/public/demo/cover.png) | Reviewed static hosting assets for `/demo-video.html`; MP4 byte-identical to the verified export, 52 captions preserve SRT text/timings, native controls and transcript; no external scripts/assets |
 | [Sponsor conversation evidence PDF](../../artifacts/submission-20261014/sponsor-evidence.pdf) | Six pages: truthful history summary, four unchanged actual captures and the sanitized 44-test log. Rendered and visually checked; 346,975 bytes, below 10 MB. SHA-256: `e3a14a614aca658d493a40fa95bab85ec911176fd88a1989035abb52fd170e0c`. |
+| [Source ZIP](../../artifacts/submission-20261014/source/EvidenceLoop-source.zip), [external source manifest](../../artifacts/submission-20261014/source/EvidenceLoop-source.manifest.json) and [SHA256SUMS](../../artifacts/submission-20261014/source/SHA256SUMS.txt) | Reproducible selected source bundle and its final packaging checksums; source repackage records are distinct from the initial deployed commit |
 
-The presentation and local video label their images as a recorded screenshot walkthrough. Their engineering figures refer to 13 October checkpoints and retain failed AI qualification. The walkthrough uses static captures and synthetic narration; it does not establish live screen operation, live inference, a volunteer session or clinical review. Local decode verification does not establish external judge access, which remains pending.
+The presentation and video label their images as a recorded screenshot walkthrough. Their engineering figures refer to 13 October checkpoints and retain failed AI qualification. Static captures and synthetic narration do not establish live screen operation, live inference, a volunteer session or clinical review. Hosted video playback was separately observed in Chrome on 14 October; local decode and hosted playback are distinct checks.
 
 ## Implementation and operation
 
@@ -42,7 +43,10 @@ The presentation and local video label their images as a recorded screenshot wal
 | [AI experiments, 14 Oct](../AI_EXTRACTION_VERIFICATION_20261014.md) | Completed dated experiments, including the final fast but semantically failing low-reasoning candidate; no qualified candidate, no fresh final/challenge cases consumed |
 | [Build status](../BUILD_STATUS.md) and [verification history](../VERIFICATION.md) | Current limitations and explicitly dated earlier results |
 | [Latest engineering results](ARCHITECTURE_AND_RESULTS.md) | Public-hosting candidate: 599 Python tests plus 51 subtests, no failures/errors/skips, 87.134 seconds (650 JUnit entries); 35 frontend tests and build passed. Local JUnit: `test-results/submission-20261014-public-demo.xml`. |
-| [Free-hosting record](../FREE_HOSTING_20261014.md) | Windows isolated-PostgreSQL supervisor smoke passed; Render Hobby/no-card/$0 build-spend setting observed. Linux Docker/512 MB CI remains pending; no service or public repository yet. |
+| [Free-hosting record](../FREE_HOSTING_20261014.md) | Windows supervisor smoke and public CI Docker build passed; Render Live, Singapore Free 0.1 CPU/512 MB. Public journey/video and separate API checks passed; corrected CI at `f51c764` passed the constrained container smoke check. No added API secrets/card; auto-deploy off. |
+| [Public check-in](../../artifacts/submission-20261014/screenshots/13-public-checkin.jpg) and [public video](../../artifacts/submission-20261014/screenshots/14-public-video.jpg) | 14 October HTTPS FERN journey through explicit save/check-in consent and Done self-reported, current trust checks, no-live-AI banner and no reviewer controls; hosted muted video playing at 11.253323s / 363.782993s, readyState 4, no error |
+| [Public home capture](../../artifacts/submission-20261014/screenshots/15-public-home.jpg), [public browser report](../PUBLIC_BROWSER_VERIFICATION_20261014.md) and [public API report](../PUBLIC_API_VERIFICATION_20261014.md) | Dated hosted demonstration checks and observed restrictions; separate from live AI qualification |
+| [Passing public CI run](https://github.com/ajayasai/EvidenceLoop/actions/runs/38530016145) | `f51c764`: 599 tests plus 51 subtests in 10.51s; 35 frontend/build, Docker and 512 MiB/no-swap/0.1 CPU startup smoke passed. About 24.45s startup; 119.5 MiB single post-smoke sample, not peak/load evidence. |
 | [Browser video playback](../../artifacts/submission-20261014/screenshots/12-video-playback.jpg) | Local muted playback advanced to 8.26s of 363.783s, readyState 4 and no error; visible English captions |
 | [Final authored replay](../../artifacts/submission-20261014/screenshots/10-final-replay.jpg) and [final edited claim](../../artifacts/submission-20261014/screenshots/11-final-edited-claim.jpg) | Restarted final app: authored FERN retained support/preview; negated-polarity edit withheld assessment and next-step preview, with its source current |
 | [Evaluation runbook](../EVALUATION_RUNBOOK.md) | Engineering harness definitions, counting and independent-review boundaries |
@@ -73,12 +77,12 @@ Exclude `.env*` except the reviewed example configuration, `.runtime`, database 
 
 | Item | Final value |
 | --- | --- |
-| Repository URL accessible to judges | Pending |
-| Browser-experience URL accessible to judges | Pending; prepared public mode uses supplied fictional examples only, no live AI or reviewer controls, and records may reset on free-host restart. No service created; localhost does not satisfy the form. |
-| Frozen source commit or bundle hash | Pending |
-| Recorded build date and latest check reference | 14 October public-hosting candidate: 599 Python tests plus 51 subtests, zero failures/errors/skips, 87.134 seconds; 35 frontend tests/build passed and interfaces exported. Windows supervisor smoke passed; Linux Docker/512 MB CI pending. See [results](ARCHITECTURE_AND_RESULTS.md) and [verification](../VERIFICATION.md). Source bundle hash remains a separate packaging record. |
-| Video URL / duration / access check | Prepared `/demo-video.html` with local byte-identical MP4 and VTT; 363.782993 seconds (6:03.78). Full decode passed; local muted playback advanced with English captions and no error. Public URL/judge-access check remains pending. |
-| Cover filename / dimensions | [cover.png](../../artifacts/submission-20261014/cover.png), 1280×720, 16:9 |
+| Repository URL accessible to judges | [ajayasai/EvidenceLoop](https://github.com/ajayasai/EvidenceLoop), published after user approval; source URL filled in the form |
+| Browser-experience URL accessible to judges | [Render demo](https://evidenceloop-aj-001.onrender.com/); public Chrome FERN journey completed through consented save/check-in. Supplied fictional examples only, no live AI/reviewer controls, records may reset on restart; URL filled in the form. |
+| Initial published source commit | `6f1b125`; subsequent documentation synchronization and final package hash are separate records |
+| Recorded build date and latest check reference | 14 October local candidate: 599 Python tests plus 51 subtests, zero failures/errors/skips, 87.134 seconds; 35 frontend tests/build passed and interfaces exported. Corrected public CI at `f51c764` passed 599 + 51 in 10.51s, 35 frontend/build, Docker and constrained smoke; separate public API checks passed. Render Live at initial `6f1b125`; public Chrome journey/video verified. See [results](ARCHITECTURE_AND_RESULTS.md). |
+| Video URL / duration / access check | [Hosted video](https://evidenceloop-aj-001.onrender.com/demo-video.html), 363.782993 seconds (6:03.78). Full local decode passed; public muted playback advanced to 11.253323s, readyState 4, playing with no error; URL filled. |
+| Cover filename / dimensions | [cover.png](../../artifacts/submission-20261014/cover.png), 1280×720, 16:9; uploaded to the form |
 | Volunteer observation report, if actually completed | Pending; no observations collected in this package |
-| Submission receipt and timestamp | Pending; no submission performed |
+| Uploads / submission receipt | All three uploads show accepted chips and all three URLs are filled. Final Submit untouched; no submission acknowledgment. |
 

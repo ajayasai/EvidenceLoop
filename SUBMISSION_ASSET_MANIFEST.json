@@ -1,0 +1,196 @@
+{
+  "date": "2026-10-14",
+  "scope": "Local review package of source and selected assets; final competition submission not confirmed.",
+  "source_repository": "https://github.com/ajayasai/EvidenceLoop",
+  "initial_public_commit": "6f1b125",
+  "source_archive_sha256": "974add2f441b54bcc79548f7beababc76101a2dd9b56788b6d6b4729c6b5b7c5",
+  "source_manifest": "BUNDLE_MANIFEST.json",
+  "assets": [
+    {
+      "path": "artifacts/submission-20261014/START_HERE.md",
+      "bytes": 5373,
+      "sha256": "28c43db1410bf913f628e7ad36ab50c0d4cb3d4c00056592e92c9a9fde05fd8e"
+    },
+    {
+      "path": "artifacts/submission-20261014/cover.png",
+      "bytes": 51994,
+      "sha256": "8af49ffb386248311ff319be6acf22739bbcb2a183577b37fe00b20b67e9871e"
+    },
+    {
+      "path": "artifacts/submission-20261014/EvidenceLoop-recorded-walkthrough.mp4",
+      "bytes": 5088343,
+      "sha256": "a60b44aa90feefee6e6489c211f7e10711aa7bdf97054aa400cd0c5fbe0e1d9c"
+    },
+    {
+      "path": "artifacts/submission-20261014/EvidenceLoop-recorded-walkthrough.srt",
+      "bytes": 6092,
+      "sha256": "7392781e1e80784b0d253bcd2ebb66a67c68ce2f9b75eb7d07f3c024b6d2fe57"
+    },
+    {
+      "path": "artifacts/submission-20261014/video-manifest.json",
+      "bytes": 8207,
+      "sha256": "c86c623d26a9e5c52fa0a2cd811d9f318576546ea3b4621c67c37fa87068a094"
+    },
+    {
+      "path": "artifacts/submission-20261014/sponsor-evidence.pdf",
+      "bytes": 346975,
+      "sha256": "e3a14a614aca658d493a40fa95bab85ec911176fd88a1989035abb52fd170e0c"
+    },
+    {
+      "path": "artifacts/submission-20261014/deck/EvidenceLoop-judging-deck-v2.pptx",
+      "bytes": 455581,
+      "sha256": "285feebd0467cd9c361fcf223c03c1101adc756317e98af15ae45123fcc042a2"
+    },
+    {
+      "path": "artifacts/submission-20261014/deck/manifest.json",
+      "bytes": 3469,
+      "sha256": "f0554495a15f811c613949c42d4430f29909148fd278fc51a9d2c53ad5707561"
+    },
+    {
+      "path": "artifacts/submission-20261014/deck/slides.json",
+      "bytes": 7659,
+      "sha256": "15faa07b3991d5cae43f38bd9eb14cf003556a03ddc9b5437575223cf3b5574c"
+    },
+    {
+      "path": "artifacts/submission-20261014/source/EvidenceLoop-source.zip",
+      "bytes": 5644526,
+      "sha256": "974add2f441b54bcc79548f7beababc76101a2dd9b56788b6d6b4729c6b5b7c5"
+    },
+    {
+      "path": "artifacts/submission-20261014/source/EvidenceLoop-source.manifest.json",
+      "bytes": 53548,
+      "sha256": "e0c2d9a486273ec4642454ad304cc1d55959fe5813375b4ac243b2902bdcdda9"
+    },
+    {
+      "path": "artifacts/submission-20261014/source/SHA256SUMS.txt",
+      "bytes": 90,
+      "sha256": "e9bc0b11ce2c585ab81f7fa3488abab2bd1c41d40867c7ecc4db26a10b690e95"
+    },
+    {
+      "path": "artifacts/submission-20261014/deck/slides/slide-01.png",
+      "bytes": 51994,
+      "sha256": "8af49ffb386248311ff319be6acf22739bbcb2a183577b37fe00b20b67e9871e"
+    },
+    {
+      "path": "artifacts/submission-20261014/deck/slides/slide-02.png",
+      "bytes": 219702,
+      "sha256": "2e18757027a234f77f44bf66eebf17e690f959b9fa05eec7d3e39929fe9faa3c"
+    },
+    {
+      "path": "artifacts/submission-20261014/deck/slides/slide-03.png",
+      "bytes": 206499,
+      "sha256": "48b8a88387a30c0749655d101fb7eea6ef5011f6217f9953ec92e43d705f8cd2"
+    },
+    {
+      "path": "artifacts/submission-20261014/deck/slides/slide-04.png",
+      "bytes": 165221,
+      "sha256": "2efe96882b7ca618e0a37c0cc4783dcb58c85bd0df9031e761cc5004eb8f2a4f"
+    },
+    {
+      "path": "artifacts/submission-20261014/deck/slides/slide-05.png",
+      "bytes": 191830,
+      "sha256": "bd779a981e806aff3ec97665e42fdcc808fc89b14f966d366836f8aad85bd8b4"
+    },
+    {
+      "path": "artifacts/submission-20261014/deck/slides/slide-06.png",
+      "bytes": 200326,
+      "sha256": "083636015b195b3c1427985dcc3e4996b902b3a0fcc990abc2453b136e359911"
+    },
+    {
+      "path": "artifacts/submission-20261014/deck/slides/slide-07.png",
+      "bytes": 235779,
+      "sha256": "8f81501b84c51f349917daf7fef972ca49690e92b86f3e6e6413a8ef7647e225"
+    },
+    {
+      "path": "artifacts/submission-20261014/deck/slides/slide-08.png",
+      "bytes": 75321,
+      "sha256": "cb784568555165090b3d0fbd57d72706f7d0151daab9fb4299bc717503fb64fe"
+    },
+    {
+      "path": "artifacts/submission-20261014/deck/slides/slide-09.png",
+      "bytes": 132315,
+      "sha256": "f98fc0c8388ed810e8f9debd7230fcacc9d8c501c9c725c8aeefebd5689e6db9"
+    },
+    {
+      "path": "artifacts/submission-20261014/deck/slides/slide-10.png",
+      "bytes": 73599,
+      "sha256": "d17822343c0a1a8daaf9734c55bfdcd4c0f93a106f64da946a70983b4d5b2526"
+    },
+    {
+      "path": "artifacts/submission-20261014/screenshots/01-home.jpg",
+      "bytes": 63524,
+      "sha256": "125d81de073b53684b2482e4a39f80e67f27c2d4175a00e3842edd80ceef9142"
+    },
+    {
+      "path": "artifacts/submission-20261014/screenshots/02-interpretation.jpg",
+      "bytes": 64301,
+      "sha256": "2008a11b49e79722729482d8fab71b719add10db39db5ef550594eb18d6fc21d"
+    },
+    {
+      "path": "artifacts/submission-20261014/screenshots/03-receipt.jpg",
+      "bytes": 59126,
+      "sha256": "84c39848a37c575e3e530eae9aa6e2548d06b6bb597bd5d0454fddd3567a875c"
+    },
+    {
+      "path": "artifacts/submission-20261014/screenshots/04-source.jpg",
+      "bytes": 48753,
+      "sha256": "c6c9cc8845e83c7abc3892ac79f891578e4646b9e72aa65c0c87f3f5da357cc6"
+    },
+    {
+      "path": "artifacts/submission-20261014/screenshots/05-consent.jpg",
+      "bytes": 54753,
+      "sha256": "ffc712c8c9d919463621ff8a625f76223b47382e1e430e4a31ae2891b0bb507a"
+    },
+    {
+      "path": "artifacts/submission-20261014/screenshots/06-saved.jpg",
+      "bytes": 52859,
+      "sha256": "7ecb3d79e4e999d3f1b1a8bd6a39a15cad6c4257947da90aecb4378d488f7934"
+    },
+    {
+      "path": "artifacts/submission-20261014/screenshots/07-checkin.jpg",
+      "bytes": 53771,
+      "sha256": "501df1b470e7b983c120dbbf382df0aafe9446b08d383e725f2d0065f7ca2225"
+    },
+    {
+      "path": "artifacts/submission-20261014/screenshots/08-withdrawn.jpg",
+      "bytes": 60668,
+      "sha256": "e85812ee0c1a1bd5a62fd18a3a1ff3a90b572f8212b410297273b24a9a27de04"
+    },
+    {
+      "path": "artifacts/submission-20261014/screenshots/09-ambiguous.jpg",
+      "bytes": 72085,
+      "sha256": "b727f31948557f77fa32a6393d28ede2646a54493af897f96db4ef7bd64a238e"
+    },
+    {
+      "path": "artifacts/submission-20261014/screenshots/10-final-replay.jpg",
+      "bytes": 59126,
+      "sha256": "84c39848a37c575e3e530eae9aa6e2548d06b6bb597bd5d0454fddd3567a875c"
+    },
+    {
+      "path": "artifacts/submission-20261014/screenshots/11-final-edited-claim.jpg",
+      "bytes": 60694,
+      "sha256": "d351573b8a145d1abdb105b5bac50987b6ebc90ebf9b33001e476850caf96833"
+    },
+    {
+      "path": "artifacts/submission-20261014/screenshots/12-video-playback.jpg",
+      "bytes": 63611,
+      "sha256": "13f845a4e55814c8b7dbaec1f5a8258b81ae01972a1cab1bcef663ad6b10f62a"
+    },
+    {
+      "path": "artifacts/submission-20261014/screenshots/13-public-checkin.jpg",
+      "bytes": 46860,
+      "sha256": "fe3549611d57a76cd553921359dc4835c0104a2396196a2f0ad9b0bdeed369a9"
+    },
+    {
+      "path": "artifacts/submission-20261014/screenshots/14-public-video.jpg",
+      "bytes": 79547,
+      "sha256": "673c2c29faf79a8d9c84ca4f254d4384c0f5c91b6fdce79831303d540f8c21d2"
+    },
+    {
+      "path": "artifacts/submission-20261014/screenshots/15-public-home.jpg",
+      "bytes": 57250,
+      "sha256": "7e1a72e1b05b6cedae737e948ca25148c80811dc88b59e58f05904b6d27a97e0"
+    }
+  ],
+  "limitations": "Fictional nonclinical demonstration; live AI unqualified and disabled; no volunteer study."
+}
